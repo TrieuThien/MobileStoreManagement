@@ -36,14 +36,14 @@
             this.labelForSetting = new System.Windows.Forms.Label();
             this.labelForSuport = new System.Windows.Forms.Label();
             this.flowLayoutPanelFunctions = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonToCustomerManagement = new System.Windows.Forms.Button();
-            this.buttonToBillWindow = new System.Windows.Forms.Button();
-            this.buttonToSellWindow = new System.Windows.Forms.Button();
-            this.buttonToProductWindow = new System.Windows.Forms.Button();
-            this.buttonToImportExportWindow = new System.Windows.Forms.Button();
-            this.buttonToSupplierWindow = new System.Windows.Forms.Button();
-            this.buttonToPromotionWindow = new System.Windows.Forms.Button();
-            this.buttonToStaticticalWindow = new System.Windows.Forms.Button();
+            this.buttonToCustomerManagementWindow = new System.Windows.Forms.Button();
+            this.buttonToBillManagementWindow = new System.Windows.Forms.Button();
+            this.buttonToSellManagementWindow = new System.Windows.Forms.Button();
+            this.buttonToProductManagementWindow = new System.Windows.Forms.Button();
+            this.buttonToImportExportManagementWindow = new System.Windows.Forms.Button();
+            this.buttonToSupplierManagementWindow = new System.Windows.Forms.Button();
+            this.buttonToPromotionManagementWindow = new System.Windows.Forms.Button();
+            this.buttonToStaticticalManagementWindow = new System.Windows.Forms.Button();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.buttonToAccountWindow = new System.Windows.Forms.Button();
             this.buttonToSettingWindow = new System.Windows.Forms.Button();
@@ -137,131 +137,131 @@
             // flowLayoutPanelFunctions
             // 
             this.flowLayoutPanelFunctions.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToCustomerManagement);
-            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToBillWindow);
-            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToSellWindow);
-            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToProductWindow);
-            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToImportExportWindow);
-            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToSupplierWindow);
-            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToPromotionWindow);
-            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToStaticticalWindow);
+            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToCustomerManagementWindow);
+            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToBillManagementWindow);
+            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToSellManagementWindow);
+            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToProductManagementWindow);
+            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToImportExportManagementWindow);
+            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToSupplierManagementWindow);
+            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToPromotionManagementWindow);
+            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToStaticticalManagementWindow);
             this.flowLayoutPanelFunctions.Location = new System.Drawing.Point(0, 68);
             this.flowLayoutPanelFunctions.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelFunctions.Name = "flowLayoutPanelFunctions";
             this.flowLayoutPanelFunctions.Size = new System.Drawing.Size(1126, 68);
             this.flowLayoutPanelFunctions.TabIndex = 1;
             // 
-            // buttonToCustomerManagement
+            // buttonToCustomerManagementWindow
             // 
-            this.buttonToCustomerManagement.Image = ((System.Drawing.Image)(resources.GetObject("buttonToCustomerManagement.Image")));
-            this.buttonToCustomerManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonToCustomerManagement.Location = new System.Drawing.Point(3, 14);
-            this.buttonToCustomerManagement.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
-            this.buttonToCustomerManagement.Name = "buttonToCustomerManagement";
-            this.buttonToCustomerManagement.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.buttonToCustomerManagement.Size = new System.Drawing.Size(125, 40);
-            this.buttonToCustomerManagement.TabIndex = 0;
-            this.buttonToCustomerManagement.Text = "Khách hàng";
-            this.buttonToCustomerManagement.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonToCustomerManagement.UseVisualStyleBackColor = true;
+            this.buttonToCustomerManagementWindow.Image = ((System.Drawing.Image)(resources.GetObject("buttonToCustomerManagementWindow.Image")));
+            this.buttonToCustomerManagementWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonToCustomerManagementWindow.Location = new System.Drawing.Point(3, 14);
+            this.buttonToCustomerManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
+            this.buttonToCustomerManagementWindow.Name = "buttonToCustomerManagementWindow";
+            this.buttonToCustomerManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.buttonToCustomerManagementWindow.Size = new System.Drawing.Size(125, 40);
+            this.buttonToCustomerManagementWindow.TabIndex = 0;
+            this.buttonToCustomerManagementWindow.Text = "Khách hàng";
+            this.buttonToCustomerManagementWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonToCustomerManagementWindow.UseVisualStyleBackColor = true;
             // 
-            // buttonToBillWindow
+            // buttonToBillManagementWindow
             // 
-            this.buttonToBillWindow.Image = global::MobileStoreManagement.Properties.Resources.bill_icon;
-            this.buttonToBillWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonToBillWindow.Location = new System.Drawing.Point(134, 14);
-            this.buttonToBillWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
-            this.buttonToBillWindow.Name = "buttonToBillWindow";
-            this.buttonToBillWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.buttonToBillWindow.Size = new System.Drawing.Size(110, 40);
-            this.buttonToBillWindow.TabIndex = 1;
-            this.buttonToBillWindow.Text = "Hóa đơn";
-            this.buttonToBillWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonToBillWindow.UseVisualStyleBackColor = true;
+            this.buttonToBillManagementWindow.Image = global::MobileStoreManagement.Properties.Resources.bill_icon;
+            this.buttonToBillManagementWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonToBillManagementWindow.Location = new System.Drawing.Point(134, 14);
+            this.buttonToBillManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
+            this.buttonToBillManagementWindow.Name = "buttonToBillManagementWindow";
+            this.buttonToBillManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.buttonToBillManagementWindow.Size = new System.Drawing.Size(110, 40);
+            this.buttonToBillManagementWindow.TabIndex = 1;
+            this.buttonToBillManagementWindow.Text = "Hóa đơn";
+            this.buttonToBillManagementWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonToBillManagementWindow.UseVisualStyleBackColor = true;
             // 
-            // buttonToSellWindow
+            // buttonToSellManagementWindow
             // 
-            this.buttonToSellWindow.Image = global::MobileStoreManagement.Properties.Resources.sell_icon;
-            this.buttonToSellWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonToSellWindow.Location = new System.Drawing.Point(250, 14);
-            this.buttonToSellWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
-            this.buttonToSellWindow.Name = "buttonToSellWindow";
-            this.buttonToSellWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.buttonToSellWindow.Size = new System.Drawing.Size(110, 40);
-            this.buttonToSellWindow.TabIndex = 2;
-            this.buttonToSellWindow.Text = "Bán hàng";
-            this.buttonToSellWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonToSellWindow.UseVisualStyleBackColor = true;
+            this.buttonToSellManagementWindow.Image = global::MobileStoreManagement.Properties.Resources.sell_icon;
+            this.buttonToSellManagementWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonToSellManagementWindow.Location = new System.Drawing.Point(250, 14);
+            this.buttonToSellManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
+            this.buttonToSellManagementWindow.Name = "buttonToSellManagementWindow";
+            this.buttonToSellManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.buttonToSellManagementWindow.Size = new System.Drawing.Size(110, 40);
+            this.buttonToSellManagementWindow.TabIndex = 2;
+            this.buttonToSellManagementWindow.Text = "Bán hàng";
+            this.buttonToSellManagementWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonToSellManagementWindow.UseVisualStyleBackColor = true;
             // 
-            // buttonToProductWindow
+            // buttonToProductManagementWindow
             // 
-            this.buttonToProductWindow.Image = global::MobileStoreManagement.Properties.Resources.product_icon;
-            this.buttonToProductWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonToProductWindow.Location = new System.Drawing.Point(366, 14);
-            this.buttonToProductWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
-            this.buttonToProductWindow.Name = "buttonToProductWindow";
-            this.buttonToProductWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.buttonToProductWindow.Size = new System.Drawing.Size(118, 40);
-            this.buttonToProductWindow.TabIndex = 3;
-            this.buttonToProductWindow.Text = "Sản phẩm";
-            this.buttonToProductWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonToProductWindow.UseVisualStyleBackColor = true;
+            this.buttonToProductManagementWindow.Image = global::MobileStoreManagement.Properties.Resources.product_icon;
+            this.buttonToProductManagementWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonToProductManagementWindow.Location = new System.Drawing.Point(366, 14);
+            this.buttonToProductManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
+            this.buttonToProductManagementWindow.Name = "buttonToProductManagementWindow";
+            this.buttonToProductManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.buttonToProductManagementWindow.Size = new System.Drawing.Size(118, 40);
+            this.buttonToProductManagementWindow.TabIndex = 3;
+            this.buttonToProductManagementWindow.Text = "Sản phẩm";
+            this.buttonToProductManagementWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonToProductManagementWindow.UseVisualStyleBackColor = true;
             // 
-            // buttonToImportExportWindow
+            // buttonToImportExportManagementWindow
             // 
-            this.buttonToImportExportWindow.Image = global::MobileStoreManagement.Properties.Resources.ImportSuport_icon;
-            this.buttonToImportExportWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonToImportExportWindow.Location = new System.Drawing.Point(490, 14);
-            this.buttonToImportExportWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
-            this.buttonToImportExportWindow.Name = "buttonToImportExportWindow";
-            this.buttonToImportExportWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.buttonToImportExportWindow.Size = new System.Drawing.Size(151, 40);
-            this.buttonToImportExportWindow.TabIndex = 4;
-            this.buttonToImportExportWindow.Text = "Xuất nhập hàng";
-            this.buttonToImportExportWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonToImportExportWindow.UseVisualStyleBackColor = true;
+            this.buttonToImportExportManagementWindow.Image = global::MobileStoreManagement.Properties.Resources.ImportSuport_icon;
+            this.buttonToImportExportManagementWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonToImportExportManagementWindow.Location = new System.Drawing.Point(490, 14);
+            this.buttonToImportExportManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
+            this.buttonToImportExportManagementWindow.Name = "buttonToImportExportManagementWindow";
+            this.buttonToImportExportManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.buttonToImportExportManagementWindow.Size = new System.Drawing.Size(151, 40);
+            this.buttonToImportExportManagementWindow.TabIndex = 4;
+            this.buttonToImportExportManagementWindow.Text = "Xuất nhập hàng";
+            this.buttonToImportExportManagementWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonToImportExportManagementWindow.UseVisualStyleBackColor = true;
             // 
-            // buttonToSupplierWindow
+            // buttonToSupplierManagementWindow
             // 
-            this.buttonToSupplierWindow.Image = global::MobileStoreManagement.Properties.Resources.supplier_icon;
-            this.buttonToSupplierWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonToSupplierWindow.Location = new System.Drawing.Point(647, 14);
-            this.buttonToSupplierWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
-            this.buttonToSupplierWindow.Name = "buttonToSupplierWindow";
-            this.buttonToSupplierWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.buttonToSupplierWindow.Size = new System.Drawing.Size(137, 40);
-            this.buttonToSupplierWindow.TabIndex = 5;
-            this.buttonToSupplierWindow.Text = "Nhà cung cấp";
-            this.buttonToSupplierWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonToSupplierWindow.UseVisualStyleBackColor = true;
+            this.buttonToSupplierManagementWindow.Image = global::MobileStoreManagement.Properties.Resources.supplier_icon;
+            this.buttonToSupplierManagementWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonToSupplierManagementWindow.Location = new System.Drawing.Point(647, 14);
+            this.buttonToSupplierManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
+            this.buttonToSupplierManagementWindow.Name = "buttonToSupplierManagementWindow";
+            this.buttonToSupplierManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.buttonToSupplierManagementWindow.Size = new System.Drawing.Size(137, 40);
+            this.buttonToSupplierManagementWindow.TabIndex = 5;
+            this.buttonToSupplierManagementWindow.Text = "Nhà cung cấp";
+            this.buttonToSupplierManagementWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonToSupplierManagementWindow.UseVisualStyleBackColor = true;
             // 
-            // buttonToPromotionWindow
+            // buttonToPromotionManagementWindow
             // 
-            this.buttonToPromotionWindow.Image = global::MobileStoreManagement.Properties.Resources.promotion_icon;
-            this.buttonToPromotionWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonToPromotionWindow.Location = new System.Drawing.Point(790, 14);
-            this.buttonToPromotionWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
-            this.buttonToPromotionWindow.Name = "buttonToPromotionWindow";
-            this.buttonToPromotionWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.buttonToPromotionWindow.Size = new System.Drawing.Size(125, 40);
-            this.buttonToPromotionWindow.TabIndex = 6;
-            this.buttonToPromotionWindow.Text = "Khuyến mãi";
-            this.buttonToPromotionWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonToPromotionWindow.UseVisualStyleBackColor = true;
+            this.buttonToPromotionManagementWindow.Image = global::MobileStoreManagement.Properties.Resources.promotion_icon;
+            this.buttonToPromotionManagementWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonToPromotionManagementWindow.Location = new System.Drawing.Point(790, 14);
+            this.buttonToPromotionManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
+            this.buttonToPromotionManagementWindow.Name = "buttonToPromotionManagementWindow";
+            this.buttonToPromotionManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.buttonToPromotionManagementWindow.Size = new System.Drawing.Size(125, 40);
+            this.buttonToPromotionManagementWindow.TabIndex = 6;
+            this.buttonToPromotionManagementWindow.Text = "Khuyến mãi";
+            this.buttonToPromotionManagementWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonToPromotionManagementWindow.UseVisualStyleBackColor = true;
             // 
-            // buttonToStaticticalWindow
+            // buttonToStaticticalManagementWindow
             // 
-            this.buttonToStaticticalWindow.Image = global::MobileStoreManagement.Properties.Resources.statistical_icon;
-            this.buttonToStaticticalWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonToStaticticalWindow.Location = new System.Drawing.Point(921, 14);
-            this.buttonToStaticticalWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
-            this.buttonToStaticticalWindow.Name = "buttonToStaticticalWindow";
-            this.buttonToStaticticalWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.buttonToStaticticalWindow.Size = new System.Drawing.Size(112, 40);
-            this.buttonToStaticticalWindow.TabIndex = 7;
-            this.buttonToStaticticalWindow.Text = "Thống kê";
-            this.buttonToStaticticalWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonToStaticticalWindow.UseVisualStyleBackColor = true;
+            this.buttonToStaticticalManagementWindow.Image = global::MobileStoreManagement.Properties.Resources.statistical_icon;
+            this.buttonToStaticticalManagementWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonToStaticticalManagementWindow.Location = new System.Drawing.Point(921, 14);
+            this.buttonToStaticticalManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
+            this.buttonToStaticticalManagementWindow.Name = "buttonToStaticticalManagementWindow";
+            this.buttonToStaticticalManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.buttonToStaticticalManagementWindow.Size = new System.Drawing.Size(112, 40);
+            this.buttonToStaticticalManagementWindow.TabIndex = 7;
+            this.buttonToStaticticalManagementWindow.Text = "Thống kê";
+            this.buttonToStaticticalManagementWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonToStaticticalManagementWindow.UseVisualStyleBackColor = true;
             // 
             // pictureBoxLogo
             // 
@@ -346,14 +346,14 @@
         private System.Windows.Forms.Label labelForSuport;
         private System.Windows.Forms.Label labelForSetting;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelFunctions;
-        private System.Windows.Forms.Button buttonToCustomerManagement;
-        private System.Windows.Forms.Button buttonToBillWindow;
-        private System.Windows.Forms.Button buttonToSellWindow;
-        private System.Windows.Forms.Button buttonToProductWindow;
-        private System.Windows.Forms.Button buttonToImportExportWindow;
-        private System.Windows.Forms.Button buttonToSupplierWindow;
-        private System.Windows.Forms.Button buttonToPromotionWindow;
-        private System.Windows.Forms.Button buttonToStaticticalWindow;
+        private System.Windows.Forms.Button buttonToCustomerManagementWindow;
+        private System.Windows.Forms.Button buttonToBillManagementWindow;
+        private System.Windows.Forms.Button buttonToSellManagementWindow;
+        private System.Windows.Forms.Button buttonToProductManagementWindow;
+        private System.Windows.Forms.Button buttonToImportExportManagementWindow;
+        private System.Windows.Forms.Button buttonToSupplierManagementWindow;
+        private System.Windows.Forms.Button buttonToPromotionManagementWindow;
+        private System.Windows.Forms.Button buttonToStaticticalManagementWindow;
     }
 }
 
