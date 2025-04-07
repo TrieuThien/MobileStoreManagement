@@ -43,7 +43,7 @@
             this.buttonToImportExportManagementWindow = new System.Windows.Forms.Button();
             this.buttonToSupplierManagementWindow = new System.Windows.Forms.Button();
             this.buttonToPromotionManagementWindow = new System.Windows.Forms.Button();
-            this.buttonToStaticticalManagementWindow = new System.Windows.Forms.Button();
+            this.buttonToStaticticalWindow = new System.Windows.Forms.Button();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.buttonToAccountWindow = new System.Windows.Forms.Button();
             this.buttonToSettingWindow = new System.Windows.Forms.Button();
@@ -144,7 +144,7 @@
             this.flowLayoutPanelFunctions.Controls.Add(this.buttonToImportExportManagementWindow);
             this.flowLayoutPanelFunctions.Controls.Add(this.buttonToSupplierManagementWindow);
             this.flowLayoutPanelFunctions.Controls.Add(this.buttonToPromotionManagementWindow);
-            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToStaticticalManagementWindow);
+            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToStaticticalWindow);
             this.flowLayoutPanelFunctions.Location = new System.Drawing.Point(0, 68);
             this.flowLayoutPanelFunctions.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelFunctions.Name = "flowLayoutPanelFunctions";
@@ -249,19 +249,19 @@
             this.buttonToPromotionManagementWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonToPromotionManagementWindow.UseVisualStyleBackColor = true;
             // 
-            // buttonToStaticticalManagementWindow
+            // buttonToStaticticalWindow
             // 
-            this.buttonToStaticticalManagementWindow.Image = global::MobileStoreManagement.Properties.Resources.statistical_icon;
-            this.buttonToStaticticalManagementWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonToStaticticalManagementWindow.Location = new System.Drawing.Point(921, 14);
-            this.buttonToStaticticalManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
-            this.buttonToStaticticalManagementWindow.Name = "buttonToStaticticalManagementWindow";
-            this.buttonToStaticticalManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.buttonToStaticticalManagementWindow.Size = new System.Drawing.Size(112, 40);
-            this.buttonToStaticticalManagementWindow.TabIndex = 7;
-            this.buttonToStaticticalManagementWindow.Text = "Thống kê";
-            this.buttonToStaticticalManagementWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonToStaticticalManagementWindow.UseVisualStyleBackColor = true;
+            this.buttonToStaticticalWindow.Image = global::MobileStoreManagement.Properties.Resources.statistical_icon;
+            this.buttonToStaticticalWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonToStaticticalWindow.Location = new System.Drawing.Point(921, 14);
+            this.buttonToStaticticalWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
+            this.buttonToStaticticalWindow.Name = "buttonToStaticticalWindow";
+            this.buttonToStaticticalWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.buttonToStaticticalWindow.Size = new System.Drawing.Size(112, 40);
+            this.buttonToStaticticalWindow.TabIndex = 7;
+            this.buttonToStaticticalWindow.Text = "Thống kê";
+            this.buttonToStaticticalWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonToStaticticalWindow.UseVisualStyleBackColor = true;
             // 
             // pictureBoxLogo
             // 
@@ -353,7 +353,7 @@
         private System.Windows.Forms.Button buttonToImportExportManagementWindow;
         private System.Windows.Forms.Button buttonToSupplierManagementWindow;
         private System.Windows.Forms.Button buttonToPromotionManagementWindow;
-        private System.Windows.Forms.Button buttonToStaticticalManagementWindow;
+        private System.Windows.Forms.Button buttonToStaticticalWindow;
     }
 }
 
