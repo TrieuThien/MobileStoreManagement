@@ -30,11 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.flowLayoutPanelHeader = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelApplicationName = new System.Windows.Forms.Label();
             this.flowLayoutPanelSystem = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonToAccountWindow = new System.Windows.Forms.Button();
             this.labelShowUserName = new System.Windows.Forms.Label();
             this.labelForSetting = new System.Windows.Forms.Label();
+            this.buttonToSettingWindow = new System.Windows.Forms.Button();
             this.labelForSuport = new System.Windows.Forms.Label();
+            this.buttonToSuportWindow = new System.Windows.Forms.Button();
             this.flowLayoutPanelFunctions = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonToCustomerManagementWindow = new System.Windows.Forms.Button();
             this.buttonToBillManagementWindow = new System.Windows.Forms.Button();
@@ -44,14 +48,10 @@
             this.buttonToSupplierManagementWindow = new System.Windows.Forms.Button();
             this.buttonToPromotionManagementWindow = new System.Windows.Forms.Button();
             this.buttonToStaticticalWindow = new System.Windows.Forms.Button();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.buttonToAccountWindow = new System.Windows.Forms.Button();
-            this.buttonToSettingWindow = new System.Windows.Forms.Button();
-            this.buttonToSuportWindow = new System.Windows.Forms.Button();
             this.flowLayoutPanelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.flowLayoutPanelSystem.SuspendLayout();
             this.flowLayoutPanelFunctions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanelHeader
@@ -66,6 +66,17 @@
             this.flowLayoutPanelHeader.Size = new System.Drawing.Size(1126, 68);
             this.flowLayoutPanelHeader.TabIndex = 0;
             this.flowLayoutPanelHeader.WrapContents = false;
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = global::MobileStoreManagement.Properties.Resources.logo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(27, 8);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(27, 8, 0, 8);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(112, 52);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 1;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // labelApplicationName
             // 
@@ -95,6 +106,18 @@
             this.flowLayoutPanelSystem.Size = new System.Drawing.Size(735, 68);
             this.flowLayoutPanelSystem.TabIndex = 3;
             // 
+            // buttonToAccountWindow
+            // 
+            this.buttonToAccountWindow.BackColor = System.Drawing.Color.White;
+            this.buttonToAccountWindow.BackgroundImage = global::MobileStoreManagement.Properties.Resources.account_icon;
+            this.buttonToAccountWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonToAccountWindow.Location = new System.Drawing.Point(676, 18);
+            this.buttonToAccountWindow.Margin = new System.Windows.Forms.Padding(0, 18, 27, 18);
+            this.buttonToAccountWindow.Name = "buttonToAccountWindow";
+            this.buttonToAccountWindow.Size = new System.Drawing.Size(32, 32);
+            this.buttonToAccountWindow.TabIndex = 0;
+            this.buttonToAccountWindow.UseVisualStyleBackColor = false;
+            // 
             // labelShowUserName
             // 
             this.labelShowUserName.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -120,6 +143,17 @@
             this.labelForSetting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelForSetting.Click += new System.EventHandler(this.labelForSetting_Click);
             // 
+            // buttonToSettingWindow
+            // 
+            this.buttonToSettingWindow.BackgroundImage = global::MobileStoreManagement.Properties.Resources.setting_icon;
+            this.buttonToSettingWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonToSettingWindow.Location = new System.Drawing.Point(449, 18);
+            this.buttonToSettingWindow.Margin = new System.Windows.Forms.Padding(24, 18, 0, 18);
+            this.buttonToSettingWindow.Name = "buttonToSettingWindow";
+            this.buttonToSettingWindow.Size = new System.Drawing.Size(32, 32);
+            this.buttonToSettingWindow.TabIndex = 2;
+            this.buttonToSettingWindow.UseVisualStyleBackColor = true;
+            // 
             // labelForSuport
             // 
             this.labelForSuport.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -133,6 +167,18 @@
             this.labelForSuport.Text = "Hỗ trợ";
             this.labelForSuport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelForSuport.Click += new System.EventHandler(this.labelForSuport_Click);
+            // 
+            // buttonToSuportWindow
+            // 
+            this.buttonToSuportWindow.BackgroundImage = global::MobileStoreManagement.Properties.Resources.support_icon;
+            this.buttonToSuportWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonToSuportWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonToSuportWindow.Location = new System.Drawing.Point(326, 18);
+            this.buttonToSuportWindow.Margin = new System.Windows.Forms.Padding(3, 18, 3, 18);
+            this.buttonToSuportWindow.Name = "buttonToSuportWindow";
+            this.buttonToSuportWindow.Size = new System.Drawing.Size(32, 32);
+            this.buttonToSuportWindow.TabIndex = 3;
+            this.buttonToSuportWindow.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanelFunctions
             // 
@@ -263,57 +309,11 @@
             this.buttonToStaticticalWindow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonToStaticticalWindow.UseVisualStyleBackColor = true;
             // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Image = global::MobileStoreManagement.Properties.Resources.logo;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(27, 8);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(27, 8, 0, 8);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(112, 52);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLogo.TabIndex = 1;
-            this.pictureBoxLogo.TabStop = false;
-            // 
-            // buttonToAccountWindow
-            // 
-            this.buttonToAccountWindow.BackColor = System.Drawing.Color.White;
-            this.buttonToAccountWindow.BackgroundImage = global::MobileStoreManagement.Properties.Resources.account_icon;
-            this.buttonToAccountWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonToAccountWindow.Location = new System.Drawing.Point(676, 18);
-            this.buttonToAccountWindow.Margin = new System.Windows.Forms.Padding(0, 18, 27, 18);
-            this.buttonToAccountWindow.Name = "buttonToAccountWindow";
-            this.buttonToAccountWindow.Size = new System.Drawing.Size(32, 32);
-            this.buttonToAccountWindow.TabIndex = 0;
-            this.buttonToAccountWindow.UseVisualStyleBackColor = false;
-            // 
-            // buttonToSettingWindow
-            // 
-            this.buttonToSettingWindow.BackgroundImage = global::MobileStoreManagement.Properties.Resources.setting_icon;
-            this.buttonToSettingWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonToSettingWindow.Location = new System.Drawing.Point(449, 18);
-            this.buttonToSettingWindow.Margin = new System.Windows.Forms.Padding(24, 18, 0, 18);
-            this.buttonToSettingWindow.Name = "buttonToSettingWindow";
-            this.buttonToSettingWindow.Size = new System.Drawing.Size(32, 32);
-            this.buttonToSettingWindow.TabIndex = 2;
-            this.buttonToSettingWindow.UseVisualStyleBackColor = true;
-            // 
-            // buttonToSuportWindow
-            // 
-            this.buttonToSuportWindow.BackgroundImage = global::MobileStoreManagement.Properties.Resources.support_icon;
-            this.buttonToSuportWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonToSuportWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonToSuportWindow.Location = new System.Drawing.Point(326, 18);
-            this.buttonToSuportWindow.Margin = new System.Windows.Forms.Padding(3, 18, 3, 18);
-            this.buttonToSuportWindow.Name = "buttonToSuportWindow";
-            this.buttonToSuportWindow.Size = new System.Drawing.Size(32, 32);
-            this.buttonToSuportWindow.TabIndex = 3;
-            this.buttonToSuportWindow.UseVisualStyleBackColor = true;
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1126, 532);
+            this.ClientSize = new System.Drawing.Size(1125, 532);
             this.Controls.Add(this.flowLayoutPanelFunctions);
             this.Controls.Add(this.flowLayoutPanelHeader);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -326,9 +326,9 @@
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.Resize += new System.EventHandler(this.MainWindow_Resize);
             this.flowLayoutPanelHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.flowLayoutPanelSystem.ResumeLayout(false);
             this.flowLayoutPanelFunctions.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
