@@ -93,9 +93,29 @@ namespace MobileStoreManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap decrease_picture {
+            get {
+                object obj = ResourceManager.GetObject("decrease-picture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ImportSuport_icon {
             get {
                 object obj = ResourceManager.GetObject("ImportSuport-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap increase_picture {
+            get {
+                object obj = ResourceManager.GetObject("increase-picture", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +146,26 @@ namespace MobileStoreManagement.Properties {
         internal static System.Drawing.Bitmap promotion_icon {
             get {
                 object obj = ResourceManager.GetObject("promotion-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap report_icon {
+            get {
+                object obj = ResourceManager.GetObject("report-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Revenue_picture {
+            get {
+                object obj = ResourceManager.GetObject("Revenue-picture", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

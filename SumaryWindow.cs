@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace MobileStoreManagement
 {
-    public partial class MainWindow : Form
+    public partial class SumaryWindow : Form
     {
-        public MainWindow()
+        public SumaryWindow()
         {
             InitializeComponent();
         }
 
-        private void MainWindow_Resize(object sender, EventArgs e)
+        private void SumaryWindow_Resize(object sender, EventArgs e)
         {
             // set width of flowLayout equal window
             flowLayoutPanelHeader.Width = this.ClientSize.Width;
@@ -27,12 +27,12 @@ namespace MobileStoreManagement
             flowLayoutPanelSystem.Width = this.ClientSize.Width - widthOfValiableControls;
 
             flowLayoutPanelFunctions.Width = this.ClientSize.Width;
+            groupBoxSalesResult.Width = this.ClientSize.Width;
+            groupBoxRevenueChart.Width = this.ClientSize.Width; 
+            groupBoxBestSellingProduct.Width = this.ClientSize.Width;   
         }
 
-        private void MainWindow_Load(object sender, EventArgs e)
-        {
-
-        }
+  
 
         private void labelForSuport_Click(object sender, EventArgs e)
         {
