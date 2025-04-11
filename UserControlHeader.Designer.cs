@@ -1,13 +1,13 @@
 ﻿namespace MobileStoreManagement
 {
-    partial class SumaryWindow
+    partial class UserControlHeader
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,15 +20,15 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SumaryWindow));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlHeader));
             this.flowLayoutPanelHeader = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelApplicationName = new System.Windows.Forms.Label();
@@ -42,14 +42,13 @@
             this.flowLayoutPanelFunctions = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonToSumarylWindow = new System.Windows.Forms.Button();
             this.buttonToCustomerManagementWindow = new System.Windows.Forms.Button();
-            this.buttonToInvoiceManagementWindow = new System.Windows.Forms.Button();
-            this.buttonToSalesManagementWindow = new System.Windows.Forms.Button();
+            this.buttonToBillManagementWindow = new System.Windows.Forms.Button();
+            this.buttonToSellManagementWindow = new System.Windows.Forms.Button();
             this.buttonToProductManagementWindow = new System.Windows.Forms.Button();
             this.buttonToImportExportManagementWindow = new System.Windows.Forms.Button();
             this.buttonToSupplierManagementWindow = new System.Windows.Forms.Button();
             this.buttonToPromotionManagementWindow = new System.Windows.Forms.Button();
             this.buttonToReportWindow = new System.Windows.Forms.Button();
-            this.panelMain = new System.Windows.Forms.Panel();
             this.flowLayoutPanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.flowLayoutPanelSystem.SuspendLayout();
@@ -62,12 +61,11 @@
             this.flowLayoutPanelHeader.Controls.Add(this.pictureBoxLogo);
             this.flowLayoutPanelHeader.Controls.Add(this.labelApplicationName);
             this.flowLayoutPanelHeader.Controls.Add(this.flowLayoutPanelSystem);
-            this.flowLayoutPanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanelHeader.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelHeader.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelHeader.Name = "flowLayoutPanelHeader";
-            this.flowLayoutPanelHeader.Size = new System.Drawing.Size(1427, 68);
-            this.flowLayoutPanelHeader.TabIndex = 0;
+            this.flowLayoutPanelHeader.Size = new System.Drawing.Size(1329, 68);
+            this.flowLayoutPanelHeader.TabIndex = 1;
             this.flowLayoutPanelHeader.WrapContents = false;
             // 
             // pictureBoxLogo
@@ -106,7 +104,7 @@
             this.flowLayoutPanelSystem.Location = new System.Drawing.Point(391, 0);
             this.flowLayoutPanelSystem.Margin = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.flowLayoutPanelSystem.Name = "flowLayoutPanelSystem";
-            this.flowLayoutPanelSystem.Size = new System.Drawing.Size(1036, 68);
+            this.flowLayoutPanelSystem.Size = new System.Drawing.Size(938, 68);
             this.flowLayoutPanelSystem.TabIndex = 3;
             // 
             // buttonToAccountWindow
@@ -114,7 +112,7 @@
             this.buttonToAccountWindow.BackColor = System.Drawing.Color.White;
             this.buttonToAccountWindow.BackgroundImage = global::MobileStoreManagement.Properties.Resources.account_icon;
             this.buttonToAccountWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonToAccountWindow.Location = new System.Drawing.Point(977, 18);
+            this.buttonToAccountWindow.Location = new System.Drawing.Point(879, 18);
             this.buttonToAccountWindow.Margin = new System.Windows.Forms.Padding(0, 18, 27, 18);
             this.buttonToAccountWindow.Name = "buttonToAccountWindow";
             this.buttonToAccountWindow.Size = new System.Drawing.Size(32, 32);
@@ -125,32 +123,30 @@
             // 
             this.labelShowUserName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelShowUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelShowUserName.Location = new System.Drawing.Point(865, 10);
+            this.labelShowUserName.Location = new System.Drawing.Point(767, 10);
             this.labelShowUserName.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.labelShowUserName.Name = "labelShowUserName";
             this.labelShowUserName.Size = new System.Drawing.Size(112, 48);
             this.labelShowUserName.TabIndex = 1;
             this.labelShowUserName.Text = "Tên người dùng ";
             this.labelShowUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelShowUserName.Click += new System.EventHandler(this.labelShowUserName_Click);
             // 
             // labelForSetting
             // 
             this.labelForSetting.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelForSetting.Location = new System.Drawing.Point(782, 18);
+            this.labelForSetting.Location = new System.Drawing.Point(684, 18);
             this.labelForSetting.Margin = new System.Windows.Forms.Padding(0, 18, 24, 18);
             this.labelForSetting.Name = "labelForSetting";
             this.labelForSetting.Size = new System.Drawing.Size(59, 32);
             this.labelForSetting.TabIndex = 5;
             this.labelForSetting.Text = "Cài đặt";
             this.labelForSetting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelForSetting.Click += new System.EventHandler(this.labelForSetting_Click);
             // 
             // buttonToSettingWindow
             // 
             this.buttonToSettingWindow.BackgroundImage = global::MobileStoreManagement.Properties.Resources.setting_icon;
             this.buttonToSettingWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonToSettingWindow.Location = new System.Drawing.Point(750, 18);
+            this.buttonToSettingWindow.Location = new System.Drawing.Point(652, 18);
             this.buttonToSettingWindow.Margin = new System.Windows.Forms.Padding(24, 18, 0, 18);
             this.buttonToSettingWindow.Name = "buttonToSettingWindow";
             this.buttonToSettingWindow.Size = new System.Drawing.Size(32, 32);
@@ -162,21 +158,20 @@
             this.labelForSuport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelForSuport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelForSuport.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.labelForSuport.Location = new System.Drawing.Point(662, 18);
+            this.labelForSuport.Location = new System.Drawing.Point(564, 18);
             this.labelForSuport.Margin = new System.Windows.Forms.Padding(0, 18, 0, 18);
             this.labelForSuport.Name = "labelForSuport";
             this.labelForSuport.Size = new System.Drawing.Size(64, 32);
             this.labelForSuport.TabIndex = 4;
             this.labelForSuport.Text = "Hỗ trợ";
             this.labelForSuport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelForSuport.Click += new System.EventHandler(this.labelForSuport_Click);
             // 
             // buttonToSuportWindow
             // 
             this.buttonToSuportWindow.BackgroundImage = global::MobileStoreManagement.Properties.Resources.support_icon;
             this.buttonToSuportWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonToSuportWindow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonToSuportWindow.Location = new System.Drawing.Point(627, 18);
+            this.buttonToSuportWindow.Location = new System.Drawing.Point(529, 18);
             this.buttonToSuportWindow.Margin = new System.Windows.Forms.Padding(3, 18, 3, 18);
             this.buttonToSuportWindow.Name = "buttonToSuportWindow";
             this.buttonToSuportWindow.Size = new System.Drawing.Size(32, 32);
@@ -188,30 +183,27 @@
             this.flowLayoutPanelFunctions.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.flowLayoutPanelFunctions.Controls.Add(this.buttonToSumarylWindow);
             this.flowLayoutPanelFunctions.Controls.Add(this.buttonToCustomerManagementWindow);
-            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToInvoiceManagementWindow);
-            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToSalesManagementWindow);
+            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToBillManagementWindow);
+            this.flowLayoutPanelFunctions.Controls.Add(this.buttonToSellManagementWindow);
             this.flowLayoutPanelFunctions.Controls.Add(this.buttonToProductManagementWindow);
             this.flowLayoutPanelFunctions.Controls.Add(this.buttonToImportExportManagementWindow);
             this.flowLayoutPanelFunctions.Controls.Add(this.buttonToSupplierManagementWindow);
             this.flowLayoutPanelFunctions.Controls.Add(this.buttonToPromotionManagementWindow);
             this.flowLayoutPanelFunctions.Controls.Add(this.buttonToReportWindow);
-            this.flowLayoutPanelFunctions.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanelFunctions.Location = new System.Drawing.Point(0, 68);
             this.flowLayoutPanelFunctions.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelFunctions.Name = "flowLayoutPanelFunctions";
-            this.flowLayoutPanelFunctions.Size = new System.Drawing.Size(1427, 68);
-            this.flowLayoutPanelFunctions.TabIndex = 1;
+            this.flowLayoutPanelFunctions.Size = new System.Drawing.Size(1329, 68);
+            this.flowLayoutPanelFunctions.TabIndex = 2;
             // 
             // buttonToSumarylWindow
             // 
-            this.buttonToSumarylWindow.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonToSumarylWindow.AutoSize = true;
             this.buttonToSumarylWindow.Image = global::MobileStoreManagement.Properties.Resources.statistical_icon;
             this.buttonToSumarylWindow.Location = new System.Drawing.Point(3, 14);
             this.buttonToSumarylWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
             this.buttonToSumarylWindow.Name = "buttonToSumarylWindow";
             this.buttonToSumarylWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.buttonToSumarylWindow.Size = new System.Drawing.Size(140, 40);
+            this.buttonToSumarylWindow.Size = new System.Drawing.Size(119, 40);
             this.buttonToSumarylWindow.TabIndex = 7;
             this.buttonToSumarylWindow.Text = "Tổng quan";
             this.buttonToSumarylWindow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -220,106 +212,86 @@
             // 
             // buttonToCustomerManagementWindow
             // 
-            this.buttonToCustomerManagementWindow.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonToCustomerManagementWindow.AutoSize = true;
             this.buttonToCustomerManagementWindow.Image = ((System.Drawing.Image)(resources.GetObject("buttonToCustomerManagementWindow.Image")));
-            this.buttonToCustomerManagementWindow.Location = new System.Drawing.Point(149, 14);
+            this.buttonToCustomerManagementWindow.Location = new System.Drawing.Point(128, 14);
             this.buttonToCustomerManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
             this.buttonToCustomerManagementWindow.Name = "buttonToCustomerManagementWindow";
             this.buttonToCustomerManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.buttonToCustomerManagementWindow.Size = new System.Drawing.Size(140, 40);
+            this.buttonToCustomerManagementWindow.Size = new System.Drawing.Size(125, 40);
             this.buttonToCustomerManagementWindow.TabIndex = 0;
             this.buttonToCustomerManagementWindow.Text = "Khách hàng";
             this.buttonToCustomerManagementWindow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonToCustomerManagementWindow.UseVisualStyleBackColor = true;
-            this.buttonToCustomerManagementWindow.Click += new System.EventHandler(this.buttonToCustomerManagementWindow_Click);
             // 
-            // buttonToInvoiceManagementWindow
+            // buttonToBillManagementWindow
             // 
-            this.buttonToInvoiceManagementWindow.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonToInvoiceManagementWindow.AutoSize = true;
-            this.buttonToInvoiceManagementWindow.Image = global::MobileStoreManagement.Properties.Resources.bill_icon;
-            this.buttonToInvoiceManagementWindow.Location = new System.Drawing.Point(295, 14);
-            this.buttonToInvoiceManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
-            this.buttonToInvoiceManagementWindow.Name = "buttonToInvoiceManagementWindow";
-            this.buttonToInvoiceManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.buttonToInvoiceManagementWindow.Size = new System.Drawing.Size(140, 40);
-            this.buttonToInvoiceManagementWindow.TabIndex = 1;
-            this.buttonToInvoiceManagementWindow.Text = "Hóa đơn";
-            this.buttonToInvoiceManagementWindow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonToInvoiceManagementWindow.UseVisualStyleBackColor = true;
-            this.buttonToInvoiceManagementWindow.Click += new System.EventHandler(this.buttonToBillManagementWindow_Click);
+            this.buttonToBillManagementWindow.Image = global::MobileStoreManagement.Properties.Resources.bill_icon;
+            this.buttonToBillManagementWindow.Location = new System.Drawing.Point(259, 14);
+            this.buttonToBillManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
+            this.buttonToBillManagementWindow.Name = "buttonToBillManagementWindow";
+            this.buttonToBillManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.buttonToBillManagementWindow.Size = new System.Drawing.Size(105, 40);
+            this.buttonToBillManagementWindow.TabIndex = 1;
+            this.buttonToBillManagementWindow.Text = "Hóa đơn";
+            this.buttonToBillManagementWindow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonToBillManagementWindow.UseVisualStyleBackColor = true;
             // 
-            // buttonToSalesManagementWindow
+            // buttonToSellManagementWindow
             // 
-            this.buttonToSalesManagementWindow.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonToSalesManagementWindow.AutoSize = true;
-            this.buttonToSalesManagementWindow.Image = global::MobileStoreManagement.Properties.Resources.sell_icon;
-            this.buttonToSalesManagementWindow.Location = new System.Drawing.Point(441, 14);
-            this.buttonToSalesManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
-            this.buttonToSalesManagementWindow.Name = "buttonToSalesManagementWindow";
-            this.buttonToSalesManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.buttonToSalesManagementWindow.Size = new System.Drawing.Size(140, 40);
-            this.buttonToSalesManagementWindow.TabIndex = 2;
-            this.buttonToSalesManagementWindow.Text = "Bán hàng";
-            this.buttonToSalesManagementWindow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonToSalesManagementWindow.UseVisualStyleBackColor = true;
-            this.buttonToSalesManagementWindow.Click += new System.EventHandler(this.buttonToSellManagementWindow_Click);
+            this.buttonToSellManagementWindow.Image = global::MobileStoreManagement.Properties.Resources.sell_icon;
+            this.buttonToSellManagementWindow.Location = new System.Drawing.Point(370, 14);
+            this.buttonToSellManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
+            this.buttonToSellManagementWindow.Name = "buttonToSellManagementWindow";
+            this.buttonToSellManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.buttonToSellManagementWindow.Size = new System.Drawing.Size(114, 40);
+            this.buttonToSellManagementWindow.TabIndex = 2;
+            this.buttonToSellManagementWindow.Text = "Bán hàng";
+            this.buttonToSellManagementWindow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonToSellManagementWindow.UseVisualStyleBackColor = true;
             // 
             // buttonToProductManagementWindow
             // 
-            this.buttonToProductManagementWindow.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonToProductManagementWindow.AutoSize = true;
             this.buttonToProductManagementWindow.Image = global::MobileStoreManagement.Properties.Resources.product_icon;
-            this.buttonToProductManagementWindow.Location = new System.Drawing.Point(587, 14);
+            this.buttonToProductManagementWindow.Location = new System.Drawing.Point(490, 14);
             this.buttonToProductManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
             this.buttonToProductManagementWindow.Name = "buttonToProductManagementWindow";
             this.buttonToProductManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.buttonToProductManagementWindow.Size = new System.Drawing.Size(140, 40);
+            this.buttonToProductManagementWindow.Size = new System.Drawing.Size(114, 40);
             this.buttonToProductManagementWindow.TabIndex = 3;
             this.buttonToProductManagementWindow.Text = "Sản phẩm";
             this.buttonToProductManagementWindow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonToProductManagementWindow.UseVisualStyleBackColor = true;
-            this.buttonToProductManagementWindow.Click += new System.EventHandler(this.buttonToProductManagementWindow_Click);
             // 
             // buttonToImportExportManagementWindow
             // 
-            this.buttonToImportExportManagementWindow.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonToImportExportManagementWindow.AutoSize = true;
             this.buttonToImportExportManagementWindow.Image = global::MobileStoreManagement.Properties.Resources.ImportSuport_icon;
-            this.buttonToImportExportManagementWindow.Location = new System.Drawing.Point(733, 14);
+            this.buttonToImportExportManagementWindow.Location = new System.Drawing.Point(610, 14);
             this.buttonToImportExportManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
             this.buttonToImportExportManagementWindow.Name = "buttonToImportExportManagementWindow";
             this.buttonToImportExportManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.buttonToImportExportManagementWindow.Size = new System.Drawing.Size(161, 40);
+            this.buttonToImportExportManagementWindow.Size = new System.Drawing.Size(157, 40);
             this.buttonToImportExportManagementWindow.TabIndex = 4;
             this.buttonToImportExportManagementWindow.Text = "Xuất nhập hàng";
             this.buttonToImportExportManagementWindow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonToImportExportManagementWindow.UseVisualStyleBackColor = true;
-            this.buttonToImportExportManagementWindow.Click += new System.EventHandler(this.buttonToImportExportManagementWindow_Click);
             // 
             // buttonToSupplierManagementWindow
             // 
-            this.buttonToSupplierManagementWindow.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonToSupplierManagementWindow.AutoSize = true;
             this.buttonToSupplierManagementWindow.Image = global::MobileStoreManagement.Properties.Resources.supplier_icon;
-            this.buttonToSupplierManagementWindow.Location = new System.Drawing.Point(900, 14);
+            this.buttonToSupplierManagementWindow.Location = new System.Drawing.Point(773, 14);
             this.buttonToSupplierManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
             this.buttonToSupplierManagementWindow.Name = "buttonToSupplierManagementWindow";
             this.buttonToSupplierManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.buttonToSupplierManagementWindow.Size = new System.Drawing.Size(153, 40);
+            this.buttonToSupplierManagementWindow.Size = new System.Drawing.Size(140, 40);
             this.buttonToSupplierManagementWindow.TabIndex = 5;
             this.buttonToSupplierManagementWindow.Text = "Nhà cung cấp";
             this.buttonToSupplierManagementWindow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonToSupplierManagementWindow.UseVisualStyleBackColor = true;
-            this.buttonToSupplierManagementWindow.Click += new System.EventHandler(this.buttonToSupplierManagementWindow_Click);
             // 
             // buttonToPromotionManagementWindow
             // 
-            this.buttonToPromotionManagementWindow.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonToPromotionManagementWindow.AutoSize = true;
             this.buttonToPromotionManagementWindow.Image = global::MobileStoreManagement.Properties.Resources.promotion_icon;
-            this.buttonToPromotionManagementWindow.Location = new System.Drawing.Point(1059, 14);
+            this.buttonToPromotionManagementWindow.Location = new System.Drawing.Point(919, 14);
             this.buttonToPromotionManagementWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
             this.buttonToPromotionManagementWindow.Name = "buttonToPromotionManagementWindow";
             this.buttonToPromotionManagementWindow.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -328,56 +300,33 @@
             this.buttonToPromotionManagementWindow.Text = "Khuyến mãi";
             this.buttonToPromotionManagementWindow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonToPromotionManagementWindow.UseVisualStyleBackColor = true;
-            this.buttonToPromotionManagementWindow.Click += new System.EventHandler(this.buttonToPromotionManagementWindow_Click);
             // 
             // buttonToReportWindow
             // 
-            this.buttonToReportWindow.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonToReportWindow.AutoSize = true;
             this.buttonToReportWindow.Image = global::MobileStoreManagement.Properties.Resources.report_icon;
-            this.buttonToReportWindow.Location = new System.Drawing.Point(1205, 14);
+            this.buttonToReportWindow.Location = new System.Drawing.Point(1065, 14);
             this.buttonToReportWindow.Margin = new System.Windows.Forms.Padding(3, 14, 3, 14);
             this.buttonToReportWindow.Name = "buttonToReportWindow";
-            this.buttonToReportWindow.Size = new System.Drawing.Size(110, 40);
+            this.buttonToReportWindow.Size = new System.Drawing.Size(140, 40);
             this.buttonToReportWindow.TabIndex = 8;
             this.buttonToReportWindow.Text = "Báo cáo";
             this.buttonToReportWindow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonToReportWindow.UseVisualStyleBackColor = true;
-            this.buttonToReportWindow.Click += new System.EventHandler(this.buttonToReportWindow_Click);
             // 
-            // panelMain
+            // UserControlHeader
             // 
-            this.panelMain.AutoScroll = true;
-            this.panelMain.BackColor = System.Drawing.SystemColors.Window;
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 136);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(0);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1427, 662);
-            this.panelMain.TabIndex = 2;
-            // 
-            // SumaryWindow
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1427, 798);
-            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.flowLayoutPanelFunctions);
             this.Controls.Add(this.flowLayoutPanelHeader);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(830, 600);
-            this.Name = "SumaryWindow";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Mobile Manager";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.SumaryWindow_Load);
-            this.Resize += new System.EventHandler(this.SumaryWindow_Resize);
+            this.MaximumSize = new System.Drawing.Size(-1, 136);
+            this.MinimumSize = new System.Drawing.Size(1325, 136);
+            this.Name = "UserControlHeader";
+            this.Size = new System.Drawing.Size(1325, 136);
             this.flowLayoutPanelHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.flowLayoutPanelSystem.ResumeLayout(false);
             this.flowLayoutPanelFunctions.ResumeLayout(false);
-            this.flowLayoutPanelFunctions.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -390,21 +339,19 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelSystem;
         private System.Windows.Forms.Button buttonToAccountWindow;
         private System.Windows.Forms.Label labelShowUserName;
-        private System.Windows.Forms.Button buttonToSettingWindow;
-        private System.Windows.Forms.Button buttonToSuportWindow;
-        private System.Windows.Forms.Label labelForSuport;
         private System.Windows.Forms.Label labelForSetting;
+        private System.Windows.Forms.Button buttonToSettingWindow;
+        private System.Windows.Forms.Label labelForSuport;
+        private System.Windows.Forms.Button buttonToSuportWindow;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelFunctions;
+        private System.Windows.Forms.Button buttonToSumarylWindow;
         private System.Windows.Forms.Button buttonToCustomerManagementWindow;
-        private System.Windows.Forms.Button buttonToInvoiceManagementWindow;
-        private System.Windows.Forms.Button buttonToSalesManagementWindow;
+        private System.Windows.Forms.Button buttonToBillManagementWindow;
+        private System.Windows.Forms.Button buttonToSellManagementWindow;
         private System.Windows.Forms.Button buttonToProductManagementWindow;
         private System.Windows.Forms.Button buttonToImportExportManagementWindow;
         private System.Windows.Forms.Button buttonToSupplierManagementWindow;
         private System.Windows.Forms.Button buttonToPromotionManagementWindow;
-        private System.Windows.Forms.Button buttonToSumarylWindow;
         private System.Windows.Forms.Button buttonToReportWindow;
-        private System.Windows.Forms.Panel panelMain;
     }
 }
-
