@@ -43,9 +43,9 @@
             this.textBoxGetKeyWordSearch = new System.Windows.Forms.TextBox();
             this.buttonSearchProduct = new System.Windows.Forms.Button();
             this.flowLayoutPanelProductList = new System.Windows.Forms.FlowLayoutPanel();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.ProductItemsPrimary = new MobileStoreManagement.UserControlProductItems();
             this.userControlProductItems2 = new MobileStoreManagement.UserControlProductItems();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.flowLayoutPanelLeft.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -79,49 +79,43 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.checkedListBox1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 76);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 232);
+            this.groupBox1.Size = new System.Drawing.Size(200, 273);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Loại hàng";
             // 
             // checkedListBox1
             // 
+            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Điện thoại",
-            "Sạc",
-            "Tai nghe",
-            "Phụ kiện"});
-            this.checkedListBox1.Location = new System.Drawing.Point(10, 45);
+            this.checkedListBox1.Location = new System.Drawing.Point(9, 45);
             this.checkedListBox1.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(176, 157);
+            this.checkedListBox1.Size = new System.Drawing.Size(176, 213);
             this.checkedListBox1.TabIndex = 7;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.checkedListBox2);
-            this.groupBox2.Location = new System.Drawing.Point(3, 314);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(3, 355);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 223);
+            this.groupBox2.Size = new System.Drawing.Size(200, 315);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hãng sản xuất";
             // 
             // checkedListBox2
             // 
+            this.checkedListBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
-            "Apple",
-            "SamSung",
-            "Oppo",
-            "Vivo"});
             this.checkedListBox2.Location = new System.Drawing.Point(9, 38);
             this.checkedListBox2.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(176, 157);
+            this.checkedListBox2.Size = new System.Drawing.Size(176, 251);
             this.checkedListBox2.TabIndex = 8;
             // 
             // flowLayoutPanel2
@@ -144,9 +138,9 @@
             this.flowLayoutPanel3.Controls.Add(this.buttonExportFile);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(674, 3);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(690, 3);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(486, 70);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(470, 70);
             this.flowLayoutPanel3.TabIndex = 3;
             this.flowLayoutPanel3.WrapContents = false;
             // 
@@ -154,10 +148,10 @@
             // 
             this.buttonAddNewManufacturer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAddNewManufacturer.Image = global::MobileStoreManagement.Properties.Resources.smartphone;
-            this.buttonAddNewManufacturer.Location = new System.Drawing.Point(308, 11);
+            this.buttonAddNewManufacturer.Location = new System.Drawing.Point(327, 11);
             this.buttonAddNewManufacturer.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.buttonAddNewManufacturer.Name = "buttonAddNewManufacturer";
-            this.buttonAddNewManufacturer.Size = new System.Drawing.Size(166, 48);
+            this.buttonAddNewManufacturer.Size = new System.Drawing.Size(131, 48);
             this.buttonAddNewManufacturer.TabIndex = 0;
             this.buttonAddNewManufacturer.Text = "Thêm hãng sản xuất";
             this.buttonAddNewManufacturer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -170,7 +164,7 @@
             this.buttonAddNewProduct.Location = new System.Drawing.Point(136, 11);
             this.buttonAddNewProduct.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.buttonAddNewProduct.Name = "buttonAddNewProduct";
-            this.buttonAddNewProduct.Size = new System.Drawing.Size(148, 48);
+            this.buttonAddNewProduct.Size = new System.Drawing.Size(167, 48);
             this.buttonAddNewProduct.TabIndex = 1;
             this.buttonAddNewProduct.Text = "Thêm sản phẩm";
             this.buttonAddNewProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -195,7 +189,7 @@
             this.flowLayoutPanel1.Controls.Add(this.textBoxGetKeyWordSearch);
             this.flowLayoutPanel1.Controls.Add(this.buttonSearchProduct);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(254, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(270, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(414, 70);
             this.flowLayoutPanel1.TabIndex = 5;
