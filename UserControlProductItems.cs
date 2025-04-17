@@ -64,5 +64,10 @@ namespace MobileStoreManagement
             buttonDeleteProduct.Hide();
         }
 
+        private void buttonUpdateProduct_Click(object sender, EventArgs e)
+        {
+            FormProductDetails formPproductDetails = new FormProductDetails();
+            formPproductDetails.ShowDialog();
+        }
     }
 }
