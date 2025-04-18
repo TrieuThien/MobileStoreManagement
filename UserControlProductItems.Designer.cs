@@ -30,15 +30,15 @@
         {
             this.labelProductName = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBoxProductImage = new System.Windows.Forms.PictureBox();
+            this.labelProductStatus = new System.Windows.Forms.Label();
             this.labelProductSellingPrice = new System.Windows.Forms.Label();
             this.labelProductCapitalPrice = new System.Windows.Forms.Label();
             this.labelOrderFromSuplier = new System.Windows.Forms.Label();
             this.labelRemaining = new System.Windows.Forms.Label();
             this.labelOrderFromCustomer = new System.Windows.Forms.Label();
+            this.pictureBoxProductImage = new System.Windows.Forms.PictureBox();
             this.buttonUpdateProduct = new System.Windows.Forms.Button();
             this.buttonDeleteProduct = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductImage)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.pictureBoxProductImage);
             this.flowLayoutPanel1.Controls.Add(this.labelProductName);
-            this.flowLayoutPanel1.Controls.Add(this.label1);
+            this.flowLayoutPanel1.Controls.Add(this.labelProductStatus);
             this.flowLayoutPanel1.Controls.Add(this.labelProductSellingPrice);
             this.flowLayoutPanel1.Controls.Add(this.labelProductCapitalPrice);
             this.flowLayoutPanel1.Controls.Add(this.labelOrderFromSuplier);
@@ -74,16 +74,14 @@
             this.flowLayoutPanel1.TabIndex = 2;
             this.flowLayoutPanel1.WrapContents = false;
             // 
-            // pictureBoxProductImage
+            // labelProductStatus
             // 
-            this.pictureBoxProductImage.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxProductImage.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxProductImage.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBoxProductImage.Name = "pictureBoxProductImage";
-            this.pictureBoxProductImage.Size = new System.Drawing.Size(159, 100);
-            this.pictureBoxProductImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxProductImage.TabIndex = 1;
-            this.pictureBoxProductImage.TabStop = false;
+            this.labelProductStatus.Location = new System.Drawing.Point(362, 0);
+            this.labelProductStatus.Name = "labelProductStatus";
+            this.labelProductStatus.Size = new System.Drawing.Size(150, 100);
+            this.labelProductStatus.TabIndex = 9;
+            this.labelProductStatus.Text = "Tình trạng sản phẩm";
+            this.labelProductStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelProductSellingPrice
             // 
@@ -135,6 +133,17 @@
             this.labelOrderFromCustomer.Text = "Khách hàng đặt";
             this.labelOrderFromCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBoxProductImage
+            // 
+            this.pictureBoxProductImage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxProductImage.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxProductImage.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBoxProductImage.Name = "pictureBoxProductImage";
+            this.pictureBoxProductImage.Size = new System.Drawing.Size(159, 100);
+            this.pictureBoxProductImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxProductImage.TabIndex = 1;
+            this.pictureBoxProductImage.TabStop = false;
+            // 
             // buttonUpdateProduct
             // 
             this.buttonUpdateProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -161,15 +170,7 @@
             this.buttonDeleteProduct.Text = "Xóa";
             this.buttonDeleteProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDeleteProduct.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(362, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 100);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Tình trạng sản phẩm";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.buttonDeleteProduct.Click += new System.EventHandler(this.buttonDeleteProduct_Click);
             // 
             // UserControlProductItems
             // 
@@ -177,7 +178,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flowLayoutPanel1);
             this.MaximumSize = new System.Drawing.Size(0, 100);
-            this.MinimumSize = new System.Drawing.Size(1500, 100);
+            this.MinimumSize = new System.Drawing.Size(1600, 100);
             this.Name = "UserControlProductItems";
             this.Size = new System.Drawing.Size(1600, 100);
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -198,6 +199,6 @@
         private System.Windows.Forms.Label labelOrderFromCustomer;
         private System.Windows.Forms.Button buttonUpdateProduct;
         private System.Windows.Forms.Button buttonDeleteProduct;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelProductStatus;
     }
 }
