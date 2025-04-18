@@ -62,7 +62,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBrandCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBrandCategory.Designer.cs">
+      <DependentUpon>FormBrandCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImageHandle.cs" />
+    <Compile Include="FormProductDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductDetails.Designer.cs">
+      <DependentUpon>FormProductDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SumaryWindow.cs">
@@ -137,6 +149,12 @@
     <Compile Include="UserControlSupplierManagement.Designer.cs">
       <DependentUpon>UserControlSupplierManagement.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormBrandCategory.resx">
+      <DependentUpon>FormBrandCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductDetails.resx">
+      <DependentUpon>FormProductDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -288,6 +306,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-store.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

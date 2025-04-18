@@ -12,46 +12,113 @@ namespace MobileStoreManagement
 {
     public partial class UserControlProductItems : UserControl
     {
-        public UserControlProductItems()
+        string productId;
+        string productName;
+        decimal productPrice;
+        decimal productCapitalPrice;
+        int productQuantityOrderFromSupplier;
+        int productQuantityOrderFromCustomer;
+        int productQuantityRemaining;
+
+        public UserControlProductItems(bool isSetup)
         {
             InitializeComponent();
+            if (isSetup)
+            {
+                hideButtonUpdate();
+                hideButtonDelete();   
+            }
         }
+        public UserControlProductItems(string productId, string productName, decimal productPrice, decimal productCapitalPrice, int productQuantityOrderFromSupplier, int productQuantityOrderFromCustomer, int productQuantityRemaining)
+        {
+            InitializeComponent();
+            this.productId = productId;
+            this.productName = productName;
+            this.productPrice = productPrice;
+            this.productCapitalPrice = productCapitalPrice;
+            this.productQuantityOrderFromSupplier = productQuantityOrderFromSupplier;
+            this.productQuantityOrderFromCustomer = productQuantityOrderFromCustomer;
+            this.productQuantityRemaining = productQuantityRemaining;
+
+            this.setProductName();
+            this.setProductSellingPrice();
+            this.setProductCapitalPrice();
+            this.setQuantityOrderFromSupplier();
+            this.setQuantityOrderFromCustomer();
+            this.setQuantityRemaining();
+        }
+
+        private string getProductId()
+        {
+            return this.productId;
+        }
+
+        private string getProductName()
+        {
+            return this.productName;
+        }
+
+        private decimal getProductPrice()
+        {
+            return this.productPrice;
+        }
+
+        private decimal getProductCapitalPrice()
+        {
+            return this.productCapitalPrice;
+        }
+
+        private int getProductQuantityOrderFromSupplier()
+        {
+            return this.productQuantityOrderFromSupplier;
+        }
+
+        private int getProductQuantityOrderFromCustomer()
+        {
+            return this.productQuantityOrderFromCustomer;
+        }
+
+        private int getProductQuantityRemaining()
+        {
+            return this.productQuantityRemaining;
+        }
+
 
         internal void setPicture(Image image)
         {
             pictureBoxProductImage.Image = image;
         }
 
-        internal void setProductName(string name)
+        internal void setProductName()
         {
-            labelProductName.Text = name;
+            labelProductName.Text = this.productName;
         }
 
-        internal void setProductSellingPrice(decimal price)
+        internal void setProductSellingPrice()
         {
-            string res = string.Format("{0:#,##0} VND", price);
+            string res = string.Format("{0:#,##0} VND", this.productPrice);
             labelProductSellingPrice.Text = res;
         }
 
-        internal void setProductCapitalPrice(decimal price) 
+        internal void setProductCapitalPrice() 
         {
-            string res = string.Format("{0:#,##0} VND", price);
+            string res = string.Format("{0:#,##0} VND", this.productCapitalPrice);
             labelProductCapitalPrice.Text = res;
          }
 
-        internal void setQuantityOrderFromSupplier(int quantity)
+        internal void setQuantityOrderFromSupplier()
         {
-            labelOrderFromSuplier.Text = quantity.ToString();
+            labelOrderFromSuplier.Text = this.productQuantityOrderFromSupplier.ToString();
         }
 
-        internal void setQuantityOrderFromCustomer(int quantity)
+        internal void setQuantityOrderFromCustomer()
         {
-            labelOrderFromCustomer.Text = quantity.ToString();
+            labelOrderFromCustomer.Text = this.productQuantityOrderFromCustomer.ToString();
         }
 
-        internal void setQuantityRemaining(int quantity)
+        internal void setQuantityRemaining()
         {
-            labelRemaining.Text = quantity.ToString();
+            labelRemaining.Text = this.productQuantityRemaining.ToString();
         }
 
         internal void hideButtonUpdate()
@@ -64,5 +131,17 @@ namespace MobileStoreManagement
             buttonDeleteProduct.Hide();
         }
 
+        private void buttonUpdateProduct_Click(object sender, EventArgs e)
+        {
+            FormProductDetails formProductDetails = new FormProductDetails(productId, productName, productPrice);
+            
+            formProductDetails.ShowDialog();
+        }
+
+        private void buttonDeleteProduct_Click(object sender, EventArgs e)
+        {
+            string message = "Mã sản phẩm: " + getProductId() + "\nTên sản phẩm: " + getProductName();
+            MessageBox.Show(message, "Xác nhận xóa sản phẩm", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+        }
     }
 }
