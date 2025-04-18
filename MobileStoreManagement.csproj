@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAddPromoution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddPromoution.Designer.cs">
+      <DependentUpon>FormAddPromoution.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBrandCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,12 @@
     <Compile Include="UserControlProductManagement.Designer.cs">
       <DependentUpon>UserControlProductManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlPromoutionItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPromoutionItems.Designer.cs">
+      <DependentUpon>UserControlPromoutionItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlPromoutionManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,6 +161,9 @@
     <Compile Include="UserControlSupplierManagement.Designer.cs">
       <DependentUpon>UserControlSupplierManagement.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormAddPromoution.resx">
+      <DependentUpon>FormAddPromoution.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBrandCategory.resx">
       <DependentUpon>FormBrandCategory.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlProductManagement.resx">
       <DependentUpon>UserControlProductManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPromoutionItems.resx">
+      <DependentUpon>UserControlPromoutionItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlPromoutionManagement.resx">
       <DependentUpon>UserControlPromoutionManagement.cs</DependentUpon>
@@ -312,6 +330,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\online-store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deactivate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\activate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\activate1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deactivate1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

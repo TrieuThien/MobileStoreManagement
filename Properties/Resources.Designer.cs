@@ -73,6 +73,16 @@ namespace MobileStoreManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap activate {
+            get {
+                object obj = ResourceManager.GetObject("activate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bill_icon {
             get {
                 object obj = ResourceManager.GetObject("bill-icon", resourceCulture);
@@ -96,6 +106,16 @@ namespace MobileStoreManagement.Properties {
         internal static System.Drawing.Bitmap customer_icon {
             get {
                 object obj = ResourceManager.GetObject("customer-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap deactivate {
+            get {
+                object obj = ResourceManager.GetObject("deactivate", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

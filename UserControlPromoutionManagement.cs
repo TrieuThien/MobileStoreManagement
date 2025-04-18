@@ -16,5 +16,11 @@ namespace MobileStoreManagement
         {
             InitializeComponent();
         }
+
+        private void buttonAddPromoution_Click(object sender, EventArgs e)
+        {
+            FormAddPromoution formAddPromoution = new FormAddPromoution();
+            formAddPromoution.ShowDialog(); 
+        }
     }
 }
