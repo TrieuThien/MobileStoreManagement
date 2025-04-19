@@ -38,12 +38,11 @@
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.labelSearch = new System.Windows.Forms.Label();
             this.textBoxGetKeyWordSearch = new System.Windows.Forms.TextBox();
+            this.buttonSearchPromoution = new System.Windows.Forms.Button();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonAddPromoution = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanelListPromoution = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonAddPromoution = new System.Windows.Forms.Button();
-            this.buttonSearchPromoution = new System.Windows.Forms.Button();
-            this.userControlPromoutionItems1 = new MobileStoreManagement.UserControlPromoutionItems();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
@@ -51,7 +50,6 @@
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanelListPromoution.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelPromoution
@@ -170,6 +168,19 @@
             this.textBoxGetKeyWordSearch.Size = new System.Drawing.Size(280, 22);
             this.textBoxGetKeyWordSearch.TabIndex = 1;
             // 
+            // buttonSearchPromoution
+            // 
+            this.buttonSearchPromoution.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSearchPromoution.Image = global::MobileStoreManagement.Properties.Resources.search;
+            this.buttonSearchPromoution.Location = new System.Drawing.Point(290, 12);
+            this.buttonSearchPromoution.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.buttonSearchPromoution.Name = "buttonSearchPromoution";
+            this.buttonSearchPromoution.Size = new System.Drawing.Size(111, 48);
+            this.buttonSearchPromoution.TabIndex = 2;
+            this.buttonSearchPromoution.Text = "Tìm kiếm";
+            this.buttonSearchPromoution.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonSearchPromoution.UseVisualStyleBackColor = true;
+            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.AutoSize = true;
@@ -182,6 +193,20 @@
             this.flowLayoutPanel3.Size = new System.Drawing.Size(191, 72);
             this.flowLayoutPanel3.TabIndex = 3;
             this.flowLayoutPanel3.WrapContents = false;
+            // 
+            // buttonAddPromoution
+            // 
+            this.buttonAddPromoution.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAddPromoution.Image = global::MobileStoreManagement.Properties.Resources.plus;
+            this.buttonAddPromoution.Location = new System.Drawing.Point(12, 11);
+            this.buttonAddPromoution.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.buttonAddPromoution.Name = "buttonAddPromoution";
+            this.buttonAddPromoution.Size = new System.Drawing.Size(167, 48);
+            this.buttonAddPromoution.TabIndex = 1;
+            this.buttonAddPromoution.Text = "Thêm khuyến mãi";
+            this.buttonAddPromoution.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAddPromoution.UseVisualStyleBackColor = true;
+            this.buttonAddPromoution.Click += new System.EventHandler(this.buttonAddPromoution_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -199,7 +224,6 @@
             // 
             this.flowLayoutPanelListPromoution.AutoScroll = true;
             this.flowLayoutPanelListPromoution.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanelListPromoution.Controls.Add(this.userControlPromoutionItems1);
             this.flowLayoutPanelListPromoution.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelListPromoution.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanelListPromoution.Location = new System.Drawing.Point(200, 72);
@@ -207,41 +231,6 @@
             this.flowLayoutPanelListPromoution.Size = new System.Drawing.Size(1650, 628);
             this.flowLayoutPanelListPromoution.TabIndex = 17;
             this.flowLayoutPanelListPromoution.WrapContents = false;
-            // 
-            // buttonAddPromoution
-            // 
-            this.buttonAddPromoution.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonAddPromoution.Image = global::MobileStoreManagement.Properties.Resources.plus;
-            this.buttonAddPromoution.Location = new System.Drawing.Point(12, 11);
-            this.buttonAddPromoution.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
-            this.buttonAddPromoution.Name = "buttonAddPromoution";
-            this.buttonAddPromoution.Size = new System.Drawing.Size(167, 48);
-            this.buttonAddPromoution.TabIndex = 1;
-            this.buttonAddPromoution.Text = "Thêm khuyến mãi";
-            this.buttonAddPromoution.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonAddPromoution.UseVisualStyleBackColor = true;
-            this.buttonAddPromoution.Click += new System.EventHandler(this.buttonAddPromoution_Click);
-            // 
-            // buttonSearchPromoution
-            // 
-            this.buttonSearchPromoution.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonSearchPromoution.Image = global::MobileStoreManagement.Properties.Resources.search;
-            this.buttonSearchPromoution.Location = new System.Drawing.Point(290, 12);
-            this.buttonSearchPromoution.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
-            this.buttonSearchPromoution.Name = "buttonSearchPromoution";
-            this.buttonSearchPromoution.Size = new System.Drawing.Size(111, 48);
-            this.buttonSearchPromoution.TabIndex = 2;
-            this.buttonSearchPromoution.Text = "Tìm kiếm";
-            this.buttonSearchPromoution.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonSearchPromoution.UseVisualStyleBackColor = true;
-            // 
-            // userControlPromoutionItems1
-            // 
-            this.userControlPromoutionItems1.Location = new System.Drawing.Point(3, 3);
-            this.userControlPromoutionItems1.MinimumSize = new System.Drawing.Size(1600, 100);
-            this.userControlPromoutionItems1.Name = "userControlPromoutionItems1";
-            this.userControlPromoutionItems1.Size = new System.Drawing.Size(1600, 100);
-            this.userControlPromoutionItems1.TabIndex = 0;
             // 
             // UserControlPromoutionManagement
             // 
@@ -253,6 +242,7 @@
             this.MinimumSize = new System.Drawing.Size(830, 700);
             this.Name = "UserControlPromoutionManagement";
             this.Size = new System.Drawing.Size(1850, 700);
+            this.Load += new System.EventHandler(this.UserControlPromoutionManagement_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.flowLayoutPanel5.ResumeLayout(false);
@@ -262,7 +252,6 @@
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            this.flowLayoutPanelListPromoution.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -284,6 +273,5 @@
         private System.Windows.Forms.Button buttonAddPromoution;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelListPromoution;
-        private UserControlPromoutionItems userControlPromoutionItems1;
     }
 }

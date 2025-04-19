@@ -16,6 +16,16 @@ namespace MobileStoreManagement
         {
             InitializeComponent();
         }
+        public UserControlPromoutionItems(bool isSetUp)
+        {
+            InitializeComponent();
+            if (isSetUp)
+            {
+                buttonDeactivePromoution.Hide();
+                buttonActivePromoution.Hide();
+            }
+        }
+
 
         internal void setPromoutionName(string name)
         {

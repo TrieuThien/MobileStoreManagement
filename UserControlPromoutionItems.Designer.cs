@@ -68,7 +68,7 @@
             this.labelPromoutionName.Size = new System.Drawing.Size(200, 100);
             this.labelPromoutionName.TabIndex = 0;
             this.labelPromoutionName.Text = "Tên khuyến mãi";
-            this.labelPromoutionName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelPromoutionName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelPromotionDes
             // 
@@ -77,7 +77,7 @@
             this.labelPromotionDes.Size = new System.Drawing.Size(200, 100);
             this.labelPromotionDes.TabIndex = 1;
             this.labelPromotionDes.Text = "Mô tả";
-            this.labelPromotionDes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelPromotionDes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelFromDate
             // 
@@ -86,7 +86,7 @@
             this.labelFromDate.Size = new System.Drawing.Size(200, 100);
             this.labelFromDate.TabIndex = 2;
             this.labelFromDate.Text = "Ngày bắt đầu";
-            this.labelFromDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelFromDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelToDate
             // 
@@ -95,7 +95,7 @@
             this.labelToDate.Size = new System.Drawing.Size(200, 100);
             this.labelToDate.TabIndex = 3;
             this.labelToDate.Text = "Ngày kết thúc";
-            this.labelToDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelToDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelForm
             // 
@@ -104,7 +104,7 @@
             this.labelForm.Size = new System.Drawing.Size(200, 100);
             this.labelForm.TabIndex = 4;
             this.labelForm.Text = "Hình thức";
-            this.labelForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelForm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelStatus
             // 

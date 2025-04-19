@@ -22,5 +22,18 @@ namespace MobileStoreManagement
             FormAddPromoution formAddPromoution = new FormAddPromoution();
             formAddPromoution.ShowDialog(); 
         }
+
+        private void UserControlPromoutionManagement_Load(object sender, EventArgs e)
+        {
+            UserControlPromoutionItems ucPromoutionItemHeader = new UserControlPromoutionItems(isSetUp: true);
+            flowLayoutPanelListPromoution.Controls.Add(ucPromoutionItemHeader);
+
+            // Add data
+            for (int i = 0; i < 10; i++)
+            {
+                UserControlPromoutionItems promoutionItem = new UserControlPromoutionItems();
+                flowLayoutPanelListPromoution.Controls.Add(promoutionItem);
+            }
+        }
     }
 }
