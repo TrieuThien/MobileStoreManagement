@@ -111,6 +111,24 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImportExport\UserControlImoprtExportItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportExport\UserControlImoprtExportItems.Designer.cs">
+      <DependentUpon>UserControlImoprtExportItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\UserControlImportExportHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportExport\UserControlImportExportHeader.Designer.cs">
+      <DependentUpon>UserControlImportExportHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\UserControlImportExportProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportExport\UserControlImportExportProduct.Designer.cs">
+      <DependentUpon>UserControlImportExportProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -135,10 +153,10 @@
     <Compile Include="UserControlHeader.Designer.cs">
       <DependentUpon>UserControlHeader.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlImportExportManagementcs.cs">
+    <Compile Include="ImportExport\UserControlImportExportManagementcs.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlImportExportManagementcs.Designer.cs">
+    <Compile Include="ImportExport\UserControlImportExportManagementcs.Designer.cs">
       <DependentUpon>UserControlImportExportManagementcs.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlInvoiceManagement.cs">
@@ -219,6 +237,15 @@
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\UserControlImoprtExportItems.resx">
+      <DependentUpon>UserControlImoprtExportItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\UserControlImportExportHeader.resx">
+      <DependentUpon>UserControlImportExportHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\UserControlImportExportProduct.resx">
+      <DependentUpon>UserControlImportExportProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -233,7 +260,7 @@
     <EmbeddedResource Include="UserControlHeader.resx">
       <DependentUpon>UserControlHeader.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlImportExportManagementcs.resx">
+    <EmbeddedResource Include="ImportExport\UserControlImportExportManagementcs.resx">
       <DependentUpon>UserControlImportExportManagementcs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlInvoiceManagement.resx">
@@ -409,6 +436,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reset-password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\road.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-on-delivery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delivery-box.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
