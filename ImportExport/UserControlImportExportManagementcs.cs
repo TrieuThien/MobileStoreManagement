@@ -39,6 +39,8 @@ namespace MobileStoreManagement
             UserControlImportExportProduct layout = new UserControlImportExportProduct();
             layout.SetLabelFunctionName("Xuất hàng");
             LoadUserControl(layout);
+
+            // Kiểm tra label để phân biệt chức năng
         }
     }
 }
