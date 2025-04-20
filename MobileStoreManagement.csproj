@@ -62,6 +62,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountDasboard\FormAccountDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountDasboard\FormAccountDashboard.Designer.cs">
+      <DependentUpon>FormAccountDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountDasboard\UserControlChangeLanguage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AccountDasboard\UserControlChangeLanguage.Designer.cs">
+      <DependentUpon>UserControlChangeLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountDasboard\UserControlPersionalInfor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AccountDasboard\UserControlPersionalInfor.Designer.cs">
+      <DependentUpon>UserControlPersionalInfor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddPromoution.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +195,15 @@
     <Compile Include="UserControlSupplierManagement.Designer.cs">
       <DependentUpon>UserControlSupplierManagement.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AccountDasboard\FormAccountDashboard.resx">
+      <DependentUpon>FormAccountDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountDasboard\UserControlChangeLanguage.resx">
+      <DependentUpon>UserControlChangeLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountDasboard\UserControlPersionalInfor.resx">
+      <DependentUpon>UserControlPersionalInfor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddPromoution.resx">
       <DependentUpon>FormAddPromoution.cs</DependentUpon>
     </EmbeddedResource>
