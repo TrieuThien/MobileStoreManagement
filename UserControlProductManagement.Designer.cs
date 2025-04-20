@@ -36,15 +36,15 @@
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonAddNewManufacturer = new System.Windows.Forms.Button();
+            this.buttonAddNewProduct = new System.Windows.Forms.Button();
+            this.buttonExportFile = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.labelSearch = new System.Windows.Forms.Label();
             this.textBoxGetKeyWordSearch = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanelProductList = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonAddNewManufacturer = new System.Windows.Forms.Button();
-            this.buttonAddNewProduct = new System.Windows.Forms.Button();
-            this.buttonExportFile = new System.Windows.Forms.Button();
             this.buttonSearchProduct = new System.Windows.Forms.Button();
+            this.flowLayoutPanelProductList = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanelLeft.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -144,6 +144,47 @@
             this.flowLayoutPanel3.TabIndex = 3;
             this.flowLayoutPanel3.WrapContents = false;
             // 
+            // buttonAddNewManufacturer
+            // 
+            this.buttonAddNewManufacturer.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAddNewManufacturer.Image = global::MobileStoreManagement.Properties.Resources.smartphone;
+            this.buttonAddNewManufacturer.Location = new System.Drawing.Point(327, 11);
+            this.buttonAddNewManufacturer.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.buttonAddNewManufacturer.Name = "buttonAddNewManufacturer";
+            this.buttonAddNewManufacturer.Size = new System.Drawing.Size(131, 48);
+            this.buttonAddNewManufacturer.TabIndex = 0;
+            this.buttonAddNewManufacturer.Text = "Thêm hãng sản xuất";
+            this.buttonAddNewManufacturer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAddNewManufacturer.UseVisualStyleBackColor = true;
+            this.buttonAddNewManufacturer.Click += new System.EventHandler(this.buttonAddNewManufacturer_Click);
+            // 
+            // buttonAddNewProduct
+            // 
+            this.buttonAddNewProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAddNewProduct.Image = global::MobileStoreManagement.Properties.Resources.plus;
+            this.buttonAddNewProduct.Location = new System.Drawing.Point(136, 11);
+            this.buttonAddNewProduct.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.buttonAddNewProduct.Name = "buttonAddNewProduct";
+            this.buttonAddNewProduct.Size = new System.Drawing.Size(167, 48);
+            this.buttonAddNewProduct.TabIndex = 1;
+            this.buttonAddNewProduct.Text = "Thêm sản phẩm";
+            this.buttonAddNewProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAddNewProduct.UseVisualStyleBackColor = true;
+            this.buttonAddNewProduct.Click += new System.EventHandler(this.buttonAddNewProduct_Click);
+            // 
+            // buttonExportFile
+            // 
+            this.buttonExportFile.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonExportFile.Image = global::MobileStoreManagement.Properties.Resources.export;
+            this.buttonExportFile.Location = new System.Drawing.Point(12, 11);
+            this.buttonExportFile.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.buttonExportFile.Name = "buttonExportFile";
+            this.buttonExportFile.Size = new System.Drawing.Size(100, 48);
+            this.buttonExportFile.TabIndex = 2;
+            this.buttonExportFile.Text = "Xuất file";
+            this.buttonExportFile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonExportFile.UseVisualStyleBackColor = true;
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoSize = true;
@@ -188,6 +229,19 @@
             this.textBoxGetKeyWordSearch.Size = new System.Drawing.Size(280, 22);
             this.textBoxGetKeyWordSearch.TabIndex = 1;
             // 
+            // buttonSearchProduct
+            // 
+            this.buttonSearchProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSearchProduct.Image = global::MobileStoreManagement.Properties.Resources.search;
+            this.buttonSearchProduct.Location = new System.Drawing.Point(290, 12);
+            this.buttonSearchProduct.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.buttonSearchProduct.Name = "buttonSearchProduct";
+            this.buttonSearchProduct.Size = new System.Drawing.Size(111, 48);
+            this.buttonSearchProduct.TabIndex = 2;
+            this.buttonSearchProduct.Text = "Tìm kiếm";
+            this.buttonSearchProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonSearchProduct.UseVisualStyleBackColor = true;
+            // 
             // flowLayoutPanelProductList
             // 
             this.flowLayoutPanelProductList.AutoScroll = true;
@@ -201,60 +255,6 @@
             this.flowLayoutPanelProductList.Size = new System.Drawing.Size(1650, 628);
             this.flowLayoutPanelProductList.TabIndex = 3;
             this.flowLayoutPanelProductList.WrapContents = false;
-            // 
-            // buttonAddNewManufacturer
-            // 
-            this.buttonAddNewManufacturer.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonAddNewManufacturer.Image = global::MobileStoreManagement.Properties.Resources.smartphone;
-            this.buttonAddNewManufacturer.Location = new System.Drawing.Point(327, 11);
-            this.buttonAddNewManufacturer.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
-            this.buttonAddNewManufacturer.Name = "buttonAddNewManufacturer";
-            this.buttonAddNewManufacturer.Size = new System.Drawing.Size(131, 48);
-            this.buttonAddNewManufacturer.TabIndex = 0;
-            this.buttonAddNewManufacturer.Text = "Thêm hãng sản xuất";
-            this.buttonAddNewManufacturer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonAddNewManufacturer.UseVisualStyleBackColor = true;
-            this.buttonAddNewManufacturer.Click += new System.EventHandler(this.buttonAddNewManufacturer_Click);
-            // 
-            // buttonAddNewProduct
-            // 
-            this.buttonAddNewProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonAddNewProduct.Image = global::MobileStoreManagement.Properties.Resources.plus;
-            this.buttonAddNewProduct.Location = new System.Drawing.Point(136, 11);
-            this.buttonAddNewProduct.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
-            this.buttonAddNewProduct.Name = "buttonAddNewProduct";
-            this.buttonAddNewProduct.Size = new System.Drawing.Size(167, 48);
-            this.buttonAddNewProduct.TabIndex = 1;
-            this.buttonAddNewProduct.Text = "Thêm sản phẩm";
-            this.buttonAddNewProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonAddNewProduct.UseVisualStyleBackColor = true;
-            this.buttonAddNewProduct.Click += new System.EventHandler(this.buttonAddNewProduct_Click);
-            // 
-            // buttonExportFile
-            // 
-            this.buttonExportFile.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonExportFile.Image = global::MobileStoreManagement.Properties.Resources.export;
-            this.buttonExportFile.Location = new System.Drawing.Point(12, 11);
-            this.buttonExportFile.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
-            this.buttonExportFile.Name = "buttonExportFile";
-            this.buttonExportFile.Size = new System.Drawing.Size(100, 48);
-            this.buttonExportFile.TabIndex = 2;
-            this.buttonExportFile.Text = "Xuất file";
-            this.buttonExportFile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonExportFile.UseVisualStyleBackColor = true;
-            // 
-            // buttonSearchProduct
-            // 
-            this.buttonSearchProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonSearchProduct.Image = global::MobileStoreManagement.Properties.Resources.search;
-            this.buttonSearchProduct.Location = new System.Drawing.Point(290, 12);
-            this.buttonSearchProduct.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
-            this.buttonSearchProduct.Name = "buttonSearchProduct";
-            this.buttonSearchProduct.Size = new System.Drawing.Size(111, 48);
-            this.buttonSearchProduct.TabIndex = 2;
-            this.buttonSearchProduct.Text = "Tìm kiếm";
-            this.buttonSearchProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonSearchProduct.UseVisualStyleBackColor = true;
             // 
             // UserControlProductManagement
             // 
