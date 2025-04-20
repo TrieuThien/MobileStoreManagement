@@ -120,6 +120,7 @@
             this.buttonToAccountWindow.Size = new System.Drawing.Size(32, 32);
             this.buttonToAccountWindow.TabIndex = 0;
             this.buttonToAccountWindow.UseVisualStyleBackColor = false;
+            this.buttonToAccountWindow.Click += new System.EventHandler(this.buttonToAccountWindow_Click);
             // 
             // labelShowUserName
             // 

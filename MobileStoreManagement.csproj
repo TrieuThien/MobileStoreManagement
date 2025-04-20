@@ -62,11 +62,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountDasboard\FormAccountDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountDasboard\FormAccountDashboard.Designer.cs">
+      <DependentUpon>FormAccountDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountDasboard\UserControlChangeLanguage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AccountDasboard\UserControlChangeLanguage.Designer.cs">
+      <DependentUpon>UserControlChangeLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountDasboard\UserControlPersionalInfor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AccountDasboard\UserControlPersionalInfor.Designer.cs">
+      <DependentUpon>UserControlPersionalInfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddPromoution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddPromoution.Designer.cs">
+      <DependentUpon>FormAddPromoution.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBrandCategory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormBrandCategory.Designer.cs">
       <DependentUpon>FormBrandCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegister.Designer.cs">
+      <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="ImageHandle.cs" />
     <Compile Include="FormProductDetails.cs">
@@ -75,8 +105,18 @@
     <Compile Include="FormProductDetails.Designer.cs">
       <DependentUpon>FormProductDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterService.cs" />
+    <Compile Include="FormValidator.cs" />
+    <Compile Include="Session.cs" />
     <Compile Include="SumaryWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +159,12 @@
     <Compile Include="UserControlProductManagement.Designer.cs">
       <DependentUpon>UserControlProductManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlPromoutionItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPromoutionItems.Designer.cs">
+      <DependentUpon>UserControlPromoutionItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlPromoutionManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,11 +195,29 @@
     <Compile Include="UserControlSupplierManagement.Designer.cs">
       <DependentUpon>UserControlSupplierManagement.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AccountDasboard\FormAccountDashboard.resx">
+      <DependentUpon>FormAccountDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountDasboard\UserControlChangeLanguage.resx">
+      <DependentUpon>UserControlChangeLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountDasboard\UserControlPersionalInfor.resx">
+      <DependentUpon>UserControlPersionalInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddPromoution.resx">
+      <DependentUpon>FormAddPromoution.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBrandCategory.resx">
       <DependentUpon>FormBrandCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProductDetails.resx">
       <DependentUpon>FormProductDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegister.resx">
+      <DependentUpon>FormRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -180,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlProductManagement.resx">
       <DependentUpon>UserControlProductManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPromoutionItems.resx">
+      <DependentUpon>UserControlPromoutionItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlPromoutionManagement.resx">
       <DependentUpon>UserControlPromoutionManagement.cs</DependentUpon>
@@ -312,6 +379,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\online-store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deactivate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\activate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\activate1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deactivate1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset-password.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

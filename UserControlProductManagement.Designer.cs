@@ -45,7 +45,6 @@
             this.textBoxGetKeyWordSearch = new System.Windows.Forms.TextBox();
             this.buttonSearchProduct = new System.Windows.Forms.Button();
             this.flowLayoutPanelProductList = new System.Windows.Forms.FlowLayoutPanel();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.flowLayoutPanelLeft.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -53,7 +52,6 @@
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
-            this.flowLayoutPanelProductList.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanelLeft
@@ -257,7 +255,6 @@
             this.flowLayoutPanelProductList.Size = new System.Drawing.Size(1650, 628);
             this.flowLayoutPanelProductList.TabIndex = 3;
             this.flowLayoutPanelProductList.WrapContents = false;
-       
             // 
             // UserControlProductManagement
             // 
@@ -281,7 +278,6 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
-            this.flowLayoutPanelProductList.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,7 +293,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Button buttonAddNewManufacturer;
         private System.Windows.Forms.Button buttonAddNewProduct;
