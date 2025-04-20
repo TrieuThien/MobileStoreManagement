@@ -116,7 +116,6 @@
             this.comboBoxSelectLanguage.Name = "comboBoxSelectLanguage";
             this.comboBoxSelectLanguage.Size = new System.Drawing.Size(273, 24);
             this.comboBoxSelectLanguage.TabIndex = 2;
-            this.comboBoxSelectLanguage.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // UserControlChangeLanguage
             // 

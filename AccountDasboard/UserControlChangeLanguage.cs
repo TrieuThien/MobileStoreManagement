@@ -17,10 +17,6 @@ namespace MobileStoreManagement.AccountDasboard
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonSaveLanguage_Click(object sender, EventArgs e)
         {
