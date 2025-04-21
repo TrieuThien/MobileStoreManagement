@@ -42,5 +42,15 @@ namespace MobileStoreManagement
 
             // Kiểm tra label để phân biệt chức năng
         }
+
+        private void buttonDeliveryNote_Click(object sender, EventArgs e)
+        {
+            LoadUserControl(new UserControlDeliveryInvoice());
+        }
+
+        private void buttonOrderSuplier_Click(object sender, EventArgs e)
+        {
+            LoadUserControl(new UserControlOrderSupplier());
+        }
     }
 }
