@@ -37,7 +37,7 @@ namespace MobileStoreManagement
         private void buttonExportProduct_Click(object sender, EventArgs e)
         {
             UserControlImportExportProduct layout = new UserControlImportExportProduct();
-            layout.SetLabelFunctionName("Xuất hàng");
+            layout.SetLabelFunctionName("Xuất kho");
             LoadUserControl(layout);
 
             // Kiểm tra label để phân biệt chức năng
