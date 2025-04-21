@@ -41,6 +41,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Controls.Add(this.buttonImportProduct);
             this.flowLayoutPanel1.Controls.Add(this.buttonExportProduct);
             this.flowLayoutPanel1.Controls.Add(this.buttonDeliveryNote);
@@ -106,6 +107,7 @@
             this.buttonDeliveryNote.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDeliveryNote.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDeliveryNote.UseVisualStyleBackColor = true;
+            this.buttonDeliveryNote.Click += new System.EventHandler(this.buttonDeliveryNote_Click);
             // 
             // buttonOrderSuplier
             // 
@@ -120,6 +122,7 @@
             this.buttonOrderSuplier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonOrderSuplier.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonOrderSuplier.UseVisualStyleBackColor = true;
+            this.buttonOrderSuplier.Click += new System.EventHandler(this.buttonOrderSuplier_Click);
             // 
             // buttonPaying
             // 

@@ -7,15 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MobileStoreManagement.ImportExport
 {
-    public partial class UserControlImportExportProduct : UserControl
+    public partial class UserControlOrderSupplier : UserControl
     {
-
-        
-        public UserControlImportExportProduct()
+        public UserControlOrderSupplier()
         {
             InitializeComponent();
             labelCurrentDate.Text = DateTime.Now.ToString();
@@ -33,7 +30,7 @@ namespace MobileStoreManagement.ImportExport
 
         private void RemovePlaceholderQuantityPd(object sender, EventArgs e)
         {
-       
+
             if (textBoxGetQuantity.Text == placeholderTextQuantityPd)
             {
                 textBoxGetQuantity.Text = "";
@@ -58,16 +55,8 @@ namespace MobileStoreManagement.ImportExport
                 textBoxGetQuantity.ForeColor = Color.Gray;
             }
         }
-
-        internal void SetLabelFunctionName(string name)
+        private void UserControlOrderSupplier_Load(object sender, EventArgs e)
         {
-            labelFunctionName.Text = name;
-        }
-
-        private void UserControlImportProduct_Load(object sender, EventArgs e)
-        {
-            // Gán placeholder ban đầu
-            
             textBoxGetIdOrNamePd.Text = placeholderTextIdOrNamePd;
             textBoxGetIdOrNamePd.ForeColor = Color.Gray;
 
@@ -80,12 +69,12 @@ namespace MobileStoreManagement.ImportExport
 
             textBoxGetQuantity.Enter += RemovePlaceholderQuantityPd;
             textBoxGetQuantity.Leave += SetPlaceholderQuantityPd;
+            flowLayoutPanelListOrderProduct.Controls.Add(new UserControlProductItemsHeader());
 
-            flowLayoutPanelListProduct.Controls.Add(new UserControlImportExportHeader()); 
-            for (int i = 0; i < 10; i++)
+            // Example: Load data
+            for (int i = 0; i<5 ; i++)
             {
-                UserControlImoprtExportItems item = new UserControlImoprtExportItems();
-                flowLayoutPanelListProduct.Controls.Add(item);
+                flowLayoutPanelListOrderProduct.Controls.Add(new UserControlProductItems());
             }
         }
     }
