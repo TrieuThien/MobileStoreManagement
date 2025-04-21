@@ -7,21 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MobileStoreManagement.ImportExport
 {
-    public partial class UserControlImportExportProduct : UserControl
+    public partial class UserControlDeliveryInvoice : UserControl
     {
-
-        
-        public UserControlImportExportProduct()
+        public UserControlDeliveryInvoice()
         {
             InitializeComponent();
             labelCurrentDate.Text = DateTime.Now.ToString();
         }
+
         string placeholderTextIdOrNamePd = "Nhập mã, tên sản phẩm";
         string placeholderTextQuantityPd = "Số lượng";
+
         private void RemovePlaceholderIdOrNamePd(object sender, EventArgs e)
         {
             if (textBoxGetIdOrNamePd.Text == placeholderTextIdOrNamePd)
@@ -33,7 +32,7 @@ namespace MobileStoreManagement.ImportExport
 
         private void RemovePlaceholderQuantityPd(object sender, EventArgs e)
         {
-       
+
             if (textBoxGetQuantity.Text == placeholderTextQuantityPd)
             {
                 textBoxGetQuantity.Text = "";
@@ -59,15 +58,8 @@ namespace MobileStoreManagement.ImportExport
             }
         }
 
-        internal void SetLabelFunctionName(string name)
+        private void UserControlDeliveryInvoice_Load(object sender, EventArgs e)
         {
-            labelFunctionName.Text = name;
-        }
-
-        private void UserControlImportProduct_Load(object sender, EventArgs e)
-        {
-            // Gán placeholder ban đầu
-            
             textBoxGetIdOrNamePd.Text = placeholderTextIdOrNamePd;
             textBoxGetIdOrNamePd.ForeColor = Color.Gray;
 
@@ -81,11 +73,13 @@ namespace MobileStoreManagement.ImportExport
             textBoxGetQuantity.Enter += RemovePlaceholderQuantityPd;
             textBoxGetQuantity.Leave += SetPlaceholderQuantityPd;
 
-            flowLayoutPanelListProduct.Controls.Add(new UserControlImportExportHeader()); 
+            flowLayoutPanelListDeliveryInvoice.Controls.Add(new UserControlProductItemsHeader());
+            
+            // Example load data
             for (int i = 0; i < 10; i++)
             {
-                UserControlImoprtExportItems item = new UserControlImoprtExportItems();
-                flowLayoutPanelListProduct.Controls.Add(item);
+                flowLayoutPanelListDeliveryInvoice.Controls.Add(new UserControlProductItems());
+
             }
         }
     }

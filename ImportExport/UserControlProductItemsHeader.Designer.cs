@@ -1,6 +1,6 @@
 ﻿namespace MobileStoreManagement.ImportExport
 {
-    partial class UserControlImportExportHeader
+    partial class UserControlProductItemsHeader
     {
         /// <summary> 
         /// Required designer variable.
@@ -32,8 +32,7 @@
             this.labelProductId = new System.Windows.Forms.Label();
             this.labelProductName = new System.Windows.Forms.Label();
             this.labelProductQuantity = new System.Windows.Forms.Label();
-            this.labelCapitalPrice = new System.Windows.Forms.Label();
-            this.labelTotalPrice = new System.Windows.Forms.Label();
+            this.labelNote = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,14 +41,13 @@
             this.flowLayoutPanel1.Controls.Add(this.labelProductId);
             this.flowLayoutPanel1.Controls.Add(this.labelProductName);
             this.flowLayoutPanel1.Controls.Add(this.labelProductQuantity);
-            this.flowLayoutPanel1.Controls.Add(this.labelCapitalPrice);
-            this.flowLayoutPanel1.Controls.Add(this.labelTotalPrice);
+            this.flowLayoutPanel1.Controls.Add(this.labelNote);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(850, 100);
+            this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(800, 100);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(849, 100);
-            this.flowLayoutPanel1.TabIndex = 4;
-            this.flowLayoutPanel1.WrapContents = false;
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(800, 100);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // labelProductId
             // 
@@ -58,7 +56,7 @@
             this.labelProductId.Margin = new System.Windows.Forms.Padding(0);
             this.labelProductId.Name = "labelProductId";
             this.labelProductId.Size = new System.Drawing.Size(200, 100);
-            this.labelProductId.TabIndex = 0;
+            this.labelProductId.TabIndex = 14;
             this.labelProductId.Text = "Mã sản phẩm";
             this.labelProductId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -67,7 +65,7 @@
             this.labelProductName.Location = new System.Drawing.Point(203, 0);
             this.labelProductName.Name = "labelProductName";
             this.labelProductName.Size = new System.Drawing.Size(150, 100);
-            this.labelProductName.TabIndex = 9;
+            this.labelProductName.TabIndex = 17;
             this.labelProductName.Text = "Tên sản phẩm";
             this.labelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -77,38 +75,27 @@
             this.labelProductQuantity.Location = new System.Drawing.Point(359, 0);
             this.labelProductQuantity.Name = "labelProductQuantity";
             this.labelProductQuantity.Size = new System.Drawing.Size(150, 100);
-            this.labelProductQuantity.TabIndex = 2;
+            this.labelProductQuantity.TabIndex = 15;
             this.labelProductQuantity.Text = "Số lượng";
             this.labelProductQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelCapitalPrice
+            // labelNote
             // 
-            this.labelCapitalPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelCapitalPrice.Location = new System.Drawing.Point(515, 0);
-            this.labelCapitalPrice.Name = "labelCapitalPrice";
-            this.labelCapitalPrice.Size = new System.Drawing.Size(150, 100);
-            this.labelCapitalPrice.TabIndex = 5;
-            this.labelCapitalPrice.Text = "Giá nhập";
-            this.labelCapitalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNote.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelNote.Location = new System.Drawing.Point(515, 0);
+            this.labelNote.Name = "labelNote";
+            this.labelNote.Size = new System.Drawing.Size(150, 100);
+            this.labelNote.TabIndex = 16;
+            this.labelNote.Text = "Ghi chú";
+            this.labelNote.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelTotalPrice
-            // 
-            this.labelTotalPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelTotalPrice.Location = new System.Drawing.Point(671, 0);
-            this.labelTotalPrice.Name = "labelTotalPrice";
-            this.labelTotalPrice.Size = new System.Drawing.Size(150, 100);
-            this.labelTotalPrice.TabIndex = 5;
-            this.labelTotalPrice.Text = "Thành tiền";
-            this.labelTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // UserControlImportExportHeader
+            // UserControlDeliveryListHeader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flowLayoutPanel1);
-            this.MinimumSize = new System.Drawing.Size(850, 100);
-            this.Name = "UserControlImportExportHeader";
-            this.Size = new System.Drawing.Size(850, 100);
+            this.Name = "UserControlDeliveryListHeader";
+            this.Size = new System.Drawing.Size(800, 100);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -120,7 +107,6 @@
         private System.Windows.Forms.Label labelProductId;
         private System.Windows.Forms.Label labelProductName;
         private System.Windows.Forms.Label labelProductQuantity;
-        private System.Windows.Forms.Label labelTotalPrice;
-        private System.Windows.Forms.Label labelCapitalPrice;
+        private System.Windows.Forms.Label labelNote;
     }
 }

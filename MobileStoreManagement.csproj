@@ -117,6 +117,36 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImportExport\UserControlDeliveryInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportExport\UserControlDeliveryInvoice.Designer.cs">
+      <DependentUpon>UserControlDeliveryInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\UserControlOrderSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportExport\UserControlOrderSupplier.Designer.cs">
+      <DependentUpon>UserControlOrderSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\UserControlPaymentInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportExport\UserControlPaymentInvoice.Designer.cs">
+      <DependentUpon>UserControlPaymentInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\UserControlProductItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportExport\UserControlProductItems.Designer.cs">
+      <DependentUpon>UserControlProductItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\UserControlProductItemsHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportExport\UserControlProductItemsHeader.Designer.cs">
+      <DependentUpon>UserControlProductItemsHeader.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImportExport\UserControlImoprtExportItems.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -242,6 +272,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\UserControlDeliveryInvoice.resx">
+      <DependentUpon>UserControlDeliveryInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\UserControlOrderSupplier.resx">
+      <DependentUpon>UserControlOrderSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\UserControlPaymentInvoice.resx">
+      <DependentUpon>UserControlPaymentInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\UserControlProductItems.resx">
+      <DependentUpon>UserControlProductItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\UserControlProductItemsHeader.resx">
+      <DependentUpon>UserControlProductItemsHeader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImportExport\UserControlImoprtExportItems.resx">
       <DependentUpon>UserControlImoprtExportItems.cs</DependentUpon>
@@ -479,6 +524,12 @@
   <ItemGroup>
     <None Include="Resources\printer.png" />
 
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\done.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
