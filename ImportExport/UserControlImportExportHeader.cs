@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MobileStoreManagement
+namespace MobileStoreManagement.ImportExport
 {
-    public partial class UserControlImportExportManagementcs : UserControl
+    public partial class UserControlImportExportHeader : UserControl
     {
-        public UserControlImportExportManagementcs()
+        public UserControlImportExportHeader()
         {
             InitializeComponent();
         }
