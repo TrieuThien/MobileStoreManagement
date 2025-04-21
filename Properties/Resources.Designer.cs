@@ -124,9 +124,15 @@ namespace MobileStoreManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap checkout {
-            get {
+        internal static System.Drawing.Bitmap checkout
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("checkout", resourceCulture);
+
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
 
         internal static System.Drawing.Bitmap cost {
             get {
@@ -279,8 +285,7 @@ namespace MobileStoreManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD
-=======
+
         internal static System.Drawing.Bitmap megaphone {
             get {
                 object obj = ResourceManager.GetObject("megaphone", resourceCulture);
@@ -301,7 +306,6 @@ namespace MobileStoreManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
->>>>>>> c155d310d58de756d75c7dd2677fb546123eb388
         internal static System.Drawing.Bitmap online_store {
             get {
                 object obj = ResourceManager.GetObject("online-store", resourceCulture);
