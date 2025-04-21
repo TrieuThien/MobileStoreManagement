@@ -171,10 +171,10 @@
     <Compile Include="UserControlPromoutionManagement.Designer.cs">
       <DependentUpon>UserControlPromoutionManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlReport.cs">
+    <Compile Include="Report\UserControlReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlReport.Designer.cs">
+    <Compile Include="Report\UserControlReport.Designer.cs">
       <DependentUpon>UserControlReport.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlSalesManagementcs.cs">
@@ -251,7 +251,7 @@
     <EmbeddedResource Include="UserControlPromoutionManagement.resx">
       <DependentUpon>UserControlPromoutionManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlReport.resx">
+    <EmbeddedResource Include="Report\UserControlReport.resx">
       <DependentUpon>UserControlReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlSalesManagementcs.resx">
