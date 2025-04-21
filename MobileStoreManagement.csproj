@@ -48,8 +48,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -219,10 +225,10 @@
     <Compile Include="UserControlPromoutionManagement.Designer.cs">
       <DependentUpon>UserControlPromoutionManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlReport.cs">
+    <Compile Include="Report\UserControlReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlReport.Designer.cs">
+    <Compile Include="Report\UserControlReport.Designer.cs">
       <DependentUpon>UserControlReport.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlSalesManagementcs.cs">
@@ -323,7 +329,7 @@
     <EmbeddedResource Include="UserControlPromoutionManagement.resx">
       <DependentUpon>UserControlPromoutionManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlReport.resx">
+    <EmbeddedResource Include="Report\UserControlReport.resx">
       <DependentUpon>UserControlReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlSalesManagementcs.resx">
@@ -483,6 +489,7 @@
     <None Include="Resources\reset-password.png" />
   </ItemGroup>
   <ItemGroup>
+
     <None Include="Resources\download.png" />
   </ItemGroup>
   <ItemGroup>
@@ -502,6 +509,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delivery-box.png" />
+
+    <None Include="Resources\cost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\megaphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\menu.png" />
