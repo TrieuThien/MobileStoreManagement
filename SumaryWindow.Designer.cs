@@ -372,6 +372,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mobile Manager";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SumaryWindow_FormClosing);
             this.Load += new System.EventHandler(this.SumaryWindow_Load);
             this.Resize += new System.EventHandler(this.SumaryWindow_Resize);
             this.flowLayoutPanelHeader.ResumeLayout(false);

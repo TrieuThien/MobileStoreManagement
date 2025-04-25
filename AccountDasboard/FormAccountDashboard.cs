@@ -50,9 +50,10 @@ namespace MobileStoreManagement
             {
                 LoginService.LogOut();
               
-                if (this.Owner != null)
+                if (this.Owner != null && this.Owner is SumaryWindow mainForm)
                 {
-                    this.Owner.Close(); 
+                    mainForm.isLoggingOut = true; 
+                    mainForm.Close();
                 } 
                 this.Close();
             }
