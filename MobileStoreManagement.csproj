@@ -489,7 +489,6 @@
     <None Include="Resources\reset-password.png" />
   </ItemGroup>
   <ItemGroup>
-
     <None Include="Resources\download.png" />
   </ItemGroup>
   <ItemGroup>
@@ -509,7 +508,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delivery-box.png" />
-
     <None Include="Resources\cost.png" />
   </ItemGroup>
   <ItemGroup>
@@ -523,13 +521,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\printer.png" />
-
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\menu.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\done.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\see.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
