@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountDasboard\AccountDashboard.cs" />
     <Compile Include="AccountDasboard\FormAccountDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +87,7 @@
     <Compile Include="AccountDasboard\UserControlPersionalInfor.Designer.cs">
       <DependentUpon>UserControlPersionalInfor.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConnectDatabase.cs" />
     <Compile Include="FormAddPromoution.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -489,7 +491,6 @@
     <None Include="Resources\reset-password.png" />
   </ItemGroup>
   <ItemGroup>
-
     <None Include="Resources\download.png" />
   </ItemGroup>
   <ItemGroup>
@@ -509,7 +510,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delivery-box.png" />
-
     <None Include="Resources\cost.png" />
   </ItemGroup>
   <ItemGroup>
@@ -523,7 +523,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\printer.png" />
-
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\menu.png" />

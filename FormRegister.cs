@@ -17,29 +17,11 @@ namespace MobileStoreManagement
             InitializeComponent();
         }
 
-        private bool IsAllTextBoxesFilled(Control parent)
-        {
-            foreach (Control ctrl in parent.Controls)
-            {
-                if (ctrl is TextBox textBox && string.IsNullOrWhiteSpace(textBox.Text))
-                {
-                    return false;
-                }
-                else if (ctrl.HasChildren)
-                {
-                    if (!IsAllTextBoxesFilled(ctrl))
-                        return false;
-                }
-            }
-            return true;
-        }
-
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            if (!IsAllTextBoxesFilled(this)) 
+            if (!FormValidator.IsAllTextBoxesFilled(this)) 
             { 
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin các trường.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
             else
             {
@@ -50,17 +32,28 @@ namespace MobileStoreManagement
                 string pass = textBoxGetPassword.Text;
                 string confirmPass = textBoxGetPasswordConfirm.Text;
 
-                if (pass.Equals(confirmPass))
+                if (!FormValidator.IsValidPhoneNumber(phoneNumber))
                 {
-                    RegisterService signUpService = new RegisterService();
-                    signUpService.createAccount(fullName, email, phoneNumber, userName, pass);
-                    MessageBox.Show("Tạo tài khoản thành công. Vui lòng đăng nhập lại để sử dụng ứng dụng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    MessageBox.Show("Vui lòng nhập đúng định dạng số điện thoại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    textBoxGetNumberPhone.Focus();
                 }
-                else
+                else if (!FormValidator.IsValidEmail(email)) {
+                    MessageBox.Show("Vui lòng nhập đúng định dạng email.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    textBoxGetEmail.Focus();
+                }
+                else if (!pass.Equals(confirmPass))
                 {
                     MessageBox.Show("Mật khẩu xác nhận không trùng khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textBoxGetPasswordConfirm.Focus();
+                }
+                else
+                {
+                    // Nếu tạo tài khoản thành công thì đóng form
+                    if (RegisterService.IsCreateAccountSuccess(fullName, email, phoneNumber, userName, pass))
+                    {
+                        MessageBox.Show("Tạo tài khoản thành công. Vui lòng đăng nhập lại ứng dụng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                        this.Close();
+                    }
                 }
             }
         }

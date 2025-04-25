@@ -15,6 +15,7 @@ namespace MobileStoreManagement
         public SumaryWindow()
         {
             InitializeComponent();
+            labelShowUserName.Text = Session.username;
         }
 
         private void SumaryWindow_Resize(object sender, EventArgs e)
@@ -116,7 +117,8 @@ namespace MobileStoreManagement
 
         private void buttonToAccountWindow_Click(object sender, EventArgs e)
         {
-            FormAccountDashboard formAccountDashboard = new FormAccountDashboard(); 
+            FormAccountDashboard formAccountDashboard = new FormAccountDashboard();
+            formAccountDashboard.Owner = this;
             formAccountDashboard.ShowDialog();
         }
     }

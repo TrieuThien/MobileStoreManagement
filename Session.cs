@@ -8,8 +8,14 @@ namespace MobileStoreManagement
 {
     internal static class Session
     {
-        public static int UserID { get; set; }
-        public static string Username { get; set; }
+        static Session()
+        {
+            authenticateStatus = false;
+        }
+        internal static int userId { get; set; }
+        internal static string username { get; set; }
+
+        internal static bool authenticateStatus { get; set; }
 
     }
 }
