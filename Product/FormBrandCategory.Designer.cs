@@ -79,7 +79,7 @@
             this.flowLayoutPanel2.Location = new System.Drawing.Point(65, 33);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(110, 87);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(157, 87);
             this.flowLayoutPanel2.TabIndex = 1;
             this.flowLayoutPanel2.WrapContents = false;
             // 
@@ -110,10 +110,10 @@
             this.flowLayoutPanel3.Controls.Add(this.textBoxGetBrandId);
             this.flowLayoutPanel3.Controls.Add(this.textBoxGetBrandName);
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(178, 33);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(222, 33);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(273, 87);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(289, 87);
             this.flowLayoutPanel3.TabIndex = 2;
             this.flowLayoutPanel3.WrapContents = false;
             // 

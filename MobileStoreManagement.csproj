@@ -94,10 +94,10 @@
     <Compile Include="FormAddPromoution.Designer.cs">
       <DependentUpon>FormAddPromoution.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBrandCategory.cs">
+    <Compile Include="Product\FormBrandCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBrandCategory.Designer.cs">
+    <Compile Include="Product\FormBrandCategory.Designer.cs">
       <DependentUpon>FormBrandCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRegister.cs">
@@ -107,10 +107,10 @@
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="ImageHandle.cs" />
-    <Compile Include="FormProductDetails.cs">
+    <Compile Include="Product\FormProductDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProductDetails.Designer.cs">
+    <Compile Include="Product\FormProductDetails.Designer.cs">
       <DependentUpon>FormProductDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
@@ -263,10 +263,10 @@
     <EmbeddedResource Include="FormAddPromoution.resx">
       <DependentUpon>FormAddPromoution.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBrandCategory.resx">
+    <EmbeddedResource Include="Product\FormBrandCategory.resx">
       <DependentUpon>FormBrandCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProductDetails.resx">
+    <EmbeddedResource Include="Product\FormProductDetails.resx">
       <DependentUpon>FormProductDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
