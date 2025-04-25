@@ -203,16 +203,16 @@
     <Compile Include="UserControlInvoiceManagement.Designer.cs">
       <DependentUpon>UserControlInvoiceManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlProductItems.cs">
+    <Compile Include="Product\UserControlProductItems.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlProductItems.Designer.cs">
+    <Compile Include="Product\UserControlProductItems.Designer.cs">
       <DependentUpon>UserControlProductItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlProductManagement.cs">
+    <Compile Include="Product\UserControlProductManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlProductManagement.Designer.cs">
+    <Compile Include="Product\UserControlProductManagement.Designer.cs">
       <DependentUpon>UserControlProductManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlPromoutionItems.cs">
@@ -319,10 +319,10 @@
     <EmbeddedResource Include="UserControlInvoiceManagement.resx">
       <DependentUpon>UserControlInvoiceManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlProductItems.resx">
+    <EmbeddedResource Include="Product\UserControlProductItems.resx">
       <DependentUpon>UserControlProductItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlProductManagement.resx">
+    <EmbeddedResource Include="Product\UserControlProductManagement.resx">
       <DependentUpon>UserControlProductManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlPromoutionItems.resx">
