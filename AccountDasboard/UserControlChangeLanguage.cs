@@ -15,6 +15,7 @@ namespace MobileStoreManagement.AccountDasboard
         public UserControlChangeLanguage()
         {
             InitializeComponent();
+            comboBoxSelectLanguage.SelectedIndex = 0;
         }
 
 

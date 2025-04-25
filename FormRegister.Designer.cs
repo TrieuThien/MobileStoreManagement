@@ -55,7 +55,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxGetPasswordConfirm = new System.Windows.Forms.TextBox();
-            this.buttonLogin = new System.Windows.Forms.Button();
+            this.buttonSignIn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -94,7 +94,7 @@
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel7);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel3);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel4);
-            this.flowLayoutPanel1.Controls.Add(this.buttonLogin);
+            this.flowLayoutPanel1.Controls.Add(this.buttonSignIn);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(137, 257);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -357,16 +357,16 @@
             this.textBoxGetPasswordConfirm.Size = new System.Drawing.Size(237, 22);
             this.textBoxGetPasswordConfirm.TabIndex = 6;
             // 
-            // buttonLogin
+            // buttonSignIn
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(153, 444);
-            this.buttonLogin.Margin = new System.Windows.Forms.Padding(153, 12, 153, 12);
-            this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(120, 48);
-            this.buttonLogin.TabIndex = 7;
-            this.buttonLogin.Text = "Đăng ký";
-            this.buttonLogin.UseVisualStyleBackColor = true;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            this.buttonSignIn.Location = new System.Drawing.Point(153, 444);
+            this.buttonSignIn.Margin = new System.Windows.Forms.Padding(153, 12, 153, 12);
+            this.buttonSignIn.Name = "buttonSignIn";
+            this.buttonSignIn.Size = new System.Drawing.Size(120, 48);
+            this.buttonSignIn.TabIndex = 7;
+            this.buttonSignIn.Text = "Đăng ký";
+            this.buttonSignIn.UseVisualStyleBackColor = true;
+            this.buttonSignIn.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // pictureBox1
             // 
@@ -431,7 +431,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxGetPassword;
-        private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.Button buttonSignIn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label4;

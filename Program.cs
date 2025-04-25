@@ -19,26 +19,20 @@ namespace MobileStoreManagement
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            FormLogin loginForm = new FormLogin();
-
-
-            // Hiển thị form đăng nhập dưới dạng modal
-            if (loginForm.ShowDialog() == DialogResult.OK)
-            {
-                Session.Username = loginForm.userName;
-
-                // Mã người bán UserID được lấy từ bảng NguoiBan
-                //Session.UserID = loginForm.password;
-
-                // Nếu đăng nhập thành công thì mở MainForm
-                loginForm.Close();
-                Application.Run(new SumaryWindow());
-                
-            }
-
-            else
-            {
-                Application.Exit();
+            while (true) {
+                // Hiển thị form đăng nhập dưới dạng modal
+                FormLogin loginForm = new FormLogin();
+                if (loginForm.ShowDialog() == DialogResult.OK)
+                {
+                    // Nếu đăng nhập thành công thì mở MainForm
+                    loginForm.Close();
+                    Application.Run(new SumaryWindow());
+                }
+                else
+                {
+                    break;
+                }
+            
             }
         }
     }
