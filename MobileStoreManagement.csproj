@@ -497,9 +497,7 @@
     <None Include="Resources\online-store.png" />
   </ItemGroup>
   <ItemGroup>
-
     <None Include="Resources\In.png" />
-
     <None Include="Resources\deactivate.png" />
   </ItemGroup>
   <ItemGroup>
@@ -576,12 +574,8 @@
     <None Include="Resources\exit.png" />
   </ItemGroup>
   <ItemGroup>
-
     <None Include="Resources\see.png" />
-
     <None Include="Resources\exit1.png" />
-
-
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

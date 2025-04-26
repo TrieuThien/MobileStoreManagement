@@ -152,7 +152,7 @@
   <data name="mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  </data>
+  
   <data name="promotion-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\promotion-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -247,7 +247,7 @@
   <data name="Revenue-picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Revenue-picture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
 </data>
-  </data>
+  
   <data name="support-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\support-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

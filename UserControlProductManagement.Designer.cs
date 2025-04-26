@@ -302,6 +302,6 @@
         private System.Windows.Forms.Button buttonSearchProduct;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Label labelSearch;
-        private UserControlProductItems ProductItemsPrimary;
+        
     }
 }
