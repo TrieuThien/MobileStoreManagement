@@ -41,6 +41,7 @@
             this.buttonSearchPromoution = new System.Windows.Forms.Button();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonAddPromoution = new System.Windows.Forms.Button();
+            this.buttonPromoutionSpecies = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanelListPromoution = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1.SuspendLayout();
@@ -131,7 +132,7 @@
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel4);
             this.flowLayoutPanel1.Controls.Add(this.buttonSearchPromoution);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1046, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(855, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(413, 72);
@@ -185,12 +186,13 @@
             // 
             this.flowLayoutPanel3.AutoSize = true;
             this.flowLayoutPanel3.Controls.Add(this.buttonAddPromoution);
+            this.flowLayoutPanel3.Controls.Add(this.buttonPromoutionSpecies);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(1459, 0);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(1268, 0);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(191, 72);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(382, 72);
             this.flowLayoutPanel3.TabIndex = 3;
             this.flowLayoutPanel3.WrapContents = false;
             // 
@@ -198,7 +200,7 @@
             // 
             this.buttonAddPromoution.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAddPromoution.Image = global::MobileStoreManagement.Properties.Resources.plus;
-            this.buttonAddPromoution.Location = new System.Drawing.Point(12, 11);
+            this.buttonAddPromoution.Location = new System.Drawing.Point(203, 11);
             this.buttonAddPromoution.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.buttonAddPromoution.Name = "buttonAddPromoution";
             this.buttonAddPromoution.Size = new System.Drawing.Size(167, 48);
@@ -207,6 +209,20 @@
             this.buttonAddPromoution.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAddPromoution.UseVisualStyleBackColor = true;
             this.buttonAddPromoution.Click += new System.EventHandler(this.buttonAddPromoution_Click);
+            // 
+            // buttonPromoutionSpecies
+            // 
+            this.buttonPromoutionSpecies.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonPromoutionSpecies.Image = global::MobileStoreManagement.Properties.Resources.plus;
+            this.buttonPromoutionSpecies.Location = new System.Drawing.Point(12, 11);
+            this.buttonPromoutionSpecies.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.buttonPromoutionSpecies.Name = "buttonPromoutionSpecies";
+            this.buttonPromoutionSpecies.Size = new System.Drawing.Size(167, 48);
+            this.buttonPromoutionSpecies.TabIndex = 2;
+            this.buttonPromoutionSpecies.Text = "QL loại khuyến mãi";
+            this.buttonPromoutionSpecies.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPromoutionSpecies.UseVisualStyleBackColor = true;
+            this.buttonPromoutionSpecies.Click += new System.EventHandler(this.buttonPromoutionSpecies_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -273,5 +289,6 @@
         private System.Windows.Forms.Button buttonAddPromoution;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelListPromoution;
+        private System.Windows.Forms.Button buttonPromoutionSpecies;
     }
 }

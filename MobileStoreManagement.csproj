@@ -120,10 +120,10 @@
       <DependentUpon>UserControlPersionalInfor.cs</DependentUpon>
     </Compile>
     <Compile Include="ConnectDatabase.cs" />
-    <Compile Include="FormAddPromoution.cs">
+    <Compile Include="Promoution\FormAddPromoution.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddPromoution.Designer.cs">
+    <Compile Include="Promoution\FormAddPromoution.Designer.cs">
       <DependentUpon>FormAddPromoution.cs</DependentUpon>
     </Compile>
     <Compile Include="Product\FormBrandCategory.cs">
@@ -211,6 +211,13 @@
     <Compile Include="Product\ProductCategoryManager.cs" />
     <Compile Include="Product\ProductManager.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Promoution\PromoutionManager.cs" />
+    <Compile Include="Promoution\FormPromoutionSpecies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Promoution\FormPromoutionSpecies.Designer.cs">
+      <DependentUpon>FormPromoutionSpecies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -262,16 +269,16 @@
     <Compile Include="Product\UserControlProductManagement.Designer.cs">
       <DependentUpon>UserControlProductManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlPromoutionItems.cs">
+    <Compile Include="Promoution\UserControlPromoutionItems.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlPromoutionItems.Designer.cs">
+    <Compile Include="Promoution\UserControlPromoutionItems.Designer.cs">
       <DependentUpon>UserControlPromoutionItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlPromoutionManagement.cs">
+    <Compile Include="Promoution\UserControlPromoutionManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlPromoutionManagement.Designer.cs">
+    <Compile Include="Promoution\UserControlPromoutionManagement.Designer.cs">
       <DependentUpon>UserControlPromoutionManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\UserControlReport.cs">
@@ -331,7 +338,7 @@
     <EmbeddedResource Include="AccountDasboard\UserControlPersionalInfor.resx">
       <DependentUpon>UserControlPersionalInfor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddPromoution.resx">
+    <EmbeddedResource Include="Promoution\FormAddPromoution.resx">
       <DependentUpon>FormAddPromoution.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Product\FormBrandCategory.resx">
@@ -373,6 +380,9 @@
     <EmbeddedResource Include="ImportExport\UserControlImportExportProduct.resx">
       <DependentUpon>UserControlImportExportProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Promoution\FormPromoutionSpecies.resx">
+      <DependentUpon>FormPromoutionSpecies.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -399,10 +409,10 @@
     <EmbeddedResource Include="Product\UserControlProductManagement.resx">
       <DependentUpon>UserControlProductManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlPromoutionItems.resx">
+    <EmbeddedResource Include="Promoution\UserControlPromoutionItems.resx">
       <DependentUpon>UserControlPromoutionItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlPromoutionManagement.resx">
+    <EmbeddedResource Include="Promoution\UserControlPromoutionManagement.resx">
       <DependentUpon>UserControlPromoutionManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\UserControlReport.resx">

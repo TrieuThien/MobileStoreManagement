@@ -29,11 +29,12 @@ namespace MobileStoreManagement
             flowLayoutPanelListPromoution.Controls.Add(ucPromoutionItemHeader);
 
             // Add data
-            for (int i = 0; i < 10; i++)
-            {
-                UserControlPromoutionItems promoutionItem = new UserControlPromoutionItems();
-                flowLayoutPanelListPromoution.Controls.Add(promoutionItem);
-            }
+            
+        }
+
+        private void buttonPromoutionSpecies_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
