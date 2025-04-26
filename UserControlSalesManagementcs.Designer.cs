@@ -34,20 +34,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(201, 309);
+            this.label1.Location = new System.Drawing.Point(151, 251);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 16);
+            this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bán Hàng";
             // 
             // UserControlSalesManagementcs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
-            this.MinimumSize = new System.Drawing.Size(830, 700);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(622, 569);
             this.Name = "UserControlSalesManagementcs";
-            this.Size = new System.Drawing.Size(830, 700);
+            this.Size = new System.Drawing.Size(622, 569);
             this.ResumeLayout(false);
             this.PerformLayout();
 
