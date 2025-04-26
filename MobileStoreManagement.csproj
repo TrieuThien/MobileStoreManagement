@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountDasboard\AccountDashboard.cs" />
     <Compile Include="AccountDasboard\FormAccountDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +87,7 @@
     <Compile Include="AccountDasboard\UserControlPersionalInfor.Designer.cs">
       <DependentUpon>UserControlPersionalInfor.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConnectDatabase.cs" />
     <Compile Include="FormAddPromoution.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +170,11 @@
     <Compile Include="LoginService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RegisterService.cs" />
     <Compile Include="FormValidator.cs" />
     <Compile Include="Session.cs" />
@@ -236,6 +243,30 @@
     </Compile>
     <Compile Include="UserControlSalesManagementcs.Designer.cs">
       <DependentUpon>UserControlSalesManagementcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSalesManagementDelivery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSalesManagementDelivery.Designer.cs">
+      <DependentUpon>UserControlSalesManagementDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSalesManagementGuarantee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSalesManagementGuarantee.Designer.cs">
+      <DependentUpon>UserControlSalesManagementGuarantee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSalesManagementOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSalesManagementOrder.Designer.cs">
+      <DependentUpon>UserControlSalesManagementOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSalesManagementPurchase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSalesManagementPurchase.Designer.cs">
+      <DependentUpon>UserControlSalesManagementPurchase.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlSumary.cs">
       <SubType>UserControl</SubType>
@@ -335,6 +366,18 @@
     <EmbeddedResource Include="UserControlSalesManagementcs.resx">
       <DependentUpon>UserControlSalesManagementcs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSalesManagementDelivery.resx">
+      <DependentUpon>UserControlSalesManagementDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSalesManagementGuarantee.resx">
+      <DependentUpon>UserControlSalesManagementGuarantee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSalesManagementOrder.resx">
+      <DependentUpon>UserControlSalesManagementOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSalesManagementPurchase.resx">
+      <DependentUpon>UserControlSalesManagementPurchase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlSumary.resx">
       <DependentUpon>UserControlSumary.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,11 +388,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -459,6 +497,9 @@
     <None Include="Resources\online-store.png" />
   </ItemGroup>
   <ItemGroup>
+
+    <None Include="Resources\In.png" />
+
     <None Include="Resources\deactivate.png" />
   </ItemGroup>
   <ItemGroup>
@@ -535,7 +576,12 @@
     <None Include="Resources\exit.png" />
   </ItemGroup>
   <ItemGroup>
+
     <None Include="Resources\see.png" />
+
+    <None Include="Resources\exit1.png" />
+
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

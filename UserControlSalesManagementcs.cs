@@ -16,5 +16,18 @@ namespace MobileStoreManagement
         {
             InitializeComponent();
         }
+        private void LoadUserControl(UserControl uc)
+        {
+            UserControlSalesManagementOrder.Controls.Clear();          // Xóa control cũ
+            uc.Dock = DockStyle.Top;            // Làm đầy panel
+
+            uc.Width = this.ClientSize.Width;
+            UserControlSalesManagementOrder.Controls.Add(uc);          // Thêm control mới
+        }
+
+        private void buttonToSalesManagementOrder_Click(object sender, EventArgs e)
+        {
+            LoadUserControl(new UserControlSalesManagementOrder());
+        }
     }
 }

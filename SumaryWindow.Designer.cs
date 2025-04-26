@@ -50,10 +50,12 @@
             this.buttonToPromotionManagementWindow = new System.Windows.Forms.Button();
             this.buttonToReportWindow = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.UserControlSalesManagementcs = new MobileStoreManagement.UserControlSalesManagementcs();
             this.flowLayoutPanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.flowLayoutPanelSystem.SuspendLayout();
             this.flowLayoutPanelFunctions.SuspendLayout();
+            this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanelHeader
@@ -350,6 +352,7 @@
             // 
             this.panelMain.AutoScroll = true;
             this.panelMain.BackColor = System.Drawing.SystemColors.Window;
+            this.panelMain.Controls.Add(this.UserControlSalesManagementcs);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 136);
             this.panelMain.Margin = new System.Windows.Forms.Padding(0);
@@ -357,9 +360,18 @@
             this.panelMain.Size = new System.Drawing.Size(1427, 662);
             this.panelMain.TabIndex = 2;
             // 
+            // UserControlSalesManagementcs
+            // 
+            this.UserControlSalesManagementcs.Location = new System.Drawing.Point(3, 3);
+            this.UserControlSalesManagementcs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UserControlSalesManagementcs.MinimumSize = new System.Drawing.Size(726, 657);
+            this.UserControlSalesManagementcs.Name = "UserControlSalesManagementcs";
+            this.UserControlSalesManagementcs.Size = new System.Drawing.Size(1425, 657);
+            this.UserControlSalesManagementcs.TabIndex = 0;
+            // 
             // SumaryWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1427, 798);
             this.Controls.Add(this.panelMain);
@@ -372,6 +384,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mobile Manager";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SumaryWindow_FormClosing);
             this.Load += new System.EventHandler(this.SumaryWindow_Load);
             this.Resize += new System.EventHandler(this.SumaryWindow_Resize);
             this.flowLayoutPanelHeader.ResumeLayout(false);
@@ -379,6 +392,7 @@
             this.flowLayoutPanelSystem.ResumeLayout(false);
             this.flowLayoutPanelFunctions.ResumeLayout(false);
             this.flowLayoutPanelFunctions.PerformLayout();
+            this.panelMain.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -406,6 +420,7 @@
         private System.Windows.Forms.Button buttonToSumarylWindow;
         private System.Windows.Forms.Button buttonToReportWindow;
         private System.Windows.Forms.Panel panelMain;
+        private UserControlSalesManagementcs UserControlSalesManagementcs;
     }
 }
 

@@ -13,8 +13,6 @@ namespace MobileStoreManagement
 {
     public partial class FormLogin : Form
     {
-        internal string userName { get; private set; }
-        internal string password { get; private set; }
         public FormLogin()
         {
             InitializeComponent();
@@ -37,7 +35,6 @@ namespace MobileStoreManagement
                 else
                 {
                     MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
                 }
             }
             else if (!isValidUserName)

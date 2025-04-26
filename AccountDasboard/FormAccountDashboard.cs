@@ -42,5 +42,21 @@ namespace MobileStoreManagement
             LoadUserControl(new UserControlPersionalInfor());
 
         }
+
+        private void buttonLogOut_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                LoginService.LogOut();
+              
+                if (this.Owner != null && this.Owner is SumaryWindow mainForm)
+                {
+                    mainForm.isLoggingOut = true; 
+                    mainForm.Close();
+                } 
+                this.Close();
+            }
+        }
     }
 }

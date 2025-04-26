@@ -1,25 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace MobileStoreManagement
 {
-    internal class FormValidator
+    internal static class FormValidator
     {
-        internal bool IsValidEmail(string email)
+        internal static bool IsValidEmail(string email)
         {
             if (string.IsNullOrWhiteSpace(email))
                 return false;
 
-            // Regex kiểm tra định dạng email chuẩn
-            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-            return Regex.IsMatch(email, pattern);
+            try
+            {
+                var mailAddress = new MailAddress(email);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
         }
 
-        internal bool IsValidPhoneNumber(string phone)
+        internal static bool IsValidPhoneNumber(string phone)
         {
             if (string.IsNullOrWhiteSpace(phone))
                 return false;
@@ -28,6 +37,23 @@ namespace MobileStoreManagement
             string pattern = @"^0\d{9}$";
 
             return Regex.IsMatch(phone, pattern);
+        }
+
+        internal static bool IsAllTextBoxesFilled(Control parent)
+        {
+            foreach (Control ctrl in parent.Controls)
+            {
+                if (ctrl is TextBox textBox && string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    return false;
+                }
+                else if (ctrl.HasChildren)
+                {
+                    if (!IsAllTextBoxesFilled(ctrl))
+                        return false;
+                }
+            }
+            return true;
         }
     }
 }
