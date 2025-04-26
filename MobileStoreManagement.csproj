@@ -237,11 +237,23 @@
     <Compile Include="UserControlSalesManagementcs.Designer.cs">
       <DependentUpon>UserControlSalesManagementcs.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlSalesManagementGuarantee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSalesManagementGuarantee.Designer.cs">
+      <DependentUpon>UserControlSalesManagementGuarantee.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlSalesManagementOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlSalesManagementOrder.Designer.cs">
       <DependentUpon>UserControlSalesManagementOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSalesManagementPurchase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSalesManagementPurchase.Designer.cs">
+      <DependentUpon>UserControlSalesManagementPurchase.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlSumary.cs">
       <SubType>UserControl</SubType>
@@ -341,8 +353,14 @@
     <EmbeddedResource Include="UserControlSalesManagementcs.resx">
       <DependentUpon>UserControlSalesManagementcs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSalesManagementGuarantee.resx">
+      <DependentUpon>UserControlSalesManagementGuarantee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlSalesManagementOrder.resx">
       <DependentUpon>UserControlSalesManagementOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSalesManagementPurchase.resx">
+      <DependentUpon>UserControlSalesManagementPurchase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlSumary.resx">
       <DependentUpon>UserControlSumary.cs</DependentUpon>
