@@ -176,6 +176,7 @@
             // 
             // comboBoxSelectCategory
             // 
+            this.comboBoxSelectCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelectCategory.FormattingEnabled = true;
             this.comboBoxSelectCategory.Location = new System.Drawing.Point(168, 12);
             this.comboBoxSelectCategory.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
@@ -206,6 +207,7 @@
             // 
             // comboBoxSelectBrand
             // 
+            this.comboBoxSelectBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelectBrand.FormattingEnabled = true;
             this.comboBoxSelectBrand.Location = new System.Drawing.Point(168, 12);
             this.comboBoxSelectBrand.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);

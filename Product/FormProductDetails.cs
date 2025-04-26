@@ -15,17 +15,23 @@ namespace MobileStoreManagement
     {
         ProductManager pdManager = new ProductManager();
         string selectedImagePath = string.Empty;
+        bool isUpdateProduct = false;
+
+        
         public FormProductDetails()
         {
             InitializeComponent();
         }
 
-        public FormProductDetails(string productId, string productName, decimal productPrice)
+        public FormProductDetails(bool isUpdate, string productId, string productName, decimal productPrice, string productDes)
         {
             InitializeComponent();
+            isUpdateProduct = isUpdate;
             textBoxProductName.Text = productName;
             textBoxProductId.Text = productId;
             textBoxProductPrice.Text = productPrice.ToString();
+            richTextBoxProductDescribe.Text = productDes;
+            
         }
 
         private void buttonChangePicture_Click(object sender, EventArgs e)
@@ -118,21 +124,28 @@ namespace MobileStoreManagement
                 string pdStatus = comboBoxProductStatus.SelectedItem.ToString() == "Sản phẩm mới" ? "M" : "C";
                 decimal price;
 
-                
+
 
                 if (!decimal.TryParse(textBoxProductPrice.Text.Trim(), out price))
                 {
                     MessageBox.Show("Vui lòng nhập giá bán hợp lệ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+                if (isUpdateProduct)
+                {
+                    pdManager.UpdateProduct(pdId, pdName, pdBrands, pdCategories, price, pdDes, pdStatus, getImagePath());
+                }
+                else
+                {
+                    pdManager.InsertProduct(pdId, pdName, pdBrands, pdCategories, price, pdDes, pdStatus, getImagePath());
+                }
 
-                pdManager.InsertProduct(pdId, pdName, pdBrands, pdCategories, price, pdDes, pdStatus, getImagePath());
-                
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi khi lưu sản phẩm: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
     }
 }

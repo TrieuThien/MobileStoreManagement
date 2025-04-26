@@ -27,8 +27,16 @@ namespace MobileStoreManagement
             pdManagement.LoadCategoriesToCheckedListBox(checkedLbPdCategories);
         }
 
-        private void ShowAllProducts()
+        internal void ShowAllProducts()
         {
+            // Xóa hết các control cũ trong flowLayoutPanel
+            flowLayoutPanelProductList.Controls.Clear();
+
+            // Thêm lại header
+            UserControlProductItems header = new UserControlProductItems(isSetup: true);
+            header.Dock = DockStyle.Top;
+            flowLayoutPanelProductList.Controls.Add(header);
+
             // Load data from database
             DataTable dtProducts = pdManagement.GetAllProducts();
 
@@ -36,12 +44,15 @@ namespace MobileStoreManagement
             {
                 string maSanPham = row["Ma_san_pham"].ToString();
                 string tenSanPham = row["Ten_san_pham"].ToString();
+                string moTa = row["Thong_tin_mo_ta"].ToString();
                 decimal giaVon = row.Field<decimal>("Gia_von");
                 decimal giaBan = row.Field<decimal>("Gia_ban");
                 int tonKho = row.Field<int>("So_luong_ton_kho");
                 int soLuongDatNCC = row.Field<int>("So_luong_dat_NCC");
                 int soLuongKhachDat = row.Field<int>("Khach_dat");
                 string tinhTrang = row["Tinh_trang_san_pham"].ToString();
+                string maThuongHieu = row["Ma_thuong_hieu"].ToString();
+                string maDanhMuc = row["Ma_danh_muc"].ToString();
 
                 // Lấy hình ảnh từ byte[]
                 Image hinhAnh;
@@ -62,7 +73,8 @@ namespace MobileStoreManagement
                     hinhAnh = Properties.Resources.online_store; // Sử dụng một ảnh mặc định
                 }
 
-                UserControlProductItems productItem = new UserControlProductItems(maSanPham, tenSanPham, tinhTrang, giaBan, giaVon, soLuongDatNCC, soLuongKhachDat, tonKho);
+                UserControlProductItems productItem = new UserControlProductItems(maSanPham, tenSanPham, tinhTrang, moTa, giaBan, giaVon, soLuongDatNCC, soLuongKhachDat, tonKho, maThuongHieu, maDanhMuc);
+                productItem.OnProductUpdatedOrDeleted += ProductItem_OnProductUpdatedOrDeleted;
                 productItem.setPicture(hinhAnh);
                 flowLayoutPanelProductList.Controls.Add(productItem);
             }
@@ -101,12 +113,15 @@ namespace MobileStoreManagement
             {
                 string maSanPham = row["Ma_san_pham"].ToString();
                 string tenSanPham = row["Ten_san_pham"].ToString();
+                string moTa = row["Thong_tin_mo_ta"].ToString();
                 decimal giaVon = row.Field<decimal>("Gia_von");
                 decimal giaBan = row.Field<decimal>("Gia_ban");
                 int tonKho = row.Field<int>("So_luong_ton_kho");
                 int soLuongDatNCC = row.Field<int>("So_luong_dat_NCC");
                 int soLuongKhachDat = row.Field<int>("Khach_dat");
                 string tinhTrang = row["Tinh_trang_san_pham"].ToString();
+                string maThuongHieu = row["Ma_thuong_hieu"].ToString();
+                string maDanhMuc = row["Ma_danh_muc"].ToString();
 
                 // Lấy hình ảnh
                 Image hinhAnh;
@@ -128,7 +143,7 @@ namespace MobileStoreManagement
                 }
 
                 // Tạo UserControl sản phẩm
-                UserControlProductItems productItem = new UserControlProductItems(maSanPham, tenSanPham, tinhTrang, giaBan, giaVon, soLuongDatNCC, soLuongKhachDat, tonKho);
+                UserControlProductItems productItem = new UserControlProductItems(maSanPham, tenSanPham, tinhTrang, moTa, giaBan, giaVon, soLuongDatNCC, soLuongKhachDat, tonKho, maThuongHieu, maDanhMuc);
                 productItem.setPicture(hinhAnh);
 
                 flowLayoutPanelProductList.Controls.Add(productItem);
@@ -160,12 +175,15 @@ namespace MobileStoreManagement
             {
                 string maSanPham = row["Ma_san_pham"].ToString();
                 string tenSanPham = row["Ten_san_pham"].ToString();
+                string moTa = row["Thong_tin_mo_ta"].ToString();
                 decimal giaVon = row.Field<decimal>("Gia_von");
                 decimal giaBan = row.Field<decimal>("Gia_ban");
                 int tonKho = row.Field<int>("So_luong_ton_kho");
                 int soLuongDatNCC = row.Field<int>("So_luong_dat_NCC");
                 int soLuongKhachDat = row.Field<int>("Khach_dat");
                 string tinhTrang = row["Tinh_trang_san_pham"].ToString();
+                string maThuongHieu = row["Ma_thuong_hieu"].ToString();
+                string maDanhMuc = row["Ma_danh_muc"].ToString();
 
                 // Lấy hình ảnh
                 Image hinhAnh;
@@ -188,7 +206,7 @@ namespace MobileStoreManagement
                 }
 
                 // Tạo UserControl sản phẩm
-                UserControlProductItems productItem = new UserControlProductItems(maSanPham, tenSanPham, tinhTrang, giaBan, giaVon, soLuongDatNCC, soLuongKhachDat, tonKho);
+                UserControlProductItems productItem = new UserControlProductItems(maSanPham, tenSanPham, tinhTrang, moTa, giaBan, giaVon, soLuongDatNCC, soLuongKhachDat, tonKho, maThuongHieu, maDanhMuc);
                 productItem.setPicture(hinhAnh);
 
                 flowLayoutPanelProductList.Controls.Add(productItem);
@@ -229,14 +247,13 @@ namespace MobileStoreManagement
 
 
         // Các hàm xử lý sự kiện
-
+        private void ProductItem_OnProductUpdatedOrDeleted(object sender, EventArgs e)
+        {
+            ShowAllProducts(); // Gọi lại reload toàn bộ danh sách
+        }
         private void UserControlProductManagement_Load(object sender, EventArgs e)
         {
             refeshData();
-            UserControlProductItems header = new UserControlProductItems(isSetup: true);
-            header.Dock = DockStyle.Top;
-            flowLayoutPanelProductList.Controls.Add(header);
-
             ShowAllProducts();
         }
 
@@ -245,7 +262,7 @@ namespace MobileStoreManagement
             FormProductDetails formProductDetails = new FormProductDetails();
             formProductDetails.ShowDialog();
             refeshData();
-
+            ShowAllProducts();
         }
 
         private void buttonAddNewManufacturer_Click(object sender, EventArgs e)

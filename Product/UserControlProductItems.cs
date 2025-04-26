@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MobileStoreManagement.Product;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,12 +16,16 @@ namespace MobileStoreManagement
         string productId;
         string productName;
         string productStatus;
+        string productDes;
         decimal productPrice;
         decimal productCapitalPrice;
         int productQuantityOrderFromSupplier;
         int productQuantityOrderFromCustomer;
         int productQuantityRemaining;
+        string productBrandsId;
+        string productCategoryId;
 
+        public event EventHandler OnProductUpdatedOrDeleted;
         public UserControlProductItems(bool isSetup)
         {
             InitializeComponent();
@@ -30,18 +35,19 @@ namespace MobileStoreManagement
                 hideButtonDelete();   
             }
         }
-        public UserControlProductItems(string productId, string productName, string productStatus, decimal productPrice, decimal productCapitalPrice, int productQuantityOrderFromSupplier, int productQuantityOrderFromCustomer, int productQuantityRemaining)
+        public UserControlProductItems(string productId, string productName, string productStatus, string des, decimal productPrice, decimal productCapitalPrice, int productQuantityOrderFromSupplier, int productQuantityOrderFromCustomer, int productQuantityRemaining, string productBrandsId, string productCategoryId)
         {
             InitializeComponent();
             this.productId = productId;
             this.productName = productName;
+            this.productDes = des;
             this.productStatus = productStatus;
             this.productPrice = productPrice;
             this.productCapitalPrice = productCapitalPrice;
             this.productQuantityOrderFromSupplier = productQuantityOrderFromSupplier;
             this.productQuantityOrderFromCustomer = productQuantityOrderFromCustomer;
             this.productQuantityRemaining = productQuantityRemaining;
-
+            
             this.setProductName();
             this.setProductStatus();
             this.setProductSellingPrice();
@@ -49,6 +55,8 @@ namespace MobileStoreManagement
             this.setQuantityOrderFromSupplier();
             this.setQuantityOrderFromCustomer();
             this.setQuantityRemaining();
+            this.productBrandsId = productBrandsId;
+            this.productCategoryId = productCategoryId;
         }
 
         private string getProductId()
@@ -144,15 +152,22 @@ namespace MobileStoreManagement
 
         private void buttonUpdateProduct_Click(object sender, EventArgs e)
         {
-            FormProductDetails formProductDetails = new FormProductDetails(productId, productName, productPrice);
-            
+            FormProductDetails formProductDetails = new FormProductDetails(isUpdate: true, productId, productName, productPrice, productDes);
+            OnProductUpdatedOrDeleted?.Invoke(this, EventArgs.Empty);
             formProductDetails.ShowDialog();
+            
         }
 
         private void buttonDeleteProduct_Click(object sender, EventArgs e)
         {
             string message = "Mã sản phẩm: " + getProductId() + "\nTên sản phẩm: " + getProductName();
-            MessageBox.Show(message, "Xác nhận xóa sản phẩm", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            DialogResult r = MessageBox.Show(message, "Xác nhận xóa sản phẩm", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (r == DialogResult.Yes)
+            {
+                ProductManager pdManager = new ProductManager();
+                pdManager.DeleteProduct(productId);
+                OnProductUpdatedOrDeleted?.Invoke(this, EventArgs.Empty);
+            }
         }
     }
 }
