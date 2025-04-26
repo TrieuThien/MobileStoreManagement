@@ -10,20 +10,21 @@ namespace MobileStoreManagement
 {
     internal class ConnectDatabase
     {
-        private string connectionString = "Data Source=localhost;Initial Catalog=MobileManager;Integrated Security=True";
-        private SqlConnection conn;
+
+        private readonly string connectionString;
 
         internal ConnectDatabase()
         {
-            conn = new SqlConnection(connectionString);
+            connectionString = "Data Source=localhost;Initial Catalog=MobileManager;Integrated Security=True";
+            
         }
 
         internal SqlConnection GetConnection()
         {
-            return conn;
+            return new SqlConnection(connectionString); ;
         }
 
-        internal bool IsConnected()
+        internal bool IsConnected(SqlConnection conn)
         {
             try
             {
@@ -37,7 +38,7 @@ namespace MobileStoreManagement
                 return false;
             }
         }
-        internal void CloseConnection()
+        internal void CloseConnection(SqlConnection conn)
         {
             if (conn.State == ConnectionState.Open)
                 conn.Close();
