@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using System.IO;
+using OfficeOpenXml;
 
 namespace MobileStoreManagement.Product
 {
@@ -214,7 +215,7 @@ namespace MobileStoreManagement.Product
             {
                 MessageBox.Show("Lỗi: " + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
+
         }
         internal DataTable GetAllProducts()
         {
@@ -253,6 +254,125 @@ namespace MobileStoreManagement.Product
             }
 
             return dt;
+        }
+        internal DataTable LoadFilteredProducts(CheckedListBox checkedListBoxBrands, CheckedListBox checkedListBoxCategories)
+        {
+            // Lấy danh sách mã thương hiệu được check
+            List<string> selectedBrandIds = new List<string>();
+            foreach (var item in checkedListBoxBrands.CheckedItems)
+            {
+                if (item is ListItem listItem)
+                {
+                    selectedBrandIds.Add(listItem.Value);
+                }
+            }
+
+            // Lấy danh sách mã danh mục được check
+            List<string> selectedCategoryIds = new List<string>();
+            foreach (var item in checkedListBoxCategories.CheckedItems)
+            {
+                if (item is ListItem listItem)
+                {
+                    selectedCategoryIds.Add(listItem.Value);
+                }
+            }
+
+            DataTable dt = new DataTable();
+            // Nếu không chọn gì thì không lọc (hoặc load hết)
+            if (selectedBrandIds.Count == 0 && selectedCategoryIds.Count == 0)
+            {
+                // TODO: Load hết sản phẩm hoặc hiển thị thông báo
+                return dt;
+            }
+
+            // Tạo câu lệnh SQL
+            string query = "SELECT * FROM San_pham WHERE Ma_nguoi_ban = @maNguoiBan";
+
+            if (selectedBrandIds.Count > 0)
+            {
+                string brandsCondition = string.Join(",", selectedBrandIds.Select(id => $"'{id}'"));
+                query += $" AND Ma_thuong_hieu IN ({brandsCondition})";
+            }
+
+            if (selectedCategoryIds.Count > 0)
+            {
+                string categoriesCondition = string.Join(",", selectedCategoryIds.Select(id => $"'{id}'"));
+                query += $" AND Ma_danh_muc IN ({categoriesCondition})";
+            }
+
+            // Lấy dữ liệu
+            using (SqlConnection conn = connectDb.GetConnection())
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                adapter.SelectCommand.Parameters.AddWithValue("@maNguoiBan", Session.userId);
+
+
+                adapter.Fill(dt);
+
+                return dt;
+            }
+        }
+        public DataTable SearchProducts(string searchTerm)
+        {
+            DataTable dt = new DataTable();
+
+            // Tạo câu lệnh SQL với điều kiện tìm kiếm theo tên hoặc mã sản phẩm
+            string query = @"
+        SELECT * FROM San_pham 
+        WHERE (Ma_san_pham LIKE @searchTerm OR Ten_san_pham LIKE @searchTerm)
+        AND Ma_nguoi_ban = @maNguoiBan";
+
+            using (SqlConnection conn = connectDb.GetConnection())
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                adapter.SelectCommand.Parameters.AddWithValue("@searchTerm", "%" + searchTerm + "%");
+                adapter.SelectCommand.Parameters.AddWithValue("@maNguoiBan", Session.userId);
+
+                adapter.Fill(dt);
+            }
+
+            return dt;
+        }
+        public void ExportProductsToExcel(string filePath)
+        {
+            DataTable dtProducts = GetAllProducts();
+            // Kiểm tra nếu DataTable không có dữ liệu
+            if (dtProducts == null || dtProducts.Rows.Count == 0)
+            {
+                throw new Exception("Không có dữ liệu để xuất.");
+            }
+
+            // Tạo file Excel mới
+            using (var package = new ExcelPackage())
+            {
+                // Tạo sheet mới
+                var worksheet = package.Workbook.Worksheets.Add("Sản phẩm");
+
+                // Ghi tiêu đề cột
+                for (int i = 1; i <= dtProducts.Columns.Count; i++)
+                {
+                    worksheet.Cells[1, i].Value = dtProducts.Columns[i - 1].ColumnName;
+                    worksheet.Cells[1, i].Style.Font.Bold = true;
+                    worksheet.Cells[1, i].Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+                    worksheet.Cells[1, i].Style.VerticalAlignment = OfficeOpenXml.Style.ExcelVerticalAlignment.Center;
+                }
+
+                // Ghi dữ liệu vào các ô
+                for (int i = 0; i < dtProducts.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dtProducts.Columns.Count; j++)
+                    {
+                        worksheet.Cells[i + 2, j + 1].Value = dtProducts.Rows[i][j];
+                    }
+                }
+
+                // Lưu file Excel
+                FileInfo fi = new FileInfo(filePath);
+                package.SaveAs(fi);
+            }
+
+            // Thông báo thành công
+            MessageBox.Show("Đã xuất dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

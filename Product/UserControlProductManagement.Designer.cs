@@ -31,21 +31,21 @@
             this.flowLayoutPanelLeft = new System.Windows.Forms.FlowLayoutPanel();
             this.labelProduct = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkedLbPdCategory = new System.Windows.Forms.CheckedListBox();
+            this.checkedLbPdCategories = new System.Windows.Forms.CheckedListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkedLbBrandCategory = new System.Windows.Forms.CheckedListBox();
+            this.checkedLbBrandCategories = new System.Windows.Forms.CheckedListBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.labelSearch = new System.Windows.Forms.Label();
-            this.textBoxGetKeyWordSearch = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanelProductList = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonAddNewProduct = new System.Windows.Forms.Button();
             this.buttonAddNewProductCategory = new System.Windows.Forms.Button();
             this.buttonAddNewManufacturer = new System.Windows.Forms.Button();
             this.buttonExportFile = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelSearch = new System.Windows.Forms.Label();
+            this.textBoxGetKeyWordSearch = new System.Windows.Forms.TextBox();
             this.buttonSearchProduct = new System.Windows.Forms.Button();
+            this.flowLayoutPanelProductList = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanelLeft.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -78,7 +78,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkedLbPdCategory);
+            this.groupBox1.Controls.Add(this.checkedLbPdCategories);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 76);
             this.groupBox1.Name = "groupBox1";
@@ -87,19 +87,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh mục hàng hóa";
             // 
-            // checkedLbPdCategory
+            // checkedLbPdCategories
             // 
-            this.checkedLbPdCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedLbPdCategory.FormattingEnabled = true;
-            this.checkedLbPdCategory.Location = new System.Drawing.Point(9, 45);
-            this.checkedLbPdCategory.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.checkedLbPdCategory.Name = "checkedLbPdCategory";
-            this.checkedLbPdCategory.Size = new System.Drawing.Size(176, 213);
-            this.checkedLbPdCategory.TabIndex = 7;
+            this.checkedLbPdCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedLbPdCategories.FormattingEnabled = true;
+            this.checkedLbPdCategories.Location = new System.Drawing.Point(9, 45);
+            this.checkedLbPdCategories.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.checkedLbPdCategories.Name = "checkedLbPdCategories";
+            this.checkedLbPdCategories.Size = new System.Drawing.Size(176, 202);
+            this.checkedLbPdCategories.TabIndex = 7;
+            this.checkedLbPdCategories.SelectedIndexChanged += new System.EventHandler(this.checkedLbPdCategory_SelectedIndexChanged);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkedLbBrandCategory);
+            this.groupBox2.Controls.Add(this.checkedLbBrandCategories);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(3, 355);
             this.groupBox2.Name = "groupBox2";
@@ -108,15 +109,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thương hiệu";
             // 
-            // checkedLbBrandCategory
+            // checkedLbBrandCategories
             // 
-            this.checkedLbBrandCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedLbBrandCategory.FormattingEnabled = true;
-            this.checkedLbBrandCategory.Location = new System.Drawing.Point(9, 38);
-            this.checkedLbBrandCategory.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.checkedLbBrandCategory.Name = "checkedLbBrandCategory";
-            this.checkedLbBrandCategory.Size = new System.Drawing.Size(176, 251);
-            this.checkedLbBrandCategory.TabIndex = 8;
+            this.checkedLbBrandCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedLbBrandCategories.FormattingEnabled = true;
+            this.checkedLbBrandCategories.Location = new System.Drawing.Point(9, 38);
+            this.checkedLbBrandCategories.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.checkedLbBrandCategories.Name = "checkedLbBrandCategories";
+            this.checkedLbBrandCategories.Size = new System.Drawing.Size(176, 246);
+            this.checkedLbBrandCategories.TabIndex = 8;
+            this.checkedLbBrandCategories.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedLbBrandCategory_ItemCheck);
             // 
             // flowLayoutPanel2
             // 
@@ -145,64 +147,6 @@
             this.flowLayoutPanel3.Size = new System.Drawing.Size(616, 72);
             this.flowLayoutPanel3.TabIndex = 3;
             this.flowLayoutPanel3.WrapContents = false;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel4);
-            this.flowLayoutPanel1.Controls.Add(this.buttonSearchProduct);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(621, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(413, 72);
-            this.flowLayoutPanel1.TabIndex = 5;
-            this.flowLayoutPanel1.WrapContents = false;
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.Controls.Add(this.labelSearch);
-            this.flowLayoutPanel4.Controls.Add(this.textBoxGetKeyWordSearch);
-            this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(278, 72);
-            this.flowLayoutPanel4.TabIndex = 3;
-            // 
-            // labelSearch
-            // 
-            this.labelSearch.Location = new System.Drawing.Point(0, 9);
-            this.labelSearch.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
-            this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(280, 24);
-            this.labelSearch.TabIndex = 2;
-            this.labelSearch.Text = "Tìm kiếm theo mã, tên sản phẩm";
-            this.labelSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelSearch.Click += new System.EventHandler(this.labelSearch_Click);
-            // 
-            // textBoxGetKeyWordSearch
-            // 
-            this.textBoxGetKeyWordSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxGetKeyWordSearch.Location = new System.Drawing.Point(0, 33);
-            this.textBoxGetKeyWordSearch.Margin = new System.Windows.Forms.Padding(0);
-            this.textBoxGetKeyWordSearch.Name = "textBoxGetKeyWordSearch";
-            this.textBoxGetKeyWordSearch.Size = new System.Drawing.Size(280, 22);
-            this.textBoxGetKeyWordSearch.TabIndex = 1;
-            // 
-            // flowLayoutPanelProductList
-            // 
-            this.flowLayoutPanelProductList.AutoScroll = true;
-            this.flowLayoutPanelProductList.AutoSize = true;
-            this.flowLayoutPanelProductList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanelProductList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelProductList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelProductList.Location = new System.Drawing.Point(200, 72);
-            this.flowLayoutPanelProductList.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanelProductList.Name = "flowLayoutPanelProductList";
-            this.flowLayoutPanelProductList.Size = new System.Drawing.Size(1650, 628);
-            this.flowLayoutPanelProductList.TabIndex = 3;
-            this.flowLayoutPanelProductList.WrapContents = false;
             // 
             // buttonAddNewProduct
             // 
@@ -258,6 +202,51 @@
             this.buttonExportFile.Text = "Xuất file";
             this.buttonExportFile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonExportFile.UseVisualStyleBackColor = true;
+            this.buttonExportFile.Click += new System.EventHandler(this.buttonExportFile_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel4);
+            this.flowLayoutPanel1.Controls.Add(this.buttonSearchProduct);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(621, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(413, 72);
+            this.flowLayoutPanel1.TabIndex = 5;
+            this.flowLayoutPanel1.WrapContents = false;
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Controls.Add(this.labelSearch);
+            this.flowLayoutPanel4.Controls.Add(this.textBoxGetKeyWordSearch);
+            this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(278, 72);
+            this.flowLayoutPanel4.TabIndex = 3;
+            // 
+            // labelSearch
+            // 
+            this.labelSearch.Location = new System.Drawing.Point(0, 9);
+            this.labelSearch.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
+            this.labelSearch.Name = "labelSearch";
+            this.labelSearch.Size = new System.Drawing.Size(280, 24);
+            this.labelSearch.TabIndex = 2;
+            this.labelSearch.Text = "Tìm kiếm theo mã, tên sản phẩm";
+            this.labelSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelSearch.Click += new System.EventHandler(this.labelSearch_Click);
+            // 
+            // textBoxGetKeyWordSearch
+            // 
+            this.textBoxGetKeyWordSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxGetKeyWordSearch.Location = new System.Drawing.Point(0, 33);
+            this.textBoxGetKeyWordSearch.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxGetKeyWordSearch.Name = "textBoxGetKeyWordSearch";
+            this.textBoxGetKeyWordSearch.Size = new System.Drawing.Size(280, 22);
+            this.textBoxGetKeyWordSearch.TabIndex = 1;
             // 
             // buttonSearchProduct
             // 
@@ -271,6 +260,21 @@
             this.buttonSearchProduct.Text = "Tìm kiếm";
             this.buttonSearchProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonSearchProduct.UseVisualStyleBackColor = true;
+            this.buttonSearchProduct.Click += new System.EventHandler(this.buttonSearchProduct_Click);
+            // 
+            // flowLayoutPanelProductList
+            // 
+            this.flowLayoutPanelProductList.AutoScroll = true;
+            this.flowLayoutPanelProductList.AutoSize = true;
+            this.flowLayoutPanelProductList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanelProductList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelProductList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelProductList.Location = new System.Drawing.Point(200, 72);
+            this.flowLayoutPanelProductList.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanelProductList.Name = "flowLayoutPanelProductList";
+            this.flowLayoutPanelProductList.Size = new System.Drawing.Size(1650, 628);
+            this.flowLayoutPanelProductList.TabIndex = 3;
+            this.flowLayoutPanelProductList.WrapContents = false;
             // 
             // UserControlProductManagement
             // 
@@ -303,11 +307,11 @@
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelLeft;
         private System.Windows.Forms.Label labelProduct;
-        private System.Windows.Forms.CheckedListBox checkedLbBrandCategory;
+        private System.Windows.Forms.CheckedListBox checkedLbBrandCategories;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelProductList;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckedListBox checkedLbPdCategory;
+        private System.Windows.Forms.CheckedListBox checkedLbPdCategories;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Button buttonAddNewManufacturer;
@@ -318,7 +322,6 @@
         private System.Windows.Forms.Button buttonSearchProduct;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Label labelSearch;
-        private UserControlProductItems ProductItemsPrimary;
         private System.Windows.Forms.Button buttonAddNewProductCategory;
     }
 }
