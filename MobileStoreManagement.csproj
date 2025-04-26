@@ -313,11 +313,5 @@
   <ItemGroup>
     <None Include="Resources\exit.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\printer %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\printer %282%291.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
