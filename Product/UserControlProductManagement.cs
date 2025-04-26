@@ -198,7 +198,7 @@ namespace MobileStoreManagement
         // Hàm xuất file excel
         private void SaveExcelFile()
         {
-            
+            ExcelPackage.License.SetNonCommercialPersonal("LAMTRIEUTHIEN");
             // Tạo SaveFileDialog để chọn tên và vị trí lưu file
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Title = "Chọn vị trí và tên tệp Excel";
@@ -219,7 +219,6 @@ namespace MobileStoreManagement
                     
                     pdManagement.ExportProductsToExcel(filePath);
 
-                    MessageBox.Show("Đã lưu file Excel thành công tại: " + filePath, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
@@ -234,7 +233,6 @@ namespace MobileStoreManagement
         private void UserControlProductManagement_Load(object sender, EventArgs e)
         {
             refeshData();
-            //ExcelPackage.LicenseContext = LicenseContext.Commercial;
             UserControlProductItems header = new UserControlProductItems(isSetup: true);
             header.Dock = DockStyle.Top;
             flowLayoutPanelProductList.Controls.Add(header);

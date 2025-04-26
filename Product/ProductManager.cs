@@ -333,7 +333,7 @@ namespace MobileStoreManagement.Product
 
             return dt;
         }
-        public void ExportProductsToExcel(string filePath)
+        internal void ExportProductsToExcel(string filePath)
         {
             DataTable dtProducts = GetAllProducts();
             // Kiểm tra nếu DataTable không có dữ liệu
@@ -348,21 +348,27 @@ namespace MobileStoreManagement.Product
                 // Tạo sheet mới
                 var worksheet = package.Workbook.Worksheets.Add("Sản phẩm");
 
+                // Chọn các cột cần xuất (bỏ MaNguoiDung và TenNguoiDung)
+                var columnsToExport = dtProducts.Columns
+                    .Cast<DataColumn>()
+                    .Where(c => c.ColumnName != "Ma_nguoi_ban" && c.ColumnName != "username")
+                    .ToList();
+
                 // Ghi tiêu đề cột
-                for (int i = 1; i <= dtProducts.Columns.Count; i++)
+                for (int i = 0; i < columnsToExport.Count; i++)
                 {
-                    worksheet.Cells[1, i].Value = dtProducts.Columns[i - 1].ColumnName;
-                    worksheet.Cells[1, i].Style.Font.Bold = true;
-                    worksheet.Cells[1, i].Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
-                    worksheet.Cells[1, i].Style.VerticalAlignment = OfficeOpenXml.Style.ExcelVerticalAlignment.Center;
+                    worksheet.Cells[1, i + 1].Value = columnsToExport[i].ColumnName;
+                    worksheet.Cells[1, i + 1].Style.Font.Bold = true;
+                    worksheet.Cells[1, i + 1].Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+                    worksheet.Cells[1, i + 1].Style.VerticalAlignment = OfficeOpenXml.Style.ExcelVerticalAlignment.Center;
                 }
 
                 // Ghi dữ liệu vào các ô
-                for (int i = 0; i < dtProducts.Rows.Count; i++)
+                for (int row = 0; row < dtProducts.Rows.Count; row++)
                 {
-                    for (int j = 0; j < dtProducts.Columns.Count; j++)
+                    for (int col = 0; col < columnsToExport.Count; col++)
                     {
-                        worksheet.Cells[i + 2, j + 1].Value = dtProducts.Rows[i][j];
+                        worksheet.Cells[row + 2, col + 1].Value = dtProducts.Rows[row][columnsToExport[col].ColumnName];
                     }
                 }
 
@@ -374,5 +380,6 @@ namespace MobileStoreManagement.Product
             // Thông báo thành công
             MessageBox.Show("Đã xuất dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
     }
 }
