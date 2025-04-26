@@ -237,6 +237,12 @@
     <Compile Include="UserControlSalesManagementcs.Designer.cs">
       <DependentUpon>UserControlSalesManagementcs.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlSalesManagementOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSalesManagementOrder.Designer.cs">
+      <DependentUpon>UserControlSalesManagementOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlSumary.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -334,6 +340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlSalesManagementcs.resx">
       <DependentUpon>UserControlSalesManagementcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSalesManagementOrder.resx">
+      <DependentUpon>UserControlSalesManagementOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlSumary.resx">
       <DependentUpon>UserControlSumary.cs</DependentUpon>
@@ -489,7 +498,6 @@
     <None Include="Resources\reset-password.png" />
   </ItemGroup>
   <ItemGroup>
-
     <None Include="Resources\download.png" />
   </ItemGroup>
   <ItemGroup>
@@ -509,7 +517,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delivery-box.png" />
-
     <None Include="Resources\cost.png" />
   </ItemGroup>
   <ItemGroup>
@@ -523,13 +530,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\printer.png" />
-
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\menu.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\done.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
