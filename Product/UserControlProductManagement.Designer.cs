@@ -31,13 +31,14 @@
             this.flowLayoutPanelLeft = new System.Windows.Forms.FlowLayoutPanel();
             this.labelProduct = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.checkedLbPdCategories = new System.Windows.Forms.CheckedListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.checkedLbBrandCategories = new System.Windows.Forms.CheckedListBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonAddNewManufacturer = new System.Windows.Forms.Button();
             this.buttonAddNewProduct = new System.Windows.Forms.Button();
+            this.buttonAddNewProductCategory = new System.Windows.Forms.Button();
+            this.buttonAddNewManufacturer = new System.Windows.Forms.Button();
             this.buttonExportFile = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
@@ -77,28 +78,29 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkedListBox1);
+            this.groupBox1.Controls.Add(this.checkedLbPdCategories);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 76);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 273);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Loại hàng";
+            this.groupBox1.Text = "Danh mục hàng hóa";
             // 
-            // checkedListBox1
+            // checkedLbPdCategories
             // 
-            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(9, 45);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(176, 213);
-            this.checkedListBox1.TabIndex = 7;
+            this.checkedLbPdCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedLbPdCategories.FormattingEnabled = true;
+            this.checkedLbPdCategories.Location = new System.Drawing.Point(9, 45);
+            this.checkedLbPdCategories.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.checkedLbPdCategories.Name = "checkedLbPdCategories";
+            this.checkedLbPdCategories.Size = new System.Drawing.Size(176, 202);
+            this.checkedLbPdCategories.TabIndex = 7;
+            this.checkedLbPdCategories.SelectedIndexChanged += new System.EventHandler(this.checkedLbPdCategory_SelectedIndexChanged);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkedListBox2);
+            this.groupBox2.Controls.Add(this.checkedLbBrandCategories);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(3, 355);
             this.groupBox2.Name = "groupBox2";
@@ -107,15 +109,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thương hiệu";
             // 
-            // checkedListBox2
+            // checkedLbBrandCategories
             // 
-            this.checkedListBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Location = new System.Drawing.Point(9, 38);
-            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(176, 251);
-            this.checkedListBox2.TabIndex = 8;
+            this.checkedLbBrandCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedLbBrandCategories.FormattingEnabled = true;
+            this.checkedLbBrandCategories.Location = new System.Drawing.Point(9, 38);
+            this.checkedLbBrandCategories.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.checkedLbBrandCategories.Name = "checkedLbBrandCategories";
+            this.checkedLbBrandCategories.Size = new System.Drawing.Size(176, 246);
+            this.checkedLbBrandCategories.TabIndex = 8;
+            this.checkedLbBrandCategories.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedLbBrandCategory_ItemCheck);
             // 
             // flowLayoutPanel2
             // 
@@ -132,37 +135,24 @@
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.AutoSize = true;
-            this.flowLayoutPanel3.Controls.Add(this.buttonAddNewManufacturer);
             this.flowLayoutPanel3.Controls.Add(this.buttonAddNewProduct);
+            this.flowLayoutPanel3.Controls.Add(this.buttonAddNewProductCategory);
+            this.flowLayoutPanel3.Controls.Add(this.buttonAddNewManufacturer);
             this.flowLayoutPanel3.Controls.Add(this.buttonExportFile);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(1180, 0);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(1034, 0);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(470, 72);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(616, 72);
             this.flowLayoutPanel3.TabIndex = 3;
             this.flowLayoutPanel3.WrapContents = false;
-            // 
-            // buttonAddNewManufacturer
-            // 
-            this.buttonAddNewManufacturer.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonAddNewManufacturer.Image = global::MobileStoreManagement.Properties.Resources.smartphone;
-            this.buttonAddNewManufacturer.Location = new System.Drawing.Point(327, 11);
-            this.buttonAddNewManufacturer.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
-            this.buttonAddNewManufacturer.Name = "buttonAddNewManufacturer";
-            this.buttonAddNewManufacturer.Size = new System.Drawing.Size(131, 48);
-            this.buttonAddNewManufacturer.TabIndex = 0;
-            this.buttonAddNewManufacturer.Text = "Thêm hãng sản xuất";
-            this.buttonAddNewManufacturer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonAddNewManufacturer.UseVisualStyleBackColor = true;
-            this.buttonAddNewManufacturer.Click += new System.EventHandler(this.buttonAddNewManufacturer_Click);
             // 
             // buttonAddNewProduct
             // 
             this.buttonAddNewProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAddNewProduct.Image = global::MobileStoreManagement.Properties.Resources.plus;
-            this.buttonAddNewProduct.Location = new System.Drawing.Point(136, 11);
+            this.buttonAddNewProduct.Location = new System.Drawing.Point(437, 11);
             this.buttonAddNewProduct.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.buttonAddNewProduct.Name = "buttonAddNewProduct";
             this.buttonAddNewProduct.Size = new System.Drawing.Size(167, 48);
@@ -171,6 +161,34 @@
             this.buttonAddNewProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAddNewProduct.UseVisualStyleBackColor = true;
             this.buttonAddNewProduct.Click += new System.EventHandler(this.buttonAddNewProduct_Click);
+            // 
+            // buttonAddNewProductCategory
+            // 
+            this.buttonAddNewProductCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAddNewProductCategory.Image = global::MobileStoreManagement.Properties.Resources.application;
+            this.buttonAddNewProductCategory.Location = new System.Drawing.Point(291, 11);
+            this.buttonAddNewProductCategory.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.buttonAddNewProductCategory.Name = "buttonAddNewProductCategory";
+            this.buttonAddNewProductCategory.Size = new System.Drawing.Size(122, 48);
+            this.buttonAddNewProductCategory.TabIndex = 3;
+            this.buttonAddNewProductCategory.Text = "Quản lý danh mục";
+            this.buttonAddNewProductCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAddNewProductCategory.UseVisualStyleBackColor = true;
+            this.buttonAddNewProductCategory.Click += new System.EventHandler(this.buttonAddNewProductCategory_Click);
+            // 
+            // buttonAddNewManufacturer
+            // 
+            this.buttonAddNewManufacturer.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAddNewManufacturer.Image = global::MobileStoreManagement.Properties.Resources.smartphone;
+            this.buttonAddNewManufacturer.Location = new System.Drawing.Point(136, 11);
+            this.buttonAddNewManufacturer.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.buttonAddNewManufacturer.Name = "buttonAddNewManufacturer";
+            this.buttonAddNewManufacturer.Size = new System.Drawing.Size(131, 48);
+            this.buttonAddNewManufacturer.TabIndex = 0;
+            this.buttonAddNewManufacturer.Text = "Quản lý thương hiệu";
+            this.buttonAddNewManufacturer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAddNewManufacturer.UseVisualStyleBackColor = true;
+            this.buttonAddNewManufacturer.Click += new System.EventHandler(this.buttonAddNewManufacturer_Click);
             // 
             // buttonExportFile
             // 
@@ -184,6 +202,7 @@
             this.buttonExportFile.Text = "Xuất file";
             this.buttonExportFile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonExportFile.UseVisualStyleBackColor = true;
+            this.buttonExportFile.Click += new System.EventHandler(this.buttonExportFile_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -191,7 +210,7 @@
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel4);
             this.flowLayoutPanel1.Controls.Add(this.buttonSearchProduct);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(767, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(621, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(413, 72);
@@ -241,6 +260,7 @@
             this.buttonSearchProduct.Text = "Tìm kiếm";
             this.buttonSearchProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonSearchProduct.UseVisualStyleBackColor = true;
+            this.buttonSearchProduct.Click += new System.EventHandler(this.buttonSearchProduct_Click);
             // 
             // flowLayoutPanelProductList
             // 
@@ -287,11 +307,11 @@
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelLeft;
         private System.Windows.Forms.Label labelProduct;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
+        private System.Windows.Forms.CheckedListBox checkedLbBrandCategories;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelProductList;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox checkedLbPdCategories;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Button buttonAddNewManufacturer;
@@ -302,6 +322,6 @@
         private System.Windows.Forms.Button buttonSearchProduct;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Label labelSearch;
-        
+        private System.Windows.Forms.Button buttonAddNewProductCategory;
     }
 }

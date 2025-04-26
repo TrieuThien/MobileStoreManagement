@@ -52,8 +52,40 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EPPlus, Version=8.0.2.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.8.0.2\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.Interfaces.8.0.0\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IO.RecyclableMemoryStream.3.0.1\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Xml, Version=8.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Xml.8.0.2\lib\net462\System.Security.Cryptography.Xml.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -94,10 +126,10 @@
     <Compile Include="FormAddPromoution.Designer.cs">
       <DependentUpon>FormAddPromoution.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBrandCategory.cs">
+    <Compile Include="Product\FormBrandCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBrandCategory.Designer.cs">
+    <Compile Include="Product\FormBrandCategory.Designer.cs">
       <DependentUpon>FormBrandCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRegister.cs">
@@ -107,10 +139,16 @@
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="ImageHandle.cs" />
-    <Compile Include="FormProductDetails.cs">
+    <Compile Include="Product\FormProductCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProductDetails.Designer.cs">
+    <Compile Include="Product\FormProductCategory.Designer.cs">
+      <DependentUpon>FormProductCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\FormProductDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\FormProductDetails.Designer.cs">
       <DependentUpon>FormProductDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
@@ -168,6 +206,10 @@
       <DependentUpon>UserControlImportExportProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginService.cs" />
+    <Compile Include="Product\BrandManager.cs" />
+    <Compile Include="Product\ListItem.cs" />
+    <Compile Include="Product\ProductCategoryManager.cs" />
+    <Compile Include="Product\ProductManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -208,16 +250,16 @@
     <Compile Include="UserControlInvoiceManagement.Designer.cs">
       <DependentUpon>UserControlInvoiceManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlProductItems.cs">
+    <Compile Include="Product\UserControlProductItems.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlProductItems.Designer.cs">
+    <Compile Include="Product\UserControlProductItems.Designer.cs">
       <DependentUpon>UserControlProductItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlProductManagement.cs">
+    <Compile Include="Product\UserControlProductManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlProductManagement.Designer.cs">
+    <Compile Include="Product\UserControlProductManagement.Designer.cs">
       <DependentUpon>UserControlProductManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlPromoutionItems.cs">
@@ -292,10 +334,13 @@
     <EmbeddedResource Include="FormAddPromoution.resx">
       <DependentUpon>FormAddPromoution.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBrandCategory.resx">
+    <EmbeddedResource Include="Product\FormBrandCategory.resx">
       <DependentUpon>FormBrandCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProductDetails.resx">
+    <EmbeddedResource Include="Product\FormProductCategory.resx">
+      <DependentUpon>FormProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\FormProductDetails.resx">
       <DependentUpon>FormProductDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
@@ -348,10 +393,10 @@
     <EmbeddedResource Include="UserControlInvoiceManagement.resx">
       <DependentUpon>UserControlInvoiceManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlProductItems.resx">
+    <EmbeddedResource Include="Product\UserControlProductItems.resx">
       <DependentUpon>UserControlProductItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlProductManagement.resx">
+    <EmbeddedResource Include="Product\UserControlProductManagement.resx">
       <DependentUpon>UserControlProductManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlPromoutionItems.resx">
@@ -384,6 +429,7 @@
     <EmbeddedResource Include="UserControlSupplierManagement.resx">
       <DependentUpon>UserControlSupplierManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
