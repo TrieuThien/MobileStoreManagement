@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MobileStoreManagement
 {
-    public partial class UserControlImportExportManagementcs : UserControl
+    public partial class UserControlSalesManagementDelivery : UserControl
     {
-        public UserControlImportExportManagementcs()
+        public UserControlSalesManagementDelivery()
         {
             InitializeComponent();
         }

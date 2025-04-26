@@ -113,5 +113,11 @@ namespace MobileStoreManagement
         {
             LoadUserControl(new UserControlReport());
         }
+
+        private void buttonToAccountWindow_Click(object sender, EventArgs e)
+        {
+            FormAccountDashboard formAccountDashboard = new FormAccountDashboard(); 
+            formAccountDashboard.ShowDialog();
+        }
     }
 }
