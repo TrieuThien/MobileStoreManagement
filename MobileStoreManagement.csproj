@@ -48,8 +48,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,11 +68,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountDasboard\AccountDashboard.cs" />
+    <Compile Include="AccountDasboard\FormAccountDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountDasboard\FormAccountDashboard.Designer.cs">
+      <DependentUpon>FormAccountDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountDasboard\UserControlChangeLanguage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AccountDasboard\UserControlChangeLanguage.Designer.cs">
+      <DependentUpon>UserControlChangeLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountDasboard\UserControlPersionalInfor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AccountDasboard\UserControlPersionalInfor.Designer.cs">
+      <DependentUpon>UserControlPersionalInfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectDatabase.cs" />
+    <Compile Include="FormAddPromoution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddPromoution.Designer.cs">
+      <DependentUpon>FormAddPromoution.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBrandCategory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormBrandCategory.Designer.cs">
       <DependentUpon>FormBrandCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegister.Designer.cs">
+      <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="ImageHandle.cs" />
     <Compile Include="FormProductDetails.cs">
@@ -75,8 +113,71 @@
     <Compile Include="FormProductDetails.Designer.cs">
       <DependentUpon>FormProductDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\UserControlDeliveryInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportExport\UserControlDeliveryInvoice.Designer.cs">
+      <DependentUpon>UserControlDeliveryInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\UserControlOrderSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportExport\UserControlOrderSupplier.Designer.cs">
+      <DependentUpon>UserControlOrderSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\UserControlPaymentInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportExport\UserControlPaymentInvoice.Designer.cs">
+      <DependentUpon>UserControlPaymentInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\UserControlProductItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportExport\UserControlProductItems.Designer.cs">
+      <DependentUpon>UserControlProductItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\UserControlProductItemsHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportExport\UserControlProductItemsHeader.Designer.cs">
+      <DependentUpon>UserControlProductItemsHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\UserControlImoprtExportItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportExport\UserControlImoprtExportItems.Designer.cs">
+      <DependentUpon>UserControlImoprtExportItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\UserControlImportExportHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportExport\UserControlImportExportHeader.Designer.cs">
+      <DependentUpon>UserControlImportExportHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\UserControlImportExportProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportExport\UserControlImportExportProduct.Designer.cs">
+      <DependentUpon>UserControlImportExportProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterService.cs" />
+    <Compile Include="FormValidator.cs" />
+    <Compile Include="Session.cs" />
     <Compile Include="SumaryWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,10 +196,10 @@
     <Compile Include="UserControlHeader.Designer.cs">
       <DependentUpon>UserControlHeader.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlImportExportManagementcs.cs">
+    <Compile Include="ImportExport\UserControlImportExportManagementcs.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlImportExportManagementcs.Designer.cs">
+    <Compile Include="ImportExport\UserControlImportExportManagementcs.Designer.cs">
       <DependentUpon>UserControlImportExportManagementcs.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlInvoiceManagement.cs">
@@ -119,16 +220,22 @@
     <Compile Include="UserControlProductManagement.Designer.cs">
       <DependentUpon>UserControlProductManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlPromoutionItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPromoutionItems.Designer.cs">
+      <DependentUpon>UserControlPromoutionItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlPromoutionManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlPromoutionManagement.Designer.cs">
       <DependentUpon>UserControlPromoutionManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlReport.cs">
+    <Compile Include="Report\UserControlReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlReport.Designer.cs">
+    <Compile Include="Report\UserControlReport.Designer.cs">
       <DependentUpon>UserControlReport.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlSalesManagementcs.cs">
@@ -136,6 +243,30 @@
     </Compile>
     <Compile Include="UserControlSalesManagementcs.Designer.cs">
       <DependentUpon>UserControlSalesManagementcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSalesManagementDelivery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSalesManagementDelivery.Designer.cs">
+      <DependentUpon>UserControlSalesManagementDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSalesManagementGuarantee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSalesManagementGuarantee.Designer.cs">
+      <DependentUpon>UserControlSalesManagementGuarantee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSalesManagementOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSalesManagementOrder.Designer.cs">
+      <DependentUpon>UserControlSalesManagementOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSalesManagementPurchase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSalesManagementPurchase.Designer.cs">
+      <DependentUpon>UserControlSalesManagementPurchase.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlSumary.cs">
       <SubType>UserControl</SubType>
@@ -149,11 +280,53 @@
     <Compile Include="UserControlSupplierManagement.Designer.cs">
       <DependentUpon>UserControlSupplierManagement.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AccountDasboard\FormAccountDashboard.resx">
+      <DependentUpon>FormAccountDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountDasboard\UserControlChangeLanguage.resx">
+      <DependentUpon>UserControlChangeLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountDasboard\UserControlPersionalInfor.resx">
+      <DependentUpon>UserControlPersionalInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddPromoution.resx">
+      <DependentUpon>FormAddPromoution.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBrandCategory.resx">
       <DependentUpon>FormBrandCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProductDetails.resx">
       <DependentUpon>FormProductDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegister.resx">
+      <DependentUpon>FormRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\UserControlDeliveryInvoice.resx">
+      <DependentUpon>UserControlDeliveryInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\UserControlOrderSupplier.resx">
+      <DependentUpon>UserControlOrderSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\UserControlPaymentInvoice.resx">
+      <DependentUpon>UserControlPaymentInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\UserControlProductItems.resx">
+      <DependentUpon>UserControlProductItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\UserControlProductItemsHeader.resx">
+      <DependentUpon>UserControlProductItemsHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\UserControlImoprtExportItems.resx">
+      <DependentUpon>UserControlImoprtExportItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\UserControlImportExportHeader.resx">
+      <DependentUpon>UserControlImportExportHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\UserControlImportExportProduct.resx">
+      <DependentUpon>UserControlImportExportProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -169,7 +342,7 @@
     <EmbeddedResource Include="UserControlHeader.resx">
       <DependentUpon>UserControlHeader.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlImportExportManagementcs.resx">
+    <EmbeddedResource Include="ImportExport\UserControlImportExportManagementcs.resx">
       <DependentUpon>UserControlImportExportManagementcs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlInvoiceManagement.resx">
@@ -181,14 +354,29 @@
     <EmbeddedResource Include="UserControlProductManagement.resx">
       <DependentUpon>UserControlProductManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPromoutionItems.resx">
+      <DependentUpon>UserControlPromoutionItems.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlPromoutionManagement.resx">
       <DependentUpon>UserControlPromoutionManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlReport.resx">
+    <EmbeddedResource Include="Report\UserControlReport.resx">
       <DependentUpon>UserControlReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlSalesManagementcs.resx">
       <DependentUpon>UserControlSalesManagementcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSalesManagementDelivery.resx">
+      <DependentUpon>UserControlSalesManagementDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSalesManagementGuarantee.resx">
+      <DependentUpon>UserControlSalesManagementGuarantee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSalesManagementOrder.resx">
+      <DependentUpon>UserControlSalesManagementOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSalesManagementPurchase.resx">
+      <DependentUpon>UserControlSalesManagementPurchase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlSumary.resx">
       <DependentUpon>UserControlSumary.cs</DependentUpon>
@@ -200,11 +388,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -314,7 +497,87 @@
     <None Include="Resources\online-store.png" />
   </ItemGroup>
   <ItemGroup>
+
     <None Include="Resources\In.png" />
+
+    <None Include="Resources\deactivate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\activate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\activate1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deactivate1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset-password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\road.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-on-delivery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delivery-box.png" />
+    <None Include="Resources\cost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\megaphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\done.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit1.png" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,11 +12,13 @@ namespace MobileStoreManagement
 {
     public partial class SumaryWindow : Form
     {
+        internal bool isLoggingOut = false;
         public SumaryWindow()
         {
             InitializeComponent();
+            labelShowUserName.Text = Session.username;
         }
-
+        
         private void SumaryWindow_Resize(object sender, EventArgs e)
         {
             // set width of flowLayout equal window
@@ -38,8 +40,6 @@ namespace MobileStoreManagement
                 flowLayoutPanelFunctions.Height = 68;
             }
         }
-
-  
 
         private void labelForSuport_Click(object sender, EventArgs e)
         {
@@ -112,6 +112,23 @@ namespace MobileStoreManagement
         private void buttonToReportWindow_Click(object sender, EventArgs e)
         {
             LoadUserControl(new UserControlReport());
+        }
+
+        private void buttonToAccountWindow_Click(object sender, EventArgs e)
+        {
+            FormAccountDashboard formAccountDashboard = new FormAccountDashboard();
+            formAccountDashboard.Owner = this;
+            formAccountDashboard.ShowDialog();
+        }
+
+        private void SumaryWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Nếu không phải đang đăng xuất
+            if (!isLoggingOut)
+            {
+                // Thoát hẳn ứng dụng
+                Application.Exit();
+            }
         }
     }
 }
