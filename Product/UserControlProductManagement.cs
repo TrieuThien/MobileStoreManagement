@@ -1,4 +1,5 @@
 ﻿using MobileStoreManagement.Product;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -66,16 +67,7 @@ namespace MobileStoreManagement
                 flowLayoutPanelProductList.Controls.Add(productItem);
             }
         }
-        private void UserControlProductManagement_Load(object sender, EventArgs e)
-        {
-            refeshData();
-
-            UserControlProductItems header = new UserControlProductItems(isSetup: true);
-            header.Dock = DockStyle.Top;
-            flowLayoutPanelProductList.Controls.Add(header);
-
-            ShowAllProducts();
-        }
+        
 
         private void LoadFilteredProductsToUI()
         {
@@ -206,6 +198,7 @@ namespace MobileStoreManagement
         // Hàm xuất file excel
         private void SaveExcelFile()
         {
+            
             // Tạo SaveFileDialog để chọn tên và vị trí lưu file
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Title = "Chọn vị trí và tên tệp Excel";
@@ -237,6 +230,18 @@ namespace MobileStoreManagement
 
 
         // Các hàm xử lý sự kiện
+
+        private void UserControlProductManagement_Load(object sender, EventArgs e)
+        {
+            refeshData();
+            //ExcelPackage.LicenseContext = LicenseContext.Commercial;
+            UserControlProductItems header = new UserControlProductItems(isSetup: true);
+            header.Dock = DockStyle.Top;
+            flowLayoutPanelProductList.Controls.Add(header);
+
+            ShowAllProducts();
+        }
+
         private void buttonAddNewProduct_Click(object sender, EventArgs e)
         {
             FormProductDetails formProductDetails = new FormProductDetails();
