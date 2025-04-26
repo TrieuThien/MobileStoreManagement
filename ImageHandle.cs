@@ -29,7 +29,7 @@ namespace MobileStoreManagement
             }
         }
 
-        public static Image getImage(string filePath)
+        public static Image GetImage(string filePath)
         {
             try
             {
@@ -42,7 +42,10 @@ namespace MobileStoreManagement
                 // Dùng Image.FromStream để tránh lỗi file bị khóa
                 using (var fs = new FileStream(filePath, FileMode.Open, FileAccess.Read))
                 {
-                    return Image.FromStream(fs);
+                    using (var imgTemp = Image.FromStream(fs))
+                    {
+                        return new Bitmap(imgTemp); // clone ảnh
+                    }
                 }
             }
             catch (Exception ex)

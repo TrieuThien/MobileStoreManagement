@@ -93,6 +93,16 @@ namespace MobileStoreManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap application {
+            get {
+                object obj = ResourceManager.GetObject("application", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bill_icon {
             get {
                 object obj = ResourceManager.GetObject("bill-icon", resourceCulture);
@@ -113,7 +123,6 @@ namespace MobileStoreManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-
         internal static System.Drawing.Bitmap cash_on_delivery {
             get {
                 object obj = ResourceManager.GetObject("cash-on-delivery", resourceCulture);
@@ -124,20 +133,19 @@ namespace MobileStoreManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap checkout
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap checkout {
+            get {
                 object obj = ResourceManager.GetObject("checkout", resourceCulture);
-
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cost {
             get {
                 object obj = ResourceManager.GetObject("cost", resourceCulture);
-
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -285,7 +293,6 @@ namespace MobileStoreManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-
         internal static System.Drawing.Bitmap megaphone {
             get {
                 object obj = ResourceManager.GetObject("megaphone", resourceCulture);

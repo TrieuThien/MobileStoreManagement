@@ -14,6 +14,7 @@ namespace MobileStoreManagement
     {
         string productId;
         string productName;
+        string productStatus;
         decimal productPrice;
         decimal productCapitalPrice;
         int productQuantityOrderFromSupplier;
@@ -29,11 +30,12 @@ namespace MobileStoreManagement
                 hideButtonDelete();   
             }
         }
-        public UserControlProductItems(string productId, string productName, decimal productPrice, decimal productCapitalPrice, int productQuantityOrderFromSupplier, int productQuantityOrderFromCustomer, int productQuantityRemaining)
+        public UserControlProductItems(string productId, string productName, string productStatus, decimal productPrice, decimal productCapitalPrice, int productQuantityOrderFromSupplier, int productQuantityOrderFromCustomer, int productQuantityRemaining)
         {
             InitializeComponent();
             this.productId = productId;
             this.productName = productName;
+            this.productStatus = productStatus;
             this.productPrice = productPrice;
             this.productCapitalPrice = productCapitalPrice;
             this.productQuantityOrderFromSupplier = productQuantityOrderFromSupplier;
@@ -41,6 +43,7 @@ namespace MobileStoreManagement
             this.productQuantityRemaining = productQuantityRemaining;
 
             this.setProductName();
+            this.setProductStatus();
             this.setProductSellingPrice();
             this.setProductCapitalPrice();
             this.setQuantityOrderFromSupplier();
@@ -119,6 +122,14 @@ namespace MobileStoreManagement
         internal void setQuantityRemaining()
         {
             labelRemaining.Text = this.productQuantityRemaining.ToString();
+        }
+
+        internal void setProductStatus()
+        {
+            if (this.productStatus.ToString() == "M")
+                labelProductStatus.Text = "Sản phẩm mới";
+            else
+                labelProductStatus.Text = "Sản phẩm cũ";
         }
 
         internal void hideButtonUpdate()

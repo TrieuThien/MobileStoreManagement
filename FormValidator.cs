@@ -55,5 +55,14 @@ namespace MobileStoreManagement
             }
             return true;
         }
+        internal static bool Is10Character(string str)
+        {
+            return (str.Length == 10) ? true : false;
+        }
+
+        internal static bool IsMaxiMum20Character(string str)
+        {
+            return (str.Length <= 20) ? true : false;
+        }
     }
 }
