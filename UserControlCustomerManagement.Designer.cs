@@ -35,6 +35,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -46,15 +52,9 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -64,9 +64,10 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(561, 27);
+            this.label13.Location = new System.Drawing.Point(748, 33);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(126, 20);
+            this.label13.Size = new System.Drawing.Size(155, 25);
             this.label13.TabIndex = 57;
             this.label13.Text = "KHÁCH HÀNG";
             // 
@@ -74,9 +75,10 @@
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(57, 179);
+            this.label11.Location = new System.Drawing.Point(76, 220);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(32, 13);
+            this.label11.Size = new System.Drawing.Size(41, 16);
             this.label11.TabIndex = 84;
             this.label11.Text = "Email";
             // 
@@ -84,9 +86,10 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 143);
+            this.label3.Location = new System.Drawing.Point(76, 176);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.Size = new System.Drawing.Size(85, 16);
             this.label3.TabIndex = 82;
             this.label3.Text = "Số điện thoại";
             // 
@@ -94,9 +97,10 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(55, 214);
+            this.label4.Location = new System.Drawing.Point(73, 263);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(47, 16);
             this.label4.TabIndex = 81;
             this.label4.Text = "Địa chỉ";
             // 
@@ -104,9 +108,10 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(56, 31);
+            this.label9.Location = new System.Drawing.Point(75, 38);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 13);
+            this.label9.Size = new System.Drawing.Size(98, 16);
             this.label9.TabIndex = 75;
             this.label9.Text = "Mã khách hàng";
             // 
@@ -114,9 +119,10 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 73);
+            this.label2.Location = new System.Drawing.Point(73, 90);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 13);
+            this.label2.Size = new System.Drawing.Size(103, 16);
             this.label2.TabIndex = 74;
             this.label2.Text = "Tên khách hàng";
             // 
@@ -131,115 +137,169 @@
             this.Column8,
             this.Column10,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(545, 62);
+            this.dataGridView1.Location = new System.Drawing.Point(727, 76);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(641, 403);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(855, 496);
             this.dataGridView1.TabIndex = 73;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "Mã khách hàng";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Tên khách hàng";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.HeaderText = "Số điện thoại";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column8.HeaderText = "Địa chỉ";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            // 
+            // Column10
+            // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column10.HeaderText = "Email";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "Giới tính";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
             // 
             // textBox5
             // 
             this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Location = new System.Drawing.Point(161, 28);
+            this.textBox5.Location = new System.Drawing.Point(215, 34);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(184, 20);
+            this.textBox5.Size = new System.Drawing.Size(244, 24);
             this.textBox5.TabIndex = 65;
             // 
             // textBox7
             // 
             this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox7.Location = new System.Drawing.Point(161, 172);
+            this.textBox7.Location = new System.Drawing.Point(215, 212);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(184, 20);
+            this.textBox7.Size = new System.Drawing.Size(244, 24);
             this.textBox7.TabIndex = 64;
             // 
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(161, 136);
+            this.textBox2.Location = new System.Drawing.Point(215, 167);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(184, 20);
+            this.textBox2.Size = new System.Drawing.Size(244, 24);
             this.textBox2.TabIndex = 62;
             // 
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Location = new System.Drawing.Point(161, 207);
+            this.textBox3.Location = new System.Drawing.Point(215, 255);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(184, 20);
+            this.textBox3.Size = new System.Drawing.Size(244, 24);
             this.textBox3.TabIndex = 60;
             // 
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox1.Location = new System.Drawing.Point(161, 66);
+            this.textBox1.Location = new System.Drawing.Point(215, 81);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 20);
+            this.textBox1.Size = new System.Drawing.Size(244, 24);
             this.textBox1.TabIndex = 58;
             // 
             // button8
             // 
             this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(331, 405);
+            this.button8.Image = global::MobileStoreManagement.Properties.Resources.pencil;
+            this.button8.Location = new System.Drawing.Point(441, 498);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(114, 48);
+            this.button8.Size = new System.Drawing.Size(152, 59);
             this.button8.TabIndex = 97;
             this.button8.Text = "Cập nhật";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
             this.button10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(118, 337);
+            this.button10.Image = global::MobileStoreManagement.Properties.Resources.search;
+            this.button10.Location = new System.Drawing.Point(157, 415);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(113, 48);
+            this.button10.Size = new System.Drawing.Size(151, 59);
             this.button10.TabIndex = 90;
             this.button10.Text = "Tìm kiếm";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button10.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
             this.button11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(374, 337);
+            this.button11.Image = global::MobileStoreManagement.Properties.Resources.save;
+            this.button11.Location = new System.Drawing.Point(499, 415);
+            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(113, 48);
+            this.button11.Size = new System.Drawing.Size(151, 59);
             this.button11.TabIndex = 91;
             this.button11.Text = "Lưu thông tin";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button11.UseVisualStyleBackColor = true;
             // 
             // button12
             // 
             this.button12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(250, 337);
+            this.button12.Image = global::MobileStoreManagement.Properties.Resources.plus;
+            this.button12.Location = new System.Drawing.Point(333, 415);
+            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(114, 48);
+            this.button12.Size = new System.Drawing.Size(152, 59);
             this.button12.TabIndex = 93;
             this.button12.Text = "Thêm mới";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button12.UseVisualStyleBackColor = true;
             // 
             // button13
             // 
             this.button13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.Location = new System.Drawing.Point(164, 405);
+            this.button13.Image = global::MobileStoreManagement.Properties.Resources.delete;
+            this.button13.Location = new System.Drawing.Point(219, 498);
+            this.button13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(113, 48);
+            this.button13.Size = new System.Drawing.Size(151, 59);
             this.button13.TabIndex = 94;
             this.button13.Text = "Xóa thông tin";
-            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button13.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -256,72 +316,40 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Location = new System.Drawing.Point(90, 62);
+            this.groupBox1.Location = new System.Drawing.Point(120, 76);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(410, 247);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(547, 304);
             this.groupBox1.TabIndex = 98;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khách hàng";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 108);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 74;
-            this.label1.Text = "Giới tính";
             // 
             // textBox9
             // 
             this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox9.Location = new System.Drawing.Point(161, 101);
+            this.textBox9.Location = new System.Drawing.Point(215, 124);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(184, 20);
+            this.textBox9.Size = new System.Drawing.Size(244, 24);
             this.textBox9.TabIndex = 58;
             // 
-            // Column1
+            // label1
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Mã khách hàng";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Tên khách hàng";
-            this.Column2.Name = "Column2";
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column7.HeaderText = "Số điện thoại";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column8.HeaderText = "Địa chỉ";
-            this.Column8.Name = "Column8";
-            // 
-            // Column10
-            // 
-            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column10.HeaderText = "Email";
-            this.Column10.Name = "Column10";
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Giới tính";
-            this.Column4.Name = "Column4";
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(73, 133);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 16);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "Giới tính";
             // 
             // UserControlCustomerManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button8);
@@ -331,10 +359,10 @@
             this.Controls.Add(this.button13);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(622, 569);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(829, 700);
             this.Name = "UserControlCustomerManagement";
-            this.Size = new System.Drawing.Size(1258, 758);
+            this.Size = new System.Drawing.Size(1677, 933);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
