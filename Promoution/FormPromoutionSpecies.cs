@@ -35,25 +35,25 @@ namespace MobileStoreManagement.Promoution
 
             if (pmId.Length != 1)
             {
-                MessageBox.Show("Vui lòng nhập 1 ký tự cho mã loại khuyến mãi.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chỉ nhập 1 ký tự cho mã loại khuyến mãi.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
             if (string.IsNullOrEmpty(pmName))
             {
                 MessageBox.Show("Vui lòng nhập tên loại khuyến mãi.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            pmManager.InsertPromotionType(pmName, pmId);   
+            pmManager.InsertPromotionType(pmId, pmName);   
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             string pmId = textBoxPromoutionSpeciesId.Text;
-            string pmName = textBoxPromoutionSpeciesName.Text;
 
             if (pmId.Length != 1)
             {
                 MessageBox.Show("Vui lòng nhập 1 ký tự cho mã loại khuyến mãi.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            pmManager.DeletePromotionType(pmName);
+            pmManager.DeletePromotionType(pmId);
         }
     }
 }

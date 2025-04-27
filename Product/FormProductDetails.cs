@@ -139,7 +139,8 @@ namespace MobileStoreManagement
                 {
                     pdManager.InsertProduct(pdId, pdName, pdBrands, pdCategories, price, pdDes, pdStatus, getImagePath());
                 }
-
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
             catch (Exception ex)
             {

@@ -101,7 +101,7 @@
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // PromoutionSpecies
+            // FormPromoutionSpecies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -117,7 +117,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(564, 419);
             this.MinimumSize = new System.Drawing.Size(564, 419);
-            this.Name = "PromoutionSpecies";
+            this.Name = "FormPromoutionSpecies";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mobile Manager";
             this.ResumeLayout(false);

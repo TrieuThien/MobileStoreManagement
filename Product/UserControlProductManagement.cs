@@ -285,17 +285,7 @@ namespace MobileStoreManagement
            refeshData();
 
         }
-
-        private void checkedLbBrandCategory_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            this.BeginInvoke(new Action(LoadFilteredProductsToUI));
-        }
-
-        private void checkedLbPdCategory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            this.BeginInvoke(new Action(LoadFilteredProductsToUI));
-        }
-
+ 
         private void buttonSearchProduct_Click(object sender, EventArgs e)
         {
             string searchTerm = textBoxGetKeyWordSearch.Text.Trim(); // Lấy từ khóa tìm kiếm
@@ -313,6 +303,16 @@ namespace MobileStoreManagement
         private void buttonExportFile_Click(object sender, EventArgs e)
         {
             SaveExcelFile();
+        }
+
+        private void checkedLbPdCategories_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            this.BeginInvoke(new Action(LoadFilteredProductsToUI));
+        }
+
+        private void checkedLbBrandCategories_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            this.BeginInvoke(new Action(LoadFilteredProductsToUI));
         }
     }
 }

@@ -96,7 +96,7 @@
             this.checkedLbPdCategories.Name = "checkedLbPdCategories";
             this.checkedLbPdCategories.Size = new System.Drawing.Size(176, 202);
             this.checkedLbPdCategories.TabIndex = 7;
-            this.checkedLbPdCategories.SelectedIndexChanged += new System.EventHandler(this.checkedLbPdCategory_SelectedIndexChanged);
+            this.checkedLbPdCategories.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedLbPdCategories_ItemCheck);
             // 
             // groupBox2
             // 
@@ -118,7 +118,7 @@
             this.checkedLbBrandCategories.Name = "checkedLbBrandCategories";
             this.checkedLbBrandCategories.Size = new System.Drawing.Size(176, 246);
             this.checkedLbBrandCategories.TabIndex = 8;
-            this.checkedLbBrandCategories.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedLbBrandCategory_ItemCheck);
+            this.checkedLbBrandCategories.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedLbBrandCategories_ItemCheck);
             // 
             // flowLayoutPanel2
             // 
@@ -165,7 +165,6 @@
             // buttonAddNewProductCategory
             // 
             this.buttonAddNewProductCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonAddNewProductCategory.Image = global::MobileStoreManagement.Properties.Resources.application;
             this.buttonAddNewProductCategory.Location = new System.Drawing.Point(291, 11);
             this.buttonAddNewProductCategory.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.buttonAddNewProductCategory.Name = "buttonAddNewProductCategory";

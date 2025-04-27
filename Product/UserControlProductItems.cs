@@ -153,8 +153,8 @@ namespace MobileStoreManagement
         private void buttonUpdateProduct_Click(object sender, EventArgs e)
         {
             FormProductDetails formProductDetails = new FormProductDetails(isUpdate: true, productId, productName, productPrice, productDes);
-            OnProductUpdatedOrDeleted?.Invoke(this, EventArgs.Empty);
             formProductDetails.ShowDialog();
+            OnProductUpdatedOrDeleted?.Invoke(this, EventArgs.Empty);
             
         }
 
