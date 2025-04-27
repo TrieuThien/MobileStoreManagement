@@ -1,6 +1,6 @@
 ﻿namespace MobileStoreManagement.ImportExport
 {
-    partial class UserControlImportExportHeader
+    partial class UserControlImportHeader
     {
         /// <summary> 
         /// Required designer variable.
@@ -32,7 +32,7 @@
             this.labelProductId = new System.Windows.Forms.Label();
             this.labelProductName = new System.Windows.Forms.Label();
             this.labelProductQuantity = new System.Windows.Forms.Label();
-            this.labelCapitalPrice = new System.Windows.Forms.Label();
+            this.labelPrice = new System.Windows.Forms.Label();
             this.labelTotalPrice = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -42,7 +42,7 @@
             this.flowLayoutPanel1.Controls.Add(this.labelProductId);
             this.flowLayoutPanel1.Controls.Add(this.labelProductName);
             this.flowLayoutPanel1.Controls.Add(this.labelProductQuantity);
-            this.flowLayoutPanel1.Controls.Add(this.labelCapitalPrice);
+            this.flowLayoutPanel1.Controls.Add(this.labelPrice);
             this.flowLayoutPanel1.Controls.Add(this.labelTotalPrice);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(850, 100);
@@ -81,15 +81,15 @@
             this.labelProductQuantity.Text = "Số lượng";
             this.labelProductQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelCapitalPrice
+            // labelPrice
             // 
-            this.labelCapitalPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelCapitalPrice.Location = new System.Drawing.Point(515, 0);
-            this.labelCapitalPrice.Name = "labelCapitalPrice";
-            this.labelCapitalPrice.Size = new System.Drawing.Size(150, 100);
-            this.labelCapitalPrice.TabIndex = 5;
-            this.labelCapitalPrice.Text = "Giá nhập";
-            this.labelCapitalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelPrice.Location = new System.Drawing.Point(515, 0);
+            this.labelPrice.Name = "labelPrice";
+            this.labelPrice.Size = new System.Drawing.Size(150, 100);
+            this.labelPrice.TabIndex = 5;
+            this.labelPrice.Text = "Giá nhập";
+            this.labelPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelTotalPrice
             // 
@@ -101,13 +101,13 @@
             this.labelTotalPrice.Text = "Thành tiền";
             this.labelTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // UserControlImportExportHeader
+            // UserControlImportHeader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flowLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(850, 100);
-            this.Name = "UserControlImportExportHeader";
+            this.Name = "UserControlImportHeader";
             this.Size = new System.Drawing.Size(850, 100);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -121,6 +121,6 @@
         private System.Windows.Forms.Label labelProductName;
         private System.Windows.Forms.Label labelProductQuantity;
         private System.Windows.Forms.Label labelTotalPrice;
-        private System.Windows.Forms.Label labelCapitalPrice;
+        private System.Windows.Forms.Label labelPrice;
     }
 }

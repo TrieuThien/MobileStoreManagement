@@ -119,7 +119,11 @@
     <Compile Include="AccountDasboard\UserControlPersionalInfor.Designer.cs">
       <DependentUpon>UserControlPersionalInfor.cs</DependentUpon>
     </Compile>
+    <Compile Include="CodeGenerator.cs" />
     <Compile Include="ConnectDatabase.cs" />
+    <Compile Include="ImportExport\ReceiptImportDetails.cs" />
+    <Compile Include="ImportExport\ImExManager.cs" />
+    <Compile Include="Product\ProductInfo.cs" />
     <Compile Include="Promoution\FormAddPromoution.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,17 +191,17 @@
     <Compile Include="ImportExport\UserControlProductItemsHeader.Designer.cs">
       <DependentUpon>UserControlProductItemsHeader.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImportExport\UserControlImoprtExportItems.cs">
+    <Compile Include="ImportExport\UserControlImExItems.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ImportExport\UserControlImoprtExportItems.Designer.cs">
-      <DependentUpon>UserControlImoprtExportItems.cs</DependentUpon>
+    <Compile Include="ImportExport\UserControlImExItems.Designer.cs">
+      <DependentUpon>UserControlImExItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImportExport\UserControlImportExportHeader.cs">
+    <Compile Include="ImportExport\UserControlImportHeader.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ImportExport\UserControlImportExportHeader.Designer.cs">
-      <DependentUpon>UserControlImportExportHeader.cs</DependentUpon>
+    <Compile Include="ImportExport\UserControlImportHeader.Designer.cs">
+      <DependentUpon>UserControlImportHeader.cs</DependentUpon>
     </Compile>
     <Compile Include="ImportExport\UserControlImportExportProduct.cs">
       <SubType>UserControl</SubType>
@@ -371,11 +375,11 @@
     <EmbeddedResource Include="ImportExport\UserControlProductItemsHeader.resx">
       <DependentUpon>UserControlProductItemsHeader.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImportExport\UserControlImoprtExportItems.resx">
-      <DependentUpon>UserControlImoprtExportItems.cs</DependentUpon>
+    <EmbeddedResource Include="ImportExport\UserControlImExItems.resx">
+      <DependentUpon>UserControlImExItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImportExport\UserControlImportExportHeader.resx">
-      <DependentUpon>UserControlImportExportHeader.cs</DependentUpon>
+    <EmbeddedResource Include="ImportExport\UserControlImportHeader.resx">
+      <DependentUpon>UserControlImportHeader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImportExport\UserControlImportExportProduct.resx">
       <DependentUpon>UserControlImportExportProduct.cs</DependentUpon>

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace MobileStoreManagement.ImportExport
 {
-    public partial class UserControlImportExportHeader : UserControl
+    public partial class UserControlImportHeader : UserControl
     {
-        public UserControlImportExportHeader()
+        public UserControlImportHeader()
         {
             InitializeComponent();
+        }
+
+        internal void SetLabelPrice(string labelPriceText)
+        {
+            labelPrice.Text = labelPriceText;
         }
     }
 }
