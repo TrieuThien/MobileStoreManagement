@@ -232,12 +232,6 @@
     </Compile>
     <Compile Include="RegisterService.cs" />
     <Compile Include="FormValidator.cs" />
-    <Compile Include="Report\CrystalReport_ImportProduct.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport_ImportProduct.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Report\CrystalReport_PromoutionReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -411,10 +405,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\CrystalReport_ImportProduct.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport_ImportProduct.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\CrystalReport_PromoutionReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

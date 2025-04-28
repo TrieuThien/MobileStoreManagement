@@ -88,45 +88,6 @@ namespace MobileStoreManagement
             return dt;
         }
 
-        public DataTable LoadImportReceiptData()
-        {
-            DataTable dt = new DataTable();
-
-            // Câu lệnh SQL để lấy dữ liệu từ ba bảng với JOIN
-            string query = @"
-            SELECT 
-                pn.Ma_phieu_nhap,
-                pn.Ngay_nhap,
-                pn.Tong_tien_nhap,
-                pn.Giam_gia,
-                pn.Ghi_chu_phieu_nhap,
-                ctpn.Ma_san_pham,
-                sp.Ten_san_pham,
-                ctpn.So_luong_nhap,
-                ctpn.Gia_nhap_vao,
-                sp.So_luong_ton_kho
-            FROM Phieu_nhap_hang_ pn
-            INNER JOIN Chi_tiet_phieu_nhap ctpn ON pn.Ma_phieu_nhap = ctpn.Ma_phieu_nhap
-            INNER JOIN San_pham sp ON ctpn.Ma_san_pham = sp.Ma_san_pham";
-
-            using (SqlConnection connection = connectDb.GetConnection())
-            {
-                // Mở kết nối
-                connection.Open();
-
-                // Tạo command và tham số nếu cần thiết
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    // Sử dụng SqlDataAdapter để điền dữ liệu vào DataTable
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                    {
-                        adapter.Fill(dt);
-                    }
-                }
-            }
-
-            return dt;
-        }
 
         private void ShowStockReport()
         {
@@ -162,22 +123,6 @@ namespace MobileStoreManagement
             crystalReportViewer1.Refresh();
         }
 
-        private void ShowImportReceiptReport()
-        {
-            ReportDocument report = new ReportDocument();
-
-            // Thay đổi đường dẫn .rpt ở đây để chạy chương trình
-            report.Load(@"E:\Learning\University\Practice\Windows_form\MobileStoreManagement\Report\CrystalReport_ImportProduct.rpt");
-
-            DataTable importReceiptData = LoadImportReceiptData();
-
-            report.SetDataSource(importReceiptData);
-
-            crystalReportViewer1.ReportSource = report;
-
-            // Làm mới báo cáo
-            crystalReportViewer1.Refresh();
-        }
 
         private void buttonRevenueReport_Click(object sender, EventArgs e)
         {
@@ -199,9 +144,5 @@ namespace MobileStoreManagement
             ShowPromoutionReport();
         }
 
-        private void buttonImportReceiptReport_Click(object sender, EventArgs e)
-        {
-            ShowImportReceiptReport();
-        }
     }
 }
