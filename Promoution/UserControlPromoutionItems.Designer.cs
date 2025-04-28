@@ -126,6 +126,7 @@
             this.buttonDeactivePromoution.Text = "Dừng áp dụng";
             this.buttonDeactivePromoution.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDeactivePromoution.UseVisualStyleBackColor = true;
+            this.buttonDeactivePromoution.Click += new System.EventHandler(this.buttonDeactivePromoution_Click);
             // 
             // buttonActivePromoution
             // 
@@ -138,6 +139,7 @@
             this.buttonActivePromoution.Text = "Kích hoạt";
             this.buttonActivePromoution.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonActivePromoution.UseVisualStyleBackColor = true;
+            this.buttonActivePromoution.Click += new System.EventHandler(this.buttonActivePromoution_Click);
             // 
             // UserControlPromoutionItems
             // 

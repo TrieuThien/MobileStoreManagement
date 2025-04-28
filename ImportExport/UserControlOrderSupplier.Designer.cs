@@ -38,28 +38,28 @@
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxGetDownPayment = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.labelFunctionName = new System.Windows.Forms.Label();
-            this.textBoxGetIdOrNamePd = new System.Windows.Forms.TextBox();
-            this.textBoxGetQuantity = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanelListOrderProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxGetNote = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelFunctionName = new System.Windows.Forms.Label();
+            this.textBoxGetIdOrNamePd = new System.Windows.Forms.TextBox();
+            this.textBoxGetQuantity = new System.Windows.Forms.TextBox();
             this.buttonAddPd = new System.Windows.Forms.Button();
             this.buttonDownPaymentInvoice = new System.Windows.Forms.Button();
             this.buttonOrderInvoice = new System.Windows.Forms.Button();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
+            this.flowLayoutPanelListOrderProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel6.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
             this.flowLayoutPanel7.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -127,7 +127,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(160, 48);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Mã nhà cung cấp";
+            this.label3.Text = "Nhà cung cấp";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // comboBoxGetSupplierId
@@ -167,61 +167,6 @@
             this.textBoxGetDownPayment.Name = "textBoxGetDownPayment";
             this.textBoxGetDownPayment.Size = new System.Drawing.Size(210, 22);
             this.textBoxGetDownPayment.TabIndex = 1;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.labelFunctionName);
-            this.flowLayoutPanel2.Controls.Add(this.textBoxGetIdOrNamePd);
-            this.flowLayoutPanel2.Controls.Add(this.textBoxGetQuantity);
-            this.flowLayoutPanel2.Controls.Add(this.buttonAddPd);
-            this.flowLayoutPanel2.Controls.Add(this.buttonDownPaymentInvoice);
-            this.flowLayoutPanel2.Controls.Add(this.buttonOrderInvoice);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1079, 68);
-            this.flowLayoutPanel2.TabIndex = 8;
-            this.flowLayoutPanel2.WrapContents = false;
-            // 
-            // labelFunctionName
-            // 
-            this.labelFunctionName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFunctionName.Location = new System.Drawing.Point(3, 0);
-            this.labelFunctionName.Name = "labelFunctionName";
-            this.labelFunctionName.Size = new System.Drawing.Size(140, 68);
-            this.labelFunctionName.TabIndex = 1;
-            this.labelFunctionName.Text = "Đặt hàng NCC";
-            this.labelFunctionName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBoxGetIdOrNamePd
-            // 
-            this.textBoxGetIdOrNamePd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxGetIdOrNamePd.Location = new System.Drawing.Point(158, 22);
-            this.textBoxGetIdOrNamePd.Margin = new System.Windows.Forms.Padding(12, 22, 12, 22);
-            this.textBoxGetIdOrNamePd.Name = "textBoxGetIdOrNamePd";
-            this.textBoxGetIdOrNamePd.Size = new System.Drawing.Size(337, 24);
-            this.textBoxGetIdOrNamePd.TabIndex = 2;
-            // 
-            // textBoxGetQuantity
-            // 
-            this.textBoxGetQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxGetQuantity.Location = new System.Drawing.Point(519, 22);
-            this.textBoxGetQuantity.Margin = new System.Windows.Forms.Padding(12, 22, 12, 22);
-            this.textBoxGetQuantity.Name = "textBoxGetQuantity";
-            this.textBoxGetQuantity.Size = new System.Drawing.Size(100, 24);
-            this.textBoxGetQuantity.TabIndex = 3;
-            // 
-            // flowLayoutPanelListOrderProduct
-            // 
-            this.flowLayoutPanelListOrderProduct.AutoScroll = true;
-            this.flowLayoutPanelListOrderProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelListOrderProduct.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelListOrderProduct.Location = new System.Drawing.Point(0, 68);
-            this.flowLayoutPanelListOrderProduct.Name = "flowLayoutPanelListOrderProduct";
-            this.flowLayoutPanelListOrderProduct.Size = new System.Drawing.Size(1079, 648);
-            this.flowLayoutPanelListOrderProduct.TabIndex = 9;
-            this.flowLayoutPanelListOrderProduct.WrapContents = false;
             // 
             // flowLayoutPanel5
             // 
@@ -273,40 +218,6 @@
             this.flowLayoutPanel7.TabIndex = 9;
             this.flowLayoutPanel7.WrapContents = false;
             // 
-            // buttonAddPd
-            // 
-            this.buttonAddPd.Image = global::MobileStoreManagement.Properties.Resources.plus;
-            this.buttonAddPd.Location = new System.Drawing.Point(643, 10);
-            this.buttonAddPd.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
-            this.buttonAddPd.Name = "buttonAddPd";
-            this.buttonAddPd.Size = new System.Drawing.Size(75, 48);
-            this.buttonAddPd.TabIndex = 4;
-            this.buttonAddPd.UseVisualStyleBackColor = true;
-            // 
-            // buttonDownPaymentInvoice
-            // 
-            this.buttonDownPaymentInvoice.Image = global::MobileStoreManagement.Properties.Resources.done;
-            this.buttonDownPaymentInvoice.Location = new System.Drawing.Point(754, 10);
-            this.buttonDownPaymentInvoice.Margin = new System.Windows.Forms.Padding(24, 10, 12, 10);
-            this.buttonDownPaymentInvoice.Name = "buttonDownPaymentInvoice";
-            this.buttonDownPaymentInvoice.Size = new System.Drawing.Size(126, 48);
-            this.buttonDownPaymentInvoice.TabIndex = 6;
-            this.buttonDownPaymentInvoice.Text = "Phiếu đặt cọc";
-            this.buttonDownPaymentInvoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonDownPaymentInvoice.UseVisualStyleBackColor = true;
-            // 
-            // buttonOrderInvoice
-            // 
-            this.buttonOrderInvoice.Image = global::MobileStoreManagement.Properties.Resources.done;
-            this.buttonOrderInvoice.Location = new System.Drawing.Point(916, 10);
-            this.buttonOrderInvoice.Margin = new System.Windows.Forms.Padding(24, 10, 12, 10);
-            this.buttonOrderInvoice.Name = "buttonOrderInvoice";
-            this.buttonOrderInvoice.Size = new System.Drawing.Size(141, 48);
-            this.buttonOrderInvoice.TabIndex = 7;
-            this.buttonOrderInvoice.Text = "Phiếu đặt hàng";
-            this.buttonOrderInvoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonOrderInvoice.UseVisualStyleBackColor = true;
-            // 
             // buttonSave
             // 
             this.buttonSave.Image = global::MobileStoreManagement.Properties.Resources.save;
@@ -332,6 +243,95 @@
             this.buttonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.labelFunctionName);
+            this.flowLayoutPanel2.Controls.Add(this.textBoxGetIdOrNamePd);
+            this.flowLayoutPanel2.Controls.Add(this.textBoxGetQuantity);
+            this.flowLayoutPanel2.Controls.Add(this.buttonAddPd);
+            this.flowLayoutPanel2.Controls.Add(this.buttonDownPaymentInvoice);
+            this.flowLayoutPanel2.Controls.Add(this.buttonOrderInvoice);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1079, 68);
+            this.flowLayoutPanel2.TabIndex = 8;
+            this.flowLayoutPanel2.WrapContents = false;
+            // 
+            // labelFunctionName
+            // 
+            this.labelFunctionName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFunctionName.Location = new System.Drawing.Point(3, 0);
+            this.labelFunctionName.Name = "labelFunctionName";
+            this.labelFunctionName.Size = new System.Drawing.Size(140, 68);
+            this.labelFunctionName.TabIndex = 1;
+            this.labelFunctionName.Text = "Đặt hàng NCC";
+            this.labelFunctionName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxGetIdOrNamePd
+            // 
+            this.textBoxGetIdOrNamePd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGetIdOrNamePd.Location = new System.Drawing.Point(158, 22);
+            this.textBoxGetIdOrNamePd.Margin = new System.Windows.Forms.Padding(12, 22, 12, 22);
+            this.textBoxGetIdOrNamePd.Name = "textBoxGetIdOrNamePd";
+            this.textBoxGetIdOrNamePd.Size = new System.Drawing.Size(337, 24);
+            this.textBoxGetIdOrNamePd.TabIndex = 2;
+            // 
+            // textBoxGetQuantity
+            // 
+            this.textBoxGetQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGetQuantity.Location = new System.Drawing.Point(519, 22);
+            this.textBoxGetQuantity.Margin = new System.Windows.Forms.Padding(12, 22, 12, 22);
+            this.textBoxGetQuantity.Name = "textBoxGetQuantity";
+            this.textBoxGetQuantity.Size = new System.Drawing.Size(100, 24);
+            this.textBoxGetQuantity.TabIndex = 3;
+            // 
+            // buttonAddPd
+            // 
+            this.buttonAddPd.Image = global::MobileStoreManagement.Properties.Resources.plus;
+            this.buttonAddPd.Location = new System.Drawing.Point(643, 10);
+            this.buttonAddPd.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
+            this.buttonAddPd.Name = "buttonAddPd";
+            this.buttonAddPd.Size = new System.Drawing.Size(75, 48);
+            this.buttonAddPd.TabIndex = 4;
+            this.buttonAddPd.UseVisualStyleBackColor = true;
+            // 
+            // buttonDownPaymentInvoice
+            // 
+            this.buttonDownPaymentInvoice.Image = global::MobileStoreManagement.Properties.Resources.done;
+            this.buttonDownPaymentInvoice.Location = new System.Drawing.Point(754, 10);
+            this.buttonDownPaymentInvoice.Margin = new System.Windows.Forms.Padding(24, 10, 12, 10);
+            this.buttonDownPaymentInvoice.Name = "buttonDownPaymentInvoice";
+            this.buttonDownPaymentInvoice.Size = new System.Drawing.Size(138, 48);
+            this.buttonDownPaymentInvoice.TabIndex = 6;
+            this.buttonDownPaymentInvoice.Text = "Phiếu đặt cọc";
+            this.buttonDownPaymentInvoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonDownPaymentInvoice.UseVisualStyleBackColor = true;
+            // 
+            // buttonOrderInvoice
+            // 
+            this.buttonOrderInvoice.Image = global::MobileStoreManagement.Properties.Resources.done;
+            this.buttonOrderInvoice.Location = new System.Drawing.Point(928, 10);
+            this.buttonOrderInvoice.Margin = new System.Windows.Forms.Padding(24, 10, 12, 10);
+            this.buttonOrderInvoice.Name = "buttonOrderInvoice";
+            this.buttonOrderInvoice.Size = new System.Drawing.Size(139, 48);
+            this.buttonOrderInvoice.TabIndex = 7;
+            this.buttonOrderInvoice.Text = "Phiếu đặt hàng";
+            this.buttonOrderInvoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonOrderInvoice.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanelListOrderProduct
+            // 
+            this.flowLayoutPanelListOrderProduct.AutoScroll = true;
+            this.flowLayoutPanelListOrderProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelListOrderProduct.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelListOrderProduct.Location = new System.Drawing.Point(0, 68);
+            this.flowLayoutPanelListOrderProduct.Name = "flowLayoutPanelListOrderProduct";
+            this.flowLayoutPanelListOrderProduct.Size = new System.Drawing.Size(1079, 648);
+            this.flowLayoutPanelListOrderProduct.TabIndex = 9;
+            this.flowLayoutPanelListOrderProduct.WrapContents = false;
+            // 
             // UserControlOrderSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -348,11 +348,11 @@
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel6.ResumeLayout(false);
             this.flowLayoutPanel6.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
             this.flowLayoutPanel7.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

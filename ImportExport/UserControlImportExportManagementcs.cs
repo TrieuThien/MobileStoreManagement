@@ -28,16 +28,15 @@ namespace MobileStoreManagement
 
         private void buttonImportProduct_Click(object sender, EventArgs e)
         {
-            UserControlImportExportProduct layout = new UserControlImportExportProduct();
-            layout.SetLabelFunctionName("Nhập hàng");
-            LoadUserControl(new UserControlImportExportProduct());
+            UserControlImportExportProduct layout = new UserControlImportExportProduct(isImport: true);
+            LoadUserControl(layout);
 
         }
 
         private void buttonExportProduct_Click(object sender, EventArgs e)
         {
-            UserControlImportExportProduct layout = new UserControlImportExportProduct();
-            layout.SetLabelFunctionName("Xuất kho");
+            UserControlImportExportProduct layout = new UserControlImportExportProduct(isImport: false);
+       
             LoadUserControl(layout);
 
             // Kiểm tra label để phân biệt chức năng
@@ -51,6 +50,21 @@ namespace MobileStoreManagement
         private void buttonOrderSuplier_Click(object sender, EventArgs e)
         {
             LoadUserControl(new UserControlOrderSupplier());
+        }
+
+        private void UserControlImportExportManagementcs_Load(object sender, EventArgs e)
+        {
+            LoadUserControl(new UserControlImportExportProduct(isImport: true));
+        }
+
+        private void buttonPaying_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng sẽ sớm được cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void buttonGetOldProduct_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng sẽ sớm được cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

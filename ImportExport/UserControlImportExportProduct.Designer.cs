@@ -30,43 +30,46 @@
         {
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.labelFunctionName = new System.Windows.Forms.Label();
-            this.textBoxGetIdOrNamePd = new System.Windows.Forms.TextBox();
+            this.textBoxGetNamePd = new System.Windows.Forms.TextBox();
             this.textBoxGetQuantity = new System.Windows.Forms.TextBox();
             this.buttonAddPd = new System.Windows.Forms.Button();
-            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxTotalPrice = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.comboBoxSupplier = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.labelCurrentDate = new System.Windows.Forms.Label();
             this.labelRole = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelSupplier = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxTotalPrice = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxDiscount = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxNote = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.flowLayoutPanelListProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel7.SuspendLayout();
-            this.flowLayoutPanel6.SuspendLayout();
-            this.flowLayoutPanel5.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanelSupplier.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
+            this.flowLayoutPanel5.SuspendLayout();
+            this.flowLayoutPanel6.SuspendLayout();
+            this.flowLayoutPanel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.labelFunctionName);
-            this.flowLayoutPanel2.Controls.Add(this.textBoxGetIdOrNamePd);
+            this.flowLayoutPanel2.Controls.Add(this.textBoxGetNamePd);
             this.flowLayoutPanel2.Controls.Add(this.textBoxGetQuantity);
             this.flowLayoutPanel2.Controls.Add(this.buttonAddPd);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -83,17 +86,17 @@
             this.labelFunctionName.Name = "labelFunctionName";
             this.labelFunctionName.Size = new System.Drawing.Size(150, 68);
             this.labelFunctionName.TabIndex = 1;
-            this.labelFunctionName.Text = "Nhập kho";
+            this.labelFunctionName.Text = "Nhập / Xuất kho";
             this.labelFunctionName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxGetIdOrNamePd
+            // textBoxGetNamePd
             // 
-            this.textBoxGetIdOrNamePd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxGetIdOrNamePd.Location = new System.Drawing.Point(168, 22);
-            this.textBoxGetIdOrNamePd.Margin = new System.Windows.Forms.Padding(12, 22, 12, 22);
-            this.textBoxGetIdOrNamePd.Name = "textBoxGetIdOrNamePd";
-            this.textBoxGetIdOrNamePd.Size = new System.Drawing.Size(337, 24);
-            this.textBoxGetIdOrNamePd.TabIndex = 2;
+            this.textBoxGetNamePd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGetNamePd.Location = new System.Drawing.Point(168, 22);
+            this.textBoxGetNamePd.Margin = new System.Windows.Forms.Padding(12, 22, 12, 22);
+            this.textBoxGetNamePd.Name = "textBoxGetNamePd";
+            this.textBoxGetNamePd.Size = new System.Drawing.Size(337, 24);
+            this.textBoxGetNamePd.TabIndex = 2;
             // 
             // textBoxGetQuantity
             // 
@@ -113,162 +116,15 @@
             this.buttonAddPd.Size = new System.Drawing.Size(75, 48);
             this.buttonAddPd.TabIndex = 4;
             this.buttonAddPd.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel7
-            // 
-            this.flowLayoutPanel7.Controls.Add(this.buttonSave);
-            this.flowLayoutPanel7.Controls.Add(this.buttonCancel);
-            this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(15, 275);
-            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(388, 68);
-            this.flowLayoutPanel7.TabIndex = 5;
-            this.flowLayoutPanel7.WrapContents = false;
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.Image = global::MobileStoreManagement.Properties.Resources.save;
-            this.buttonSave.Location = new System.Drawing.Point(247, 10);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(129, 48);
-            this.buttonSave.TabIndex = 1;
-            this.buttonSave.Text = "Hoàn thành";
-            this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonSave.UseVisualStyleBackColor = true;
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Image = global::MobileStoreManagement.Properties.Resources.deactivate;
-            this.buttonCancel.Location = new System.Drawing.Point(123, 10);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(100, 48);
-            this.buttonCancel.TabIndex = 0;
-            this.buttonCancel.Text = "Hủy";
-            this.buttonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel6
-            // 
-            this.flowLayoutPanel6.Controls.Add(this.label8);
-            this.flowLayoutPanel6.Controls.Add(this.textBox4);
-            this.flowLayoutPanel6.Controls.Add(this.label9);
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(15, 221);
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(388, 48);
-            this.flowLayoutPanel6.TabIndex = 4;
-            this.flowLayoutPanel6.WrapContents = false;
-            // 
-            // label8
-            // 
-            this.label8.Location = new System.Drawing.Point(3, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 48);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Ghi chú";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(109, 13);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 13, 3, 13);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(276, 22);
-            this.textBox4.TabIndex = 1;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(391, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 16);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "label9";
-            // 
-            // flowLayoutPanel5
-            // 
-            this.flowLayoutPanel5.Controls.Add(this.label6);
-            this.flowLayoutPanel5.Controls.Add(this.textBox3);
-            this.flowLayoutPanel5.Controls.Add(this.label7);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(15, 167);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(388, 48);
-            this.flowLayoutPanel5.TabIndex = 3;
-            this.flowLayoutPanel5.WrapContents = false;
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 48);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Giảm giá";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(109, 13);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 13, 3, 13);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(276, 22);
-            this.textBox3.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(391, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 16);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "label7";
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.Controls.Add(this.label3);
-            this.flowLayoutPanel4.Controls.Add(this.textBoxTotalPrice);
-            this.flowLayoutPanel4.Controls.Add(this.label5);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(15, 113);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(388, 48);
-            this.flowLayoutPanel4.TabIndex = 2;
-            this.flowLayoutPanel4.WrapContents = false;
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 48);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Tổng tiền";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBoxTotalPrice
-            // 
-            this.textBoxTotalPrice.Location = new System.Drawing.Point(109, 13);
-            this.textBoxTotalPrice.Margin = new System.Windows.Forms.Padding(3, 13, 3, 13);
-            this.textBoxTotalPrice.Name = "textBoxTotalPrice";
-            this.textBoxTotalPrice.ReadOnly = true;
-            this.textBoxTotalPrice.Size = new System.Drawing.Size(276, 22);
-            this.textBoxTotalPrice.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(391, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 16);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "label5";
+            this.buttonAddPd.Click += new System.EventHandler(this.buttonAddPd_Click);
             // 
             // comboBoxSupplier
             // 
             this.comboBoxSupplier.FormattingEnabled = true;
-            this.comboBoxSupplier.Location = new System.Drawing.Point(15, 83);
+            this.comboBoxSupplier.Location = new System.Drawing.Point(109, 13);
+            this.comboBoxSupplier.Margin = new System.Windows.Forms.Padding(3, 13, 3, 13);
             this.comboBoxSupplier.Name = "comboBoxSupplier";
-            this.comboBoxSupplier.Size = new System.Drawing.Size(388, 24);
+            this.comboBoxSupplier.Size = new System.Drawing.Size(276, 24);
             this.comboBoxSupplier.TabIndex = 6;
             // 
             // flowLayoutPanel3
@@ -304,7 +160,7 @@
             // 
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel3);
-            this.flowLayoutPanel1.Controls.Add(this.comboBoxSupplier);
+            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanelSupplier);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel4);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel5);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel6);
@@ -319,6 +175,176 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(422, 716);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
+            // 
+            // flowLayoutPanelSupplier
+            // 
+            this.flowLayoutPanelSupplier.Controls.Add(this.label1);
+            this.flowLayoutPanelSupplier.Controls.Add(this.comboBoxSupplier);
+            this.flowLayoutPanelSupplier.Location = new System.Drawing.Point(15, 83);
+            this.flowLayoutPanelSupplier.Name = "flowLayoutPanelSupplier";
+            this.flowLayoutPanelSupplier.Size = new System.Drawing.Size(388, 48);
+            this.flowLayoutPanelSupplier.TabIndex = 7;
+            this.flowLayoutPanelSupplier.WrapContents = false;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 48);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Nhà cung cấp";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Controls.Add(this.label3);
+            this.flowLayoutPanel4.Controls.Add(this.textBoxTotalPrice);
+            this.flowLayoutPanel4.Controls.Add(this.label5);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(15, 137);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(388, 48);
+            this.flowLayoutPanel4.TabIndex = 8;
+            this.flowLayoutPanel4.WrapContents = false;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 48);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Tổng tiền";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textBoxTotalPrice
+            // 
+            this.textBoxTotalPrice.Location = new System.Drawing.Point(109, 13);
+            this.textBoxTotalPrice.Margin = new System.Windows.Forms.Padding(3, 13, 3, 13);
+            this.textBoxTotalPrice.Name = "textBoxTotalPrice";
+            this.textBoxTotalPrice.ReadOnly = true;
+            this.textBoxTotalPrice.Size = new System.Drawing.Size(276, 22);
+            this.textBoxTotalPrice.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(391, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 16);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "label5";
+            // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.Controls.Add(this.label6);
+            this.flowLayoutPanel5.Controls.Add(this.textBoxDiscount);
+            this.flowLayoutPanel5.Controls.Add(this.label7);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(15, 191);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(388, 48);
+            this.flowLayoutPanel5.TabIndex = 9;
+            this.flowLayoutPanel5.WrapContents = false;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 48);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Giảm giá";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textBoxDiscount
+            // 
+            this.textBoxDiscount.Location = new System.Drawing.Point(109, 13);
+            this.textBoxDiscount.Margin = new System.Windows.Forms.Padding(3, 13, 3, 13);
+            this.textBoxDiscount.Name = "textBoxDiscount";
+            this.textBoxDiscount.Size = new System.Drawing.Size(276, 22);
+            this.textBoxDiscount.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(391, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 16);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "label7";
+            // 
+            // flowLayoutPanel6
+            // 
+            this.flowLayoutPanel6.Controls.Add(this.label8);
+            this.flowLayoutPanel6.Controls.Add(this.textBoxNote);
+            this.flowLayoutPanel6.Controls.Add(this.label9);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(15, 245);
+            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(388, 48);
+            this.flowLayoutPanel6.TabIndex = 10;
+            this.flowLayoutPanel6.WrapContents = false;
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(3, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 48);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Ghi chú";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textBoxNote
+            // 
+            this.textBoxNote.Location = new System.Drawing.Point(109, 13);
+            this.textBoxNote.Margin = new System.Windows.Forms.Padding(3, 13, 3, 13);
+            this.textBoxNote.Multiline = true;
+            this.textBoxNote.Name = "textBoxNote";
+            this.textBoxNote.Size = new System.Drawing.Size(276, 22);
+            this.textBoxNote.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(391, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 16);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "label9";
+            // 
+            // flowLayoutPanel7
+            // 
+            this.flowLayoutPanel7.Controls.Add(this.buttonSave);
+            this.flowLayoutPanel7.Controls.Add(this.buttonCancel);
+            this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(15, 299);
+            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(388, 68);
+            this.flowLayoutPanel7.TabIndex = 11;
+            this.flowLayoutPanel7.WrapContents = false;
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Image = global::MobileStoreManagement.Properties.Resources.save;
+            this.buttonSave.Location = new System.Drawing.Point(247, 10);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(129, 48);
+            this.buttonSave.TabIndex = 1;
+            this.buttonSave.Text = "Hoàn thành";
+            this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Image = global::MobileStoreManagement.Properties.Resources.deactivate;
+            this.buttonCancel.Location = new System.Drawing.Point(123, 10);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(100, 48);
+            this.buttonCancel.TabIndex = 0;
+            this.buttonCancel.Text = "Hủy";
+            this.buttonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // flowLayoutPanelListProduct
             // 
@@ -344,15 +370,16 @@
             this.Load += new System.EventHandler(this.UserControlImportProduct_Load);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            this.flowLayoutPanel7.ResumeLayout(false);
-            this.flowLayoutPanel6.ResumeLayout(false);
-            this.flowLayoutPanel6.PerformLayout();
-            this.flowLayoutPanel5.ResumeLayout(false);
-            this.flowLayoutPanel5.PerformLayout();
-            this.flowLayoutPanel4.ResumeLayout(false);
-            this.flowLayoutPanel4.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanelSupplier.ResumeLayout(false);
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.flowLayoutPanel4.PerformLayout();
+            this.flowLayoutPanel5.ResumeLayout(false);
+            this.flowLayoutPanel5.PerformLayout();
+            this.flowLayoutPanel6.ResumeLayout(false);
+            this.flowLayoutPanel6.PerformLayout();
+            this.flowLayoutPanel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -360,29 +387,31 @@
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label labelFunctionName;
-        private System.Windows.Forms.TextBox textBoxGetIdOrNamePd;
+        private System.Windows.Forms.TextBox textBoxGetNamePd;
         private System.Windows.Forms.TextBox textBoxGetQuantity;
         private System.Windows.Forms.Button buttonAddPd;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
-        private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxTotalPrice;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBoxSupplier;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label labelCurrentDate;
         private System.Windows.Forms.Label labelRole;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelListProduct;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelSupplier;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxTotalPrice;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxDiscount;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBoxNote;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
+        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }

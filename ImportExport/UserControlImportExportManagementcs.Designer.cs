@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelFunctions = new System.Windows.Forms.Panel();
             this.buttonImportProduct = new System.Windows.Forms.Button();
             this.buttonExportProduct = new System.Windows.Forms.Button();
             this.buttonDeliveryNote = new System.Windows.Forms.Button();
             this.buttonOrderSuplier = new System.Windows.Forms.Button();
             this.buttonPaying = new System.Windows.Forms.Button();
             this.buttonGetOldProduct = new System.Windows.Forms.Button();
+            this.panelFunctions = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,14 +55,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(220, 700);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
-            // 
-            // panelFunctions
-            // 
-            this.panelFunctions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFunctions.Location = new System.Drawing.Point(220, 0);
-            this.panelFunctions.Name = "panelFunctions";
-            this.panelFunctions.Size = new System.Drawing.Size(803, 700);
-            this.panelFunctions.TabIndex = 1;
             // 
             // buttonImportProduct
             // 
@@ -137,6 +129,7 @@
             this.buttonPaying.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonPaying.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonPaying.UseVisualStyleBackColor = true;
+            this.buttonPaying.Click += new System.EventHandler(this.buttonPaying_Click);
             // 
             // buttonGetOldProduct
             // 
@@ -151,6 +144,15 @@
             this.buttonGetOldProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonGetOldProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonGetOldProduct.UseVisualStyleBackColor = true;
+            this.buttonGetOldProduct.Click += new System.EventHandler(this.buttonGetOldProduct_Click);
+            // 
+            // panelFunctions
+            // 
+            this.panelFunctions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFunctions.Location = new System.Drawing.Point(220, 0);
+            this.panelFunctions.Name = "panelFunctions";
+            this.panelFunctions.Size = new System.Drawing.Size(803, 700);
+            this.panelFunctions.TabIndex = 1;
             // 
             // UserControlImportExportManagementcs
             // 
@@ -161,6 +163,7 @@
             this.MinimumSize = new System.Drawing.Size(830, 700);
             this.Name = "UserControlImportExportManagementcs";
             this.Size = new System.Drawing.Size(1023, 700);
+            this.Load += new System.EventHandler(this.UserControlImportExportManagementcs_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

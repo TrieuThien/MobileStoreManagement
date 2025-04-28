@@ -16,6 +16,8 @@ namespace MobileStoreManagement.ImportExport
         {
             InitializeComponent();
             labelCurrentDate.Text = DateTime.Now.ToString();
+            labelRole.Text = Session.username;
+
         }
 
         string placeholderTextIdOrNamePd = "Nhập mã, tên sản phẩm";

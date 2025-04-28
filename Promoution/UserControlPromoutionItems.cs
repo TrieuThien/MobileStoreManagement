@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MobileStoreManagement.Promoution;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,15 @@ namespace MobileStoreManagement
 {
     public partial class UserControlPromoutionItems : UserControl
     {
-        public UserControlPromoutionItems()
+        string promoutionId = string.Empty;
+        PromoutionManager pmManager = new PromoutionManager();
+        public event EventHandler PromotionStatusChanged;
+        public UserControlPromoutionItems(string promoutionId)
         {
             InitializeComponent();
+            this.promoutionId = promoutionId;
         }
+
         public UserControlPromoutionItems(bool isSetUp)
         {
             InitializeComponent();
@@ -55,6 +61,18 @@ namespace MobileStoreManagement
         internal void setPromoutionStatus(string status)
         {
             labelStatus.Text = status;
+        }
+
+        private void buttonDeactivePromoution_Click(object sender, EventArgs e)
+        {
+            pmManager.UpdatePromotionStatus(promoutionId, false);
+            PromotionStatusChanged?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void buttonActivePromoution_Click(object sender, EventArgs e)
+        {
+            pmManager.UpdatePromotionStatus(promoutionId, true);
+            PromotionStatusChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 }

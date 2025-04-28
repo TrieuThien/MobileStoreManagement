@@ -1,6 +1,6 @@
 ﻿namespace MobileStoreManagement.ImportExport
 {
-    partial class UserControlImoprtExportItems
+    partial class UserControlImExItems
     {
         /// <summary> 
         /// Required designer variable.
@@ -32,7 +32,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.labelProductName = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
-            this.textBoxCapitalPrice = new System.Windows.Forms.TextBox();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.textBoxTotalPrice = new System.Windows.Forms.TextBox();
             this.buttonDeleteProduct = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
@@ -54,7 +54,7 @@
             this.flowLayoutPanel1.Controls.Add(this.labelProductId);
             this.flowLayoutPanel1.Controls.Add(this.labelProductName);
             this.flowLayoutPanel1.Controls.Add(this.textBoxQuantity);
-            this.flowLayoutPanel1.Controls.Add(this.textBoxCapitalPrice);
+            this.flowLayoutPanel1.Controls.Add(this.textBoxPrice);
             this.flowLayoutPanel1.Controls.Add(this.textBoxTotalPrice);
             this.flowLayoutPanel1.Controls.Add(this.buttonDeleteProduct);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -83,14 +83,16 @@
             this.textBoxQuantity.Size = new System.Drawing.Size(130, 24);
             this.textBoxQuantity.TabIndex = 10;
             // 
-            // textBoxCapitalPrice
+            // textBoxPrice
             // 
-            this.textBoxCapitalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCapitalPrice.Location = new System.Drawing.Point(516, 38);
-            this.textBoxCapitalPrice.Margin = new System.Windows.Forms.Padding(10, 38, 10, 38);
-            this.textBoxCapitalPrice.Name = "textBoxCapitalPrice";
-            this.textBoxCapitalPrice.Size = new System.Drawing.Size(130, 24);
-            this.textBoxCapitalPrice.TabIndex = 11;
+            this.textBoxPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPrice.Location = new System.Drawing.Point(516, 38);
+            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(10, 38, 10, 38);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(130, 24);
+            this.textBoxPrice.TabIndex = 11;
+            this.textBoxPrice.TextChanged += new System.EventHandler(this.textBoxPrice_TextChanged);
+            this.textBoxPrice.Leave += new System.EventHandler(this.textBoxCapitalPrice_Leave);
             // 
             // textBoxTotalPrice
             // 
@@ -116,13 +118,13 @@
             this.buttonDeleteProduct.UseVisualStyleBackColor = true;
             this.buttonDeleteProduct.Click += new System.EventHandler(this.buttonDeleteProduct_Click);
             // 
-            // UserControlImoprtExportItems
+            // UserControlImExItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flowLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(1000, 100);
-            this.Name = "UserControlImoprtExportItems";
+            this.Name = "UserControlImExItems";
             this.Size = new System.Drawing.Size(1000, 100);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
@@ -137,7 +139,7 @@
         private System.Windows.Forms.Button buttonDeleteProduct;
         private System.Windows.Forms.Label labelProductName;
         private System.Windows.Forms.TextBox textBoxQuantity;
-        private System.Windows.Forms.TextBox textBoxCapitalPrice;
+        private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.TextBox textBoxTotalPrice;
     }
 }

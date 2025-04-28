@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MobileStoreManagement
+namespace MobileStoreManagement.ImportExport
 {
-    public partial class FormAddPromoution : Form
+    public partial class UserControlImportHeader : UserControl
     {
-        public FormAddPromoution()
+        public UserControlImportHeader()
         {
             InitializeComponent();
+        }
+
+        internal void SetLabelPrice(string labelPriceText)
+        {
+            labelPrice.Text = labelPriceText;
         }
     }
 }

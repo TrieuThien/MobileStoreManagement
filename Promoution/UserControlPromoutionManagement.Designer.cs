@@ -30,9 +30,9 @@
         {
             this.labelPromoution = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBoxStatus = new System.Windows.Forms.CheckedListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBoxEffect = new System.Windows.Forms.CheckedListBox();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
@@ -41,6 +41,7 @@
             this.buttonSearchPromoution = new System.Windows.Forms.Button();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonAddPromoution = new System.Windows.Forms.Button();
+            this.buttonPromoutionSpecies = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanelListPromoution = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1.SuspendLayout();
@@ -64,7 +65,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkedListBox1);
+            this.groupBox1.Controls.Add(this.checkedListBoxStatus);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 73);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
@@ -74,23 +75,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Trạng thái";
             // 
-            // checkedListBox1
+            // checkedListBoxStatus
             // 
-            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.checkedListBoxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBoxStatus.FormattingEnabled = true;
+            this.checkedListBoxStatus.Items.AddRange(new object[] {
             "Tất cả",
             "Kích hoạt",
             "Chưa áp dụng"});
-            this.checkedListBox1.Location = new System.Drawing.Point(9, 45);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(176, 118);
-            this.checkedListBox1.TabIndex = 7;
+            this.checkedListBoxStatus.Location = new System.Drawing.Point(9, 45);
+            this.checkedListBoxStatus.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.checkedListBoxStatus.Name = "checkedListBoxStatus";
+            this.checkedListBoxStatus.Size = new System.Drawing.Size(176, 118);
+            this.checkedListBoxStatus.TabIndex = 7;
+            this.checkedListBoxStatus.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxStatus_ItemCheck);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkedListBox2);
+            this.groupBox2.Controls.Add(this.checkedListBoxEffect);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(0, 259);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(0);
@@ -100,19 +102,20 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hiệu lực";
             // 
-            // checkedListBox2
+            // checkedListBoxEffect
             // 
-            this.checkedListBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
+            this.checkedListBoxEffect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBoxEffect.FormattingEnabled = true;
+            this.checkedListBoxEffect.Items.AddRange(new object[] {
             "Tất cả ",
             "Còn hiệu lực",
             "Hết hiệu lực"});
-            this.checkedListBox2.Location = new System.Drawing.Point(9, 38);
-            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(176, 99);
-            this.checkedListBox2.TabIndex = 8;
+            this.checkedListBoxEffect.Location = new System.Drawing.Point(9, 38);
+            this.checkedListBoxEffect.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.checkedListBoxEffect.Name = "checkedListBoxEffect";
+            this.checkedListBoxEffect.Size = new System.Drawing.Size(176, 99);
+            this.checkedListBoxEffect.TabIndex = 8;
+            this.checkedListBoxEffect.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxEffect_ItemCheck);
             // 
             // flowLayoutPanel5
             // 
@@ -131,7 +134,7 @@
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel4);
             this.flowLayoutPanel1.Controls.Add(this.buttonSearchPromoution);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1046, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(833, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(413, 72);
@@ -180,17 +183,19 @@
             this.buttonSearchPromoution.Text = "Tìm kiếm";
             this.buttonSearchPromoution.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonSearchPromoution.UseVisualStyleBackColor = true;
+            this.buttonSearchPromoution.Click += new System.EventHandler(this.buttonSearchPromoution_Click);
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.AutoSize = true;
             this.flowLayoutPanel3.Controls.Add(this.buttonAddPromoution);
+            this.flowLayoutPanel3.Controls.Add(this.buttonPromoutionSpecies);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(1459, 0);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(1246, 0);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(191, 72);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(404, 72);
             this.flowLayoutPanel3.TabIndex = 3;
             this.flowLayoutPanel3.WrapContents = false;
             // 
@@ -198,7 +203,7 @@
             // 
             this.buttonAddPromoution.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAddPromoution.Image = global::MobileStoreManagement.Properties.Resources.plus;
-            this.buttonAddPromoution.Location = new System.Drawing.Point(12, 11);
+            this.buttonAddPromoution.Location = new System.Drawing.Point(225, 11);
             this.buttonAddPromoution.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.buttonAddPromoution.Name = "buttonAddPromoution";
             this.buttonAddPromoution.Size = new System.Drawing.Size(167, 48);
@@ -207,6 +212,20 @@
             this.buttonAddPromoution.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAddPromoution.UseVisualStyleBackColor = true;
             this.buttonAddPromoution.Click += new System.EventHandler(this.buttonAddPromoution_Click);
+            // 
+            // buttonPromoutionSpecies
+            // 
+            this.buttonPromoutionSpecies.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonPromoutionSpecies.Image = global::MobileStoreManagement.Properties.Resources.plus;
+            this.buttonPromoutionSpecies.Location = new System.Drawing.Point(12, 11);
+            this.buttonPromoutionSpecies.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.buttonPromoutionSpecies.Name = "buttonPromoutionSpecies";
+            this.buttonPromoutionSpecies.Size = new System.Drawing.Size(189, 48);
+            this.buttonPromoutionSpecies.TabIndex = 2;
+            this.buttonPromoutionSpecies.Text = "QL loại khuyến mãi";
+            this.buttonPromoutionSpecies.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPromoutionSpecies.UseVisualStyleBackColor = true;
+            this.buttonPromoutionSpecies.Click += new System.EventHandler(this.buttonPromoutionSpecies_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -260,9 +279,9 @@
 
         private System.Windows.Forms.Label labelPromoution;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox checkedListBoxStatus;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
+        private System.Windows.Forms.CheckedListBox checkedListBoxEffect;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
@@ -273,5 +292,6 @@
         private System.Windows.Forms.Button buttonAddPromoution;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelListPromoution;
+        private System.Windows.Forms.Button buttonPromoutionSpecies;
     }
 }
