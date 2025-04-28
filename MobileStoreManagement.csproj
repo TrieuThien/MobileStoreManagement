@@ -121,6 +121,8 @@
     </Compile>
     <Compile Include="CodeGenerator.cs" />
     <Compile Include="ConnectDatabase.cs" />
+    <Compile Include="Customers\KhachHang.cs" />
+    <Compile Include="Customers\CustomersManager.cs" />
     <Compile Include="ImportExport\OrderProductDetails.cs" />
     <Compile Include="ImportExport\ReceiptExportDetails.cs" />
     <Compile Include="ImportExport\ReceiptImportDetails.cs" />
@@ -253,10 +255,10 @@
     </Compile>
     <Compile Include="Supplier\NhaCungCap.cs" />
     <Compile Include="Supplier\SupplierManager.cs" />
-    <Compile Include="UserControlCustomerManagement.cs">
+    <Compile Include="Customers\UserControlCustomerManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlCustomerManagement.Designer.cs">
+    <Compile Include="Customers\UserControlCustomerManagement.Designer.cs">
       <DependentUpon>UserControlCustomerManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlHeader.cs">
@@ -419,7 +421,7 @@
     <EmbeddedResource Include="SumaryWindow.resx">
       <DependentUpon>SumaryWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlCustomerManagement.resx">
+    <EmbeddedResource Include="Customers\UserControlCustomerManagement.resx">
       <DependentUpon>UserControlCustomerManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlHeader.resx">
