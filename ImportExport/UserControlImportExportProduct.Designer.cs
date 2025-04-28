@@ -120,6 +120,7 @@
             // 
             // comboBoxSupplier
             // 
+            this.comboBoxSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSupplier.FormattingEnabled = true;
             this.comboBoxSupplier.Location = new System.Drawing.Point(109, 13);
             this.comboBoxSupplier.Margin = new System.Windows.Forms.Padding(3, 13, 3, 13);

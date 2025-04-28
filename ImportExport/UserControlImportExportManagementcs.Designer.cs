@@ -44,8 +44,8 @@
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Controls.Add(this.buttonImportProduct);
             this.flowLayoutPanel1.Controls.Add(this.buttonExportProduct);
-            this.flowLayoutPanel1.Controls.Add(this.buttonDeliveryNote);
             this.flowLayoutPanel1.Controls.Add(this.buttonOrderSuplier);
+            this.flowLayoutPanel1.Controls.Add(this.buttonDeliveryNote);
             this.flowLayoutPanel1.Controls.Add(this.buttonPaying);
             this.flowLayoutPanel1.Controls.Add(this.buttonGetOldProduct);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -90,11 +90,11 @@
             // 
             this.buttonDeliveryNote.Image = global::MobileStoreManagement.Properties.Resources.road;
             this.buttonDeliveryNote.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDeliveryNote.Location = new System.Drawing.Point(20, 160);
+            this.buttonDeliveryNote.Location = new System.Drawing.Point(20, 234);
             this.buttonDeliveryNote.Margin = new System.Windows.Forms.Padding(20, 12, 20, 12);
             this.buttonDeliveryNote.Name = "buttonDeliveryNote";
             this.buttonDeliveryNote.Size = new System.Drawing.Size(180, 50);
-            this.buttonDeliveryNote.TabIndex = 2;
+            this.buttonDeliveryNote.TabIndex = 3;
             this.buttonDeliveryNote.Text = "Quản lý phiếu giao hàng";
             this.buttonDeliveryNote.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDeliveryNote.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -105,11 +105,11 @@
             // 
             this.buttonOrderSuplier.Image = global::MobileStoreManagement.Properties.Resources.checkout;
             this.buttonOrderSuplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonOrderSuplier.Location = new System.Drawing.Point(20, 234);
+            this.buttonOrderSuplier.Location = new System.Drawing.Point(20, 160);
             this.buttonOrderSuplier.Margin = new System.Windows.Forms.Padding(20, 12, 20, 12);
             this.buttonOrderSuplier.Name = "buttonOrderSuplier";
             this.buttonOrderSuplier.Size = new System.Drawing.Size(180, 50);
-            this.buttonOrderSuplier.TabIndex = 3;
+            this.buttonOrderSuplier.TabIndex = 2;
             this.buttonOrderSuplier.Text = "Đặt hàng NCC";
             this.buttonOrderSuplier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonOrderSuplier.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

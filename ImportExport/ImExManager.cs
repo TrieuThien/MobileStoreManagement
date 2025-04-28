@@ -12,6 +12,44 @@ namespace MobileStoreManagement.ImportExport
     internal class ImExManager
     {
         ConnectDatabase connectDb = new ConnectDatabase();
+
+        internal void LoadReceiptOrder(ComboBox comboBox)
+        {
+            using (SqlConnection connection = connectDb.GetConnection())
+            {
+                connection.Open();
+                string query = @"
+            SELECT Ma_phieu_dat_hang_NCC, Ngay_lap
+            FROM Phieu_dat_hang_NCC
+            WHERE Ma_nguoi_ban = @MaNguoiBan";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@MaNguoiBan", Session.userId);
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        // Cấu hình ComboBox
+                        comboBox.DataSource = dataTable;
+                        comboBox.DisplayMember = "DisplayText"; // Hiển thị
+                        comboBox.ValueMember = "Ma_phieu_dat_hang_NCC"; // Giá trị thực sự
+
+                        // Tạo cột DisplayText để hiển thị đẹp hơn: VD: "P001 - 01/05/2025"
+                        dataTable.Columns.Add("DisplayText", typeof(string));
+                        foreach (DataRow row in dataTable.Rows)
+                        {
+                            DateTime ngayLap = Convert.ToDateTime(row["Ngay_lap"]);
+                            row["DisplayText"] = $"{row["Ma_phieu_dat_hang_NCC"]} - {ngayLap:dd/MM/yyyy}";
+                        }
+                    }
+                }
+            }
+        }
+
+
         internal void LoadSupplierToComboBox(ComboBox comboBox) 
         {
             SqlConnection conn = connectDb.GetConnection();

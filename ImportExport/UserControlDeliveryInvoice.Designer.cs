@@ -30,10 +30,10 @@
         {
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxReceiptOrder = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxSupplier = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.labelCurrentDate = new System.Windows.Forms.Label();
             this.labelRole = new System.Windows.Forms.Label();
@@ -43,15 +43,15 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.labelFunctionName = new System.Windows.Forms.Label();
             this.textBoxGetIdOrNamePd = new System.Windows.Forms.TextBox();
             this.textBoxGetQuantity = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanelListDeliveryInvoice = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonAddPd = new System.Windows.Forms.Button();
             this.buttonDeliveryInvoice = new System.Windows.Forms.Button();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
+            this.flowLayoutPanelListDeliveryInvoice = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel5.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -64,7 +64,7 @@
             // flowLayoutPanel5
             // 
             this.flowLayoutPanel5.Controls.Add(this.label6);
-            this.flowLayoutPanel5.Controls.Add(this.comboBox2);
+            this.flowLayoutPanel5.Controls.Add(this.comboBoxReceiptOrder);
             this.flowLayoutPanel5.Location = new System.Drawing.Point(15, 137);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Size = new System.Drawing.Size(388, 48);
@@ -80,19 +80,20 @@
             this.label6.Text = "Mã phiếu đặt hàng";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox2
+            // comboBoxReceiptOrder
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(169, 12);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(216, 24);
-            this.comboBox2.TabIndex = 1;
+            this.comboBoxReceiptOrder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxReceiptOrder.FormattingEnabled = true;
+            this.comboBoxReceiptOrder.Location = new System.Drawing.Point(169, 12);
+            this.comboBoxReceiptOrder.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.comboBoxReceiptOrder.Name = "comboBoxReceiptOrder";
+            this.comboBoxReceiptOrder.Size = new System.Drawing.Size(216, 24);
+            this.comboBoxReceiptOrder.TabIndex = 1;
             // 
             // flowLayoutPanel4
             // 
             this.flowLayoutPanel4.Controls.Add(this.label3);
-            this.flowLayoutPanel4.Controls.Add(this.comboBox1);
+            this.flowLayoutPanel4.Controls.Add(this.comboBoxSupplier);
             this.flowLayoutPanel4.Location = new System.Drawing.Point(15, 83);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(388, 48);
@@ -108,14 +109,15 @@
             this.label3.Text = "Mã nhà cung cấp";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox1
+            // comboBoxSupplier
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(169, 12);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(213, 24);
-            this.comboBox1.TabIndex = 1;
+            this.comboBoxSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSupplier.FormattingEnabled = true;
+            this.comboBoxSupplier.Location = new System.Drawing.Point(169, 12);
+            this.comboBoxSupplier.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
+            this.comboBoxSupplier.Name = "comboBoxSupplier";
+            this.comboBoxSupplier.Size = new System.Drawing.Size(213, 24);
+            this.comboBoxSupplier.TabIndex = 1;
             // 
             // flowLayoutPanel3
             // 
@@ -214,6 +216,32 @@
             this.flowLayoutPanel7.TabIndex = 7;
             this.flowLayoutPanel7.WrapContents = false;
             // 
+            // buttonSave
+            // 
+            this.buttonSave.Image = global::MobileStoreManagement.Properties.Resources.save;
+            this.buttonSave.Location = new System.Drawing.Point(247, 10);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(129, 48);
+            this.buttonSave.TabIndex = 1;
+            this.buttonSave.Text = "Hoàn thành";
+            this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonSave.UseVisualStyleBackColor = true;
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Image = global::MobileStoreManagement.Properties.Resources.deactivate;
+            this.buttonCancel.Location = new System.Drawing.Point(123, 10);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(100, 48);
+            this.buttonCancel.TabIndex = 0;
+            this.buttonCancel.Text = "Hủy";
+            this.buttonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.labelFunctionName);
@@ -256,17 +284,6 @@
             this.textBoxGetQuantity.Size = new System.Drawing.Size(100, 24);
             this.textBoxGetQuantity.TabIndex = 3;
             // 
-            // flowLayoutPanelListDeliveryInvoice
-            // 
-            this.flowLayoutPanelListDeliveryInvoice.AutoScroll = true;
-            this.flowLayoutPanelListDeliveryInvoice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelListDeliveryInvoice.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelListDeliveryInvoice.Location = new System.Drawing.Point(0, 68);
-            this.flowLayoutPanelListDeliveryInvoice.Name = "flowLayoutPanelListDeliveryInvoice";
-            this.flowLayoutPanelListDeliveryInvoice.Size = new System.Drawing.Size(978, 753);
-            this.flowLayoutPanelListDeliveryInvoice.TabIndex = 8;
-            this.flowLayoutPanelListDeliveryInvoice.WrapContents = false;
-            // 
             // buttonAddPd
             // 
             this.buttonAddPd.Image = global::MobileStoreManagement.Properties.Resources.plus;
@@ -276,6 +293,7 @@
             this.buttonAddPd.Size = new System.Drawing.Size(75, 48);
             this.buttonAddPd.TabIndex = 4;
             this.buttonAddPd.UseVisualStyleBackColor = true;
+            this.buttonAddPd.Click += new System.EventHandler(this.buttonAddPd_Click);
             // 
             // buttonDeliveryInvoice
             // 
@@ -289,30 +307,16 @@
             this.buttonDeliveryInvoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDeliveryInvoice.UseVisualStyleBackColor = true;
             // 
-            // buttonSave
+            // flowLayoutPanelListDeliveryInvoice
             // 
-            this.buttonSave.Image = global::MobileStoreManagement.Properties.Resources.save;
-            this.buttonSave.Location = new System.Drawing.Point(247, 10);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(129, 48);
-            this.buttonSave.TabIndex = 1;
-            this.buttonSave.Text = "Hoàn thành";
-            this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonSave.UseVisualStyleBackColor = true;
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Image = global::MobileStoreManagement.Properties.Resources.deactivate;
-            this.buttonCancel.Location = new System.Drawing.Point(123, 10);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(100, 48);
-            this.buttonCancel.TabIndex = 0;
-            this.buttonCancel.Text = "Hủy";
-            this.buttonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.flowLayoutPanelListDeliveryInvoice.AutoScroll = true;
+            this.flowLayoutPanelListDeliveryInvoice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelListDeliveryInvoice.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelListDeliveryInvoice.Location = new System.Drawing.Point(0, 68);
+            this.flowLayoutPanelListDeliveryInvoice.Name = "flowLayoutPanelListDeliveryInvoice";
+            this.flowLayoutPanelListDeliveryInvoice.Size = new System.Drawing.Size(978, 753);
+            this.flowLayoutPanelListDeliveryInvoice.TabIndex = 8;
+            this.flowLayoutPanelListDeliveryInvoice.WrapContents = false;
             // 
             // UserControlDeliveryInvoice
             // 
@@ -341,10 +345,10 @@
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxReceiptOrder;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxSupplier;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label labelCurrentDate;
         private System.Windows.Forms.Label labelRole;

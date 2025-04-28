@@ -138,10 +138,6 @@ namespace MobileStoreManagement.ImportExport
             textBoxGetNamePd.AutoCompleteSource = AutoCompleteSource.CustomSource;
             textBoxGetNamePd.AutoCompleteCustomSource = autoComplete;
         }
-
-
-
-
         // Xử lý sự kiện
         private void UserControlImportProduct_Load(object sender, EventArgs e)
         {
@@ -271,7 +267,6 @@ namespace MobileStoreManagement.ImportExport
                 try
                 {
                     string ReceiptImportID = CodeGenerator.GenerateReceiptImportId();
-                    MessageBox.Show(ReceiptImportID);
                     imExManager.InsertReceiptImport(ReceiptImportID, supplierId, DateTime.Now, receiptImportTotalPrice, discount, receiptNote, listReceipImport);
                     MessageBox.Show("Lưu phiếu nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

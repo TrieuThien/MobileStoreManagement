@@ -132,6 +132,7 @@
             // 
             // comboBoxGetSupplierId
             // 
+            this.comboBoxGetSupplierId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGetSupplierId.FormattingEnabled = true;
             this.comboBoxGetSupplierId.Location = new System.Drawing.Point(166, 12);
             this.comboBoxGetSupplierId.Margin = new System.Windows.Forms.Padding(0, 12, 0, 12);
@@ -230,6 +231,7 @@
             this.buttonSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonCancel
             // 
@@ -242,6 +244,7 @@
             this.buttonCancel.Text = "Hủy";
             this.buttonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -296,6 +299,7 @@
             this.buttonAddPd.Size = new System.Drawing.Size(75, 48);
             this.buttonAddPd.TabIndex = 4;
             this.buttonAddPd.UseVisualStyleBackColor = true;
+            this.buttonAddPd.Click += new System.EventHandler(this.buttonAddPd_Click);
             // 
             // buttonDownPaymentInvoice
             // 
@@ -308,6 +312,7 @@
             this.buttonDownPaymentInvoice.Text = "Phiếu đặt cọc";
             this.buttonDownPaymentInvoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDownPaymentInvoice.UseVisualStyleBackColor = true;
+            this.buttonDownPaymentInvoice.Click += new System.EventHandler(this.buttonDownPaymentInvoice_Click);
             // 
             // buttonOrderInvoice
             // 
