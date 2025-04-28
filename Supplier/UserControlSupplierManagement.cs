@@ -190,5 +190,10 @@ namespace MobileStoreManagement
         {
             suppilerManager.ExportNhaCungCapFromDataGridView(dataGridView1);
         }
+
+        private void UserControlSupplierManagement_Load(object sender, EventArgs e)
+        {
+            suppilerManager.LoadNhaCungCap(dataGridView1);
+        }
     }
 }

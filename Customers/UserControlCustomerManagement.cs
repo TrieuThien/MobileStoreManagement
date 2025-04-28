@@ -173,5 +173,10 @@ namespace MobileStoreManagement
         {
             customersManager.LoadKhachHang(dataGridViewCustomers);
         }
+
+        private void UserControlCustomerManagement_Load(object sender, EventArgs e)
+        {
+            customersManager.LoadKhachHang(dataGridViewCustomers);
+        }
     }
 }
