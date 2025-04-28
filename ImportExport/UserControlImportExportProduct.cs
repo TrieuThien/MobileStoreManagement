@@ -18,6 +18,7 @@ namespace MobileStoreManagement.ImportExport
         string placeholderTextIdOrNamePd = "Nhập mã, tên sản phẩm";
         string placeholderTextQuantityPd = "Số lượng";
         decimal totalReceiptImportPrice = 0;
+        bool isImport;
         ConnectDatabase connectDb = new ConnectDatabase();
         private Dictionary<string, ProductInfo> searchKeywordToProductMap = new Dictionary<string, ProductInfo>();
 
@@ -29,13 +30,14 @@ namespace MobileStoreManagement.ImportExport
             labelRole.Text = Session.username;
             labelCurrentDate.Text = DateTime.Now.ToString();
             textBoxTotalPrice.Text = totalReceiptImportPrice.ToString();
-
-            if (isImport)
+            this.isImport = isImport;
+            if (this.isImport)
                 SetLabelFunctionName("Nhập hàng");
             else
             {
                 SetLabelFunctionName("Xuất hàng");
                 flowLayoutPanelSupplier.Hide();
+                flowLayoutPanelDiscout.Hide();
             }
                 
         }
@@ -161,7 +163,9 @@ namespace MobileStoreManagement.ImportExport
             textBoxGetQuantity.Leave += SetPlaceholderQuantityPd;
 
             imExManager.LoadSupplierToComboBox(comboBoxSupplier);
+     
             flowLayoutPanelListProduct.Controls.Add(new UserControlImportHeader());
+
 
         }
 
@@ -197,9 +201,6 @@ namespace MobileStoreManagement.ImportExport
                 MessageBox.Show("Vui lòng nhập sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-
-
             if (searchKeywordToProductMap.ContainsKey(userInput))
             {
                 var productInfo = searchKeywordToProductMap[userInput];
@@ -229,52 +230,91 @@ namespace MobileStoreManagement.ImportExport
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            if (comboBoxSupplier.SelectedValue == null)
+            if (this.isImport)
             {
-                MessageBox.Show("Vui lòng chọn nhà cung cấp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            string supplierId = comboBoxSupplier.SelectedValue.ToString();
-            decimal receiptImportTotalPrice = decimal.Parse(textBoxTotalPrice.Text);
-            string receiptNote = textBoxNote.Text.Trim();
-            decimal discount = 0;
-
-            if (!decimal.TryParse(textBoxDiscount.Text, out discount))
-            {
-                MessageBox.Show("Vui lòng nhập đúng định dạng dữ liệu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            
-            List<ReceiptImportDetails> listReceipImport = new List<ReceiptImportDetails>();
-            for (int i = 1; i < flowLayoutPanelListProduct.Controls.Count; i++)
-            {
-                Control control = flowLayoutPanelListProduct.Controls[i];
-                    
-                // Kiểm tra kiểu của control trước khi ép kiểu
-                if (control is UserControlImExItems item)
+                if (comboBoxSupplier.SelectedValue == null)
                 {
-                    if (item.productItemId != null && item.productPrice >= 0 && item.productQuantity >= 0)
+                    MessageBox.Show("Vui lòng chọn nhà cung cấp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                string supplierId = comboBoxSupplier.SelectedValue.ToString();
+                decimal receiptImportTotalPrice = decimal.Parse(textBoxTotalPrice.Text);
+                string receiptNote = textBoxNote.Text.Trim();
+                decimal discount = 0;
+
+                if (!decimal.TryParse(textBoxDiscount.Text, out discount))
+                {
+                    MessageBox.Show("Vui lòng nhập đúng định dạng dữ liệu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            
+                List<ReceiptImportDetails> listReceipImport = new List<ReceiptImportDetails>();
+                for (int i = 1; i < flowLayoutPanelListProduct.Controls.Count; i++)
+                {
+                    Control control = flowLayoutPanelListProduct.Controls[i];
+                    
+                    // Kiểm tra kiểu của control trước khi ép kiểu
+                    if (control is UserControlImExItems item)
                     {
-                        listReceipImport.Add(new ReceiptImportDetails
+                        if (item.productItemId != null && item.productPrice >= 0 && item.productQuantity >= 0)
                         {
-                            ProductId = item.productItemId.ToString(),
-                            ProductPrice = item.productPrice,
-                            ProductQuantity = item.productQuantity,
-                        });
+                            listReceipImport.Add(new ReceiptImportDetails
+                            {
+                                ProductId = item.productItemId.ToString(),
+                                ProductPrice = item.productPrice,
+                                ProductQuantity = item.productQuantity,
+                            });
+                        }
                     }
                 }
-            }
-            try
+                try
+                {
+                    string ReceiptImportID = CodeGenerator.GenerateReceiptImportId();
+                    MessageBox.Show(ReceiptImportID);
+                    imExManager.InsertReceiptImport(ReceiptImportID, supplierId, DateTime.Now, receiptImportTotalPrice, discount, receiptNote, listReceipImport);
+                    MessageBox.Show("Lưu phiếu nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } 
+            else if (this.isImport == false)
             {
-                string ReceiptImportID = CodeGenerator.GenerateReceiptImportId();
-                MessageBox.Show(ReceiptImportID);
-                imExManager.InsertReceiptImport(ReceiptImportID, supplierId, DateTime.Now, receiptImportTotalPrice, discount, receiptNote, listReceipImport);
-                MessageBox.Show("Lưu phiếu nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                decimal receiptExportTotalPrice = decimal.Parse(textBoxTotalPrice.Text);
+                string receiptNote = textBoxNote.Text.Trim();
+                
+                List<ReceiptExportDetails> listReceipExportProduct = new List<ReceiptExportDetails>();
+                for (int i = 1; i < flowLayoutPanelListProduct.Controls.Count; i++)
+                {
+                    Control control = flowLayoutPanelListProduct.Controls[i];
+
+                    // Kiểm tra kiểu của control trước khi ép kiểu
+                    if (control is UserControlImExItems item)
+                    {
+                        if (item.productItemId != null && item.productPrice >= 0 && item.productQuantity >= 0)
+                        {
+                            listReceipExportProduct.Add(new ReceiptExportDetails
+                            {
+                                ProductId = item.productItemId.ToString(),
+                                ProductPrice = item.productPrice,
+                                ProductQuantity = item.productQuantity,
+                            });
+                        }
+                    }
+                }
+                try
+                {
+                    string receiptExportID = CodeGenerator.GenerateReceiptExportId();
+                    
+                    imExManager.InsertReceiptExport(receiptExportID, DateTime.Now, receiptNote, receiptExportTotalPrice, listReceipExportProduct);
+                    MessageBox.Show("Lưu phiếu nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

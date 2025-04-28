@@ -44,7 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxTotalPrice = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelDiscout = new System.Windows.Forms.FlowLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxDiscount = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -61,7 +61,7 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanelSupplier.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
-            this.flowLayoutPanel5.SuspendLayout();
+            this.flowLayoutPanelDiscout.SuspendLayout();
             this.flowLayoutPanel6.SuspendLayout();
             this.flowLayoutPanel7.SuspendLayout();
             this.SuspendLayout();
@@ -162,7 +162,7 @@
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel3);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanelSupplier);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel4);
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel5);
+            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanelDiscout);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel6);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel7);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
@@ -233,16 +233,16 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "label5";
             // 
-            // flowLayoutPanel5
+            // flowLayoutPanelDiscout
             // 
-            this.flowLayoutPanel5.Controls.Add(this.label6);
-            this.flowLayoutPanel5.Controls.Add(this.textBoxDiscount);
-            this.flowLayoutPanel5.Controls.Add(this.label7);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(15, 191);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(388, 48);
-            this.flowLayoutPanel5.TabIndex = 9;
-            this.flowLayoutPanel5.WrapContents = false;
+            this.flowLayoutPanelDiscout.Controls.Add(this.label6);
+            this.flowLayoutPanelDiscout.Controls.Add(this.textBoxDiscount);
+            this.flowLayoutPanelDiscout.Controls.Add(this.label7);
+            this.flowLayoutPanelDiscout.Location = new System.Drawing.Point(15, 191);
+            this.flowLayoutPanelDiscout.Name = "flowLayoutPanelDiscout";
+            this.flowLayoutPanelDiscout.Size = new System.Drawing.Size(388, 48);
+            this.flowLayoutPanelDiscout.TabIndex = 9;
+            this.flowLayoutPanelDiscout.WrapContents = false;
             // 
             // label6
             // 
@@ -375,8 +375,8 @@
             this.flowLayoutPanelSupplier.ResumeLayout(false);
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
-            this.flowLayoutPanel5.ResumeLayout(false);
-            this.flowLayoutPanel5.PerformLayout();
+            this.flowLayoutPanelDiscout.ResumeLayout(false);
+            this.flowLayoutPanelDiscout.PerformLayout();
             this.flowLayoutPanel6.ResumeLayout(false);
             this.flowLayoutPanel6.PerformLayout();
             this.flowLayoutPanel7.ResumeLayout(false);
@@ -402,7 +402,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxTotalPrice;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelDiscout;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxDiscount;
         private System.Windows.Forms.Label label7;

@@ -88,7 +88,7 @@
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(150, 100);
             this.labelPrice.TabIndex = 5;
-            this.labelPrice.Text = "Giá nhập";
+            this.labelPrice.Text = "Giá";
             this.labelPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelTotalPrice

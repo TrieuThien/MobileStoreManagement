@@ -121,6 +121,7 @@
     </Compile>
     <Compile Include="CodeGenerator.cs" />
     <Compile Include="ConnectDatabase.cs" />
+    <Compile Include="ImportExport\ReceiptExportDetails.cs" />
     <Compile Include="ImportExport\ReceiptImportDetails.cs" />
     <Compile Include="ImportExport\ImExManager.cs" />
     <Compile Include="Product\ProductInfo.cs" />
