@@ -17,6 +17,5 @@ namespace MobileStoreManagement
             InitializeComponent();
         }
 
-    
     }
 }

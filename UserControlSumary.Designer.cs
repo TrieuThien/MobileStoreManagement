@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlSumary));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBoxSalesResult = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanelSalesResult = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBoxIconRevenue = new System.Windows.Forms.PictureBox();
@@ -50,10 +44,9 @@
             this.flowLayoutPanelCompareLastMonth = new System.Windows.Forms.FlowLayoutPanel();
             this.labelShowCompareLastMonth = new System.Windows.Forms.Label();
             this.labelCompareLastMonth = new System.Windows.Forms.Label();
-            this.groupBoxRevenueChart = new System.Windows.Forms.GroupBox();
-            this.chartRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.groupBoxBestSellingProduct = new System.Windows.Forms.GroupBox();
-            this.chartBestSelling = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBoxSalesResult.SuspendLayout();
             this.flowLayoutPanelSalesResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconRevenue)).BeginInit();
@@ -62,10 +55,7 @@
             this.flowLayoutPanelCompareYesterday.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCompareLastMonth)).BeginInit();
             this.flowLayoutPanelCompareLastMonth.SuspendLayout();
-            this.groupBoxRevenueChart.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartRevenue)).BeginInit();
-            this.groupBoxBestSellingProduct.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartBestSelling)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxSalesResult
@@ -238,74 +228,46 @@
             this.labelCompareLastMonth.TabIndex = 2;
             this.labelCompareLastMonth.Text = "So với cùng kì tháng trước";
             // 
-            // groupBoxRevenueChart
+            // pictureBox
             // 
-            this.groupBoxRevenueChart.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBoxRevenueChart.Controls.Add(this.chartRevenue);
-            this.groupBoxRevenueChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxRevenueChart.Location = new System.Drawing.Point(0, 185);
-            this.groupBoxRevenueChart.Margin = new System.Windows.Forms.Padding(0, 24, 0, 0);
-            this.groupBoxRevenueChart.Name = "groupBoxRevenueChart";
-            this.groupBoxRevenueChart.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBoxRevenueChart.Size = new System.Drawing.Size(830, 250);
-            this.groupBoxRevenueChart.TabIndex = 4;
-            this.groupBoxRevenueChart.TabStop = false;
-            this.groupBoxRevenueChart.Text = "Doanh thu tuần này";
+            this.pictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox.Image = global::MobileStoreManagement.Properties.Resources.logo;
+            this.pictureBox.Location = new System.Drawing.Point(114, 198);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(578, 318);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox.TabIndex = 4;
+            this.pictureBox.TabStop = false;
             // 
-            // chartRevenue
+            // label1
             // 
-            this.chartRevenue.Anchor = System.Windows.Forms.AnchorStyles.None;
-            chartArea7.Name = "ChartArea1";
-            this.chartRevenue.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chartRevenue.Legends.Add(legend7);
-            this.chartRevenue.Location = new System.Drawing.Point(45, 70);
-            this.chartRevenue.Name = "chartRevenue";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Doanh thu";
-            this.chartRevenue.Series.Add(series7);
-            this.chartRevenue.Size = new System.Drawing.Size(740, 140);
-            this.chartRevenue.TabIndex = 0;
-            this.chartRevenue.Text = "chart1";
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(325, 543);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 25);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Mobile Manager";
             // 
-            // groupBoxBestSellingProduct
+            // label2
             // 
-            this.groupBoxBestSellingProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBoxBestSellingProduct.Controls.Add(this.chartBestSelling);
-            this.groupBoxBestSellingProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxBestSellingProduct.Location = new System.Drawing.Point(0, 445);
-            this.groupBoxBestSellingProduct.Margin = new System.Windows.Forms.Padding(0, 24, 0, 0);
-            this.groupBoxBestSellingProduct.Name = "groupBoxBestSellingProduct";
-            this.groupBoxBestSellingProduct.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBoxBestSellingProduct.Size = new System.Drawing.Size(830, 208);
-            this.groupBoxBestSellingProduct.TabIndex = 5;
-            this.groupBoxBestSellingProduct.TabStop = false;
-            this.groupBoxBestSellingProduct.Text = "Top 5 sản phẩm bán chạy theo tháng";
-            // 
-            // chartBestSelling
-            // 
-            this.chartBestSelling.Anchor = System.Windows.Forms.AnchorStyles.None;
-            chartArea8.Name = "ChartArea1";
-            this.chartBestSelling.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chartBestSelling.Legends.Add(legend8);
-            this.chartBestSelling.Location = new System.Drawing.Point(43, 46);
-            this.chartBestSelling.Name = "chartBestSelling";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chartBestSelling.Series.Add(series8);
-            this.chartBestSelling.Size = new System.Drawing.Size(740, 140);
-            this.chartBestSelling.TabIndex = 0;
-            this.chartBestSelling.Text = "chartBestSelling";
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(266, 584);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(288, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Ứng dụng quản lý cửa hàng điện thoại";
             // 
             // UserControlSumary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBoxRevenueChart);
-            this.Controls.Add(this.groupBoxBestSellingProduct);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.groupBoxSalesResult);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.MinimumSize = new System.Drawing.Size(830, 700);
@@ -320,11 +282,9 @@
             this.flowLayoutPanelCompareYesterday.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCompareLastMonth)).EndInit();
             this.flowLayoutPanelCompareLastMonth.ResumeLayout(false);
-            this.groupBoxRevenueChart.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartRevenue)).EndInit();
-            this.groupBoxBestSellingProduct.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartBestSelling)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -345,9 +305,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCompareLastMonth;
         private System.Windows.Forms.Label labelShowCompareLastMonth;
         private System.Windows.Forms.Label labelCompareLastMonth;
-        private System.Windows.Forms.GroupBox groupBoxRevenueChart;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartRevenue;
-        private System.Windows.Forms.GroupBox groupBoxBestSellingProduct;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartBestSelling;
+        private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

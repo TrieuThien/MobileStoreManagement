@@ -165,6 +165,7 @@
             // buttonAddNewProductCategory
             // 
             this.buttonAddNewProductCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAddNewProductCategory.Image = global::MobileStoreManagement.Properties.Resources.done;
             this.buttonAddNewProductCategory.Location = new System.Drawing.Point(291, 11);
             this.buttonAddNewProductCategory.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.buttonAddNewProductCategory.Name = "buttonAddNewProductCategory";
