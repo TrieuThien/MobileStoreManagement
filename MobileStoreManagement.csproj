@@ -251,6 +251,8 @@
     <Compile Include="SumaryWindow.Designer.cs">
       <DependentUpon>SumaryWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Supplier\NhaCungCap.cs" />
+    <Compile Include="Supplier\SupplierManager.cs" />
     <Compile Include="UserControlCustomerManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -341,10 +343,10 @@
     <Compile Include="UserControlSumary.Designer.cs">
       <DependentUpon>UserControlSumary.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlSupplierManagement.cs">
+    <Compile Include="Supplier\UserControlSupplierManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlSupplierManagement.Designer.cs">
+    <Compile Include="Supplier\UserControlSupplierManagement.Designer.cs">
       <DependentUpon>UserControlSupplierManagement.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AccountDasboard\FormAccountDashboard.resx">
@@ -462,7 +464,7 @@
     <EmbeddedResource Include="UserControlSumary.resx">
       <DependentUpon>UserControlSumary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlSupplierManagement.resx">
+    <EmbeddedResource Include="Supplier\UserControlSupplierManagement.resx">
       <DependentUpon>UserControlSupplierManagement.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
