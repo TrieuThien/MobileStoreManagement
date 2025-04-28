@@ -82,7 +82,7 @@
             this.textBoxSupplierId.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSupplierId.Name = "textBoxSupplierId";
             this.textBoxSupplierId.Size = new System.Drawing.Size(325, 22);
-            this.textBoxSupplierId.TabIndex = 4;
+            this.textBoxSupplierId.TabIndex = 0;
             // 
             // dataGridView1
             // 
@@ -111,7 +111,7 @@
             this.textBoxSupplierName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSupplierName.Name = "textBoxSupplierName";
             this.textBoxSupplierName.Size = new System.Drawing.Size(325, 22);
-            this.textBoxSupplierName.TabIndex = 4;
+            this.textBoxSupplierName.TabIndex = 1;
             // 
             // label3
             // 
@@ -129,7 +129,7 @@
             this.textBoxSupPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSupPhoneNumber.Name = "textBoxSupPhoneNumber";
             this.textBoxSupPhoneNumber.Size = new System.Drawing.Size(325, 22);
-            this.textBoxSupPhoneNumber.TabIndex = 4;
+            this.textBoxSupPhoneNumber.TabIndex = 2;
             // 
             // label4
             // 
@@ -147,7 +147,7 @@
             this.textBoxSupEmail.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSupEmail.Name = "textBoxSupEmail";
             this.textBoxSupEmail.Size = new System.Drawing.Size(325, 22);
-            this.textBoxSupEmail.TabIndex = 4;
+            this.textBoxSupEmail.TabIndex = 3;
             // 
             // label5
             // 
@@ -194,7 +194,7 @@
             this.buttonShowGridView.Margin = new System.Windows.Forms.Padding(4);
             this.buttonShowGridView.Name = "buttonShowGridView";
             this.buttonShowGridView.Size = new System.Drawing.Size(184, 66);
-            this.buttonShowGridView.TabIndex = 39;
+            this.buttonShowGridView.TabIndex = 11;
             this.buttonShowGridView.Text = "Hiện danh sách";
             this.buttonShowGridView.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonShowGridView.UseVisualStyleBackColor = true;
@@ -208,7 +208,7 @@
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(152, 59);
-            this.buttonEdit.TabIndex = 39;
+            this.buttonEdit.TabIndex = 8;
             this.buttonEdit.Text = "Cập nhật";
             this.buttonEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -222,7 +222,7 @@
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(183, 66);
-            this.button5.TabIndex = 38;
+            this.button5.TabIndex = 12;
             this.button5.Text = "Xuất danh sách";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
@@ -236,7 +236,7 @@
             this.buttonSearch.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(151, 59);
-            this.buttonSearch.TabIndex = 37;
+            this.buttonSearch.TabIndex = 5;
             this.buttonSearch.Text = "Tìm kiếm";
             this.buttonSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonSearch.UseVisualStyleBackColor = true;
@@ -250,7 +250,7 @@
             this.buttonSave.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(151, 59);
-            this.buttonSave.TabIndex = 37;
+            this.buttonSave.TabIndex = 7;
             this.buttonSave.Text = "Lưu thông tin";
             this.buttonSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -264,7 +264,7 @@
             this.buttonAddNew.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAddNew.Name = "buttonAddNew";
             this.buttonAddNew.Size = new System.Drawing.Size(152, 59);
-            this.buttonAddNew.TabIndex = 38;
+            this.buttonAddNew.TabIndex = 6;
             this.buttonAddNew.Text = "Thêm mới";
             this.buttonAddNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAddNew.UseVisualStyleBackColor = true;
@@ -278,7 +278,7 @@
             this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(151, 59);
-            this.button7.TabIndex = 38;
+            this.button7.TabIndex = 9;
             this.button7.Text = "Xóa thông tin";
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = true;
@@ -292,7 +292,7 @@
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(152, 59);
-            this.buttonCancel.TabIndex = 38;
+            this.buttonCancel.TabIndex = 10;
             this.buttonCancel.Text = "Hủy thao tác";
             this.buttonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonCancel.UseVisualStyleBackColor = true;
