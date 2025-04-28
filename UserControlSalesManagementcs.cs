@@ -29,5 +29,20 @@ namespace MobileStoreManagement
         {
             LoadUserControl(new UserControlSalesManagementOrder());
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LoadUserControl(new UserControlSalesManagementPurchase());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LoadUserControl(new UserControlSalesManagementGuarantee());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LoadUserControl(new UserControlSalesManagementDelivery());
+        }
     }
 }

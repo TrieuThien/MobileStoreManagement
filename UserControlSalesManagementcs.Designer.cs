@@ -57,7 +57,7 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.buttonToSalesManagementOrder);
             this.panel1.Location = new System.Drawing.Point(4, 64);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(459, 686);
             this.panel1.TabIndex = 2;
@@ -65,37 +65,40 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(95, 310);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(268, 64);
             this.button4.TabIndex = 0;
             this.button4.Text = "Quản lý phiếu giao hàng";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(95, 217);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(268, 64);
             this.button3.TabIndex = 0;
             this.button3.Text = "Quản lý phiếu bảo hành";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(95, 127);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(268, 64);
             this.button2.TabIndex = 0;
             this.button2.Text = "Quản lý phiếu mua hàng";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // buttonToSalesManagementOrder
             // 
             this.buttonToSalesManagementOrder.Location = new System.Drawing.Point(95, 37);
-            this.buttonToSalesManagementOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonToSalesManagementOrder.Margin = new System.Windows.Forms.Padding(4);
             this.buttonToSalesManagementOrder.Name = "buttonToSalesManagementOrder";
             this.buttonToSalesManagementOrder.Size = new System.Drawing.Size(268, 64);
             this.buttonToSalesManagementOrder.TabIndex = 0;
@@ -107,7 +110,7 @@
             // 
             this.UserControlSalesManagementOrder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.UserControlSalesManagementOrder.Location = new System.Drawing.Point(471, 64);
-            this.UserControlSalesManagementOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UserControlSalesManagementOrder.Margin = new System.Windows.Forms.Padding(4);
             this.UserControlSalesManagementOrder.Name = "UserControlSalesManagementOrder";
             this.UserControlSalesManagementOrder.Size = new System.Drawing.Size(1175, 686);
             this.UserControlSalesManagementOrder.TabIndex = 3;
