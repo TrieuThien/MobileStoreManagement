@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlReport));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonRevenueReport = new System.Windows.Forms.Button();
+            this.buttonSalesReport = new System.Windows.Forms.Button();
+            this.buttonInventoryReport = new System.Windows.Forms.Button();
+            this.buttonPromoutionReport = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelFunctionName = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonExportReport = new System.Windows.Forms.Button();
             this.buttonPrintReport = new System.Windows.Forms.Button();
-            this.labelFunctionName = new System.Windows.Forms.Label();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -48,10 +48,10 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Controls.Add(this.button2);
-            this.flowLayoutPanel1.Controls.Add(this.button3);
-            this.flowLayoutPanel1.Controls.Add(this.button4);
+            this.flowLayoutPanel1.Controls.Add(this.buttonRevenueReport);
+            this.flowLayoutPanel1.Controls.Add(this.buttonSalesReport);
+            this.flowLayoutPanel1.Controls.Add(this.buttonInventoryReport);
+            this.flowLayoutPanel1.Controls.Add(this.buttonPromoutionReport);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -60,57 +60,61 @@
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
             // 
-            // button1
+            // buttonRevenueReport
             // 
-            this.button1.Image = global::MobileStoreManagement.Properties.Resources.cost;
-            this.button1.Location = new System.Drawing.Point(25, 12);
-            this.button1.Margin = new System.Windows.Forms.Padding(25, 12, 25, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 48);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Báo cáo doanh thu";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonRevenueReport.Image = global::MobileStoreManagement.Properties.Resources.cost;
+            this.buttonRevenueReport.Location = new System.Drawing.Point(25, 12);
+            this.buttonRevenueReport.Margin = new System.Windows.Forms.Padding(25, 12, 25, 12);
+            this.buttonRevenueReport.Name = "buttonRevenueReport";
+            this.buttonRevenueReport.Size = new System.Drawing.Size(200, 48);
+            this.buttonRevenueReport.TabIndex = 0;
+            this.buttonRevenueReport.Text = "Báo cáo doanh thu";
+            this.buttonRevenueReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRevenueReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonRevenueReport.UseVisualStyleBackColor = true;
+            this.buttonRevenueReport.Click += new System.EventHandler(this.buttonRevenueReport_Click);
             // 
-            // button2
+            // buttonSalesReport
             // 
-            this.button2.Image = global::MobileStoreManagement.Properties.Resources.analysis;
-            this.button2.Location = new System.Drawing.Point(25, 84);
-            this.button2.Margin = new System.Windows.Forms.Padding(25, 12, 25, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 48);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Báo cáo doanh số";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonSalesReport.Image = global::MobileStoreManagement.Properties.Resources.analysis;
+            this.buttonSalesReport.Location = new System.Drawing.Point(25, 84);
+            this.buttonSalesReport.Margin = new System.Windows.Forms.Padding(25, 12, 25, 12);
+            this.buttonSalesReport.Name = "buttonSalesReport";
+            this.buttonSalesReport.Size = new System.Drawing.Size(200, 48);
+            this.buttonSalesReport.TabIndex = 1;
+            this.buttonSalesReport.Text = "Báo cáo doanh số";
+            this.buttonSalesReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSalesReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonSalesReport.UseVisualStyleBackColor = true;
+            this.buttonSalesReport.Click += new System.EventHandler(this.buttonSalesReport_Click);
             // 
-            // button3
+            // buttonInventoryReport
             // 
-            this.button3.Image = global::MobileStoreManagement.Properties.Resources.inventory;
-            this.button3.Location = new System.Drawing.Point(25, 156);
-            this.button3.Margin = new System.Windows.Forms.Padding(25, 12, 25, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 48);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Báo cáo hàng tồn kho";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonInventoryReport.Image = global::MobileStoreManagement.Properties.Resources.inventory;
+            this.buttonInventoryReport.Location = new System.Drawing.Point(25, 156);
+            this.buttonInventoryReport.Margin = new System.Windows.Forms.Padding(25, 12, 25, 12);
+            this.buttonInventoryReport.Name = "buttonInventoryReport";
+            this.buttonInventoryReport.Size = new System.Drawing.Size(200, 48);
+            this.buttonInventoryReport.TabIndex = 2;
+            this.buttonInventoryReport.Text = "Báo cáo hàng tồn kho";
+            this.buttonInventoryReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonInventoryReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonInventoryReport.UseVisualStyleBackColor = true;
+            this.buttonInventoryReport.Click += new System.EventHandler(this.buttonInventoryReport_Click);
             // 
-            // button4
+            // buttonPromoutionReport
             // 
-            this.button4.Image = global::MobileStoreManagement.Properties.Resources.megaphone;
-            this.button4.Location = new System.Drawing.Point(25, 228);
-            this.button4.Margin = new System.Windows.Forms.Padding(25, 12, 25, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 48);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Báo cáo khuyến mãi";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonPromoutionReport.Image = global::MobileStoreManagement.Properties.Resources.megaphone;
+            this.buttonPromoutionReport.Location = new System.Drawing.Point(25, 228);
+            this.buttonPromoutionReport.Margin = new System.Windows.Forms.Padding(25, 12, 25, 12);
+            this.buttonPromoutionReport.Name = "buttonPromoutionReport";
+            this.buttonPromoutionReport.Size = new System.Drawing.Size(200, 48);
+            this.buttonPromoutionReport.TabIndex = 3;
+            this.buttonPromoutionReport.Text = "Báo cáo khuyến mãi";
+            this.buttonPromoutionReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPromoutionReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPromoutionReport.UseVisualStyleBackColor = true;
+            this.buttonPromoutionReport.Click += new System.EventHandler(this.buttonPromoutionReport_Click);
             // 
             // panel1
             // 
@@ -122,6 +126,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(722, 68);
             this.panel1.TabIndex = 1;
+            // 
+            // labelFunctionName
+            // 
+            this.labelFunctionName.AutoSize = true;
+            this.labelFunctionName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFunctionName.Location = new System.Drawing.Point(24, 23);
+            this.labelFunctionName.Name = "labelFunctionName";
+            this.labelFunctionName.Size = new System.Drawing.Size(71, 18);
+            this.labelFunctionName.TabIndex = 3;
+            this.labelFunctionName.Text = "Báo cáo";
             // 
             // flowLayoutPanel2
             // 
@@ -159,16 +173,6 @@
             this.buttonPrintReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonPrintReport.UseVisualStyleBackColor = true;
             // 
-            // labelFunctionName
-            // 
-            this.labelFunctionName.AutoSize = true;
-            this.labelFunctionName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFunctionName.Location = new System.Drawing.Point(24, 23);
-            this.labelFunctionName.Name = "labelFunctionName";
-            this.labelFunctionName.Size = new System.Drawing.Size(71, 18);
-            this.labelFunctionName.TabIndex = 3;
-            this.labelFunctionName.Text = "Báo cáo";
-            // 
             // crystalReportViewer1
             // 
             this.crystalReportViewer1.ActiveViewIndex = -1;
@@ -201,10 +205,10 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonRevenueReport;
+        private System.Windows.Forms.Button buttonSalesReport;
+        private System.Windows.Forms.Button buttonInventoryReport;
+        private System.Windows.Forms.Button buttonPromoutionReport;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelFunctionName;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
